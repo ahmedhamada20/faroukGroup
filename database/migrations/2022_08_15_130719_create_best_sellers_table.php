@@ -16,7 +16,7 @@ class CreateBestSellersTable extends Migration
         Schema::create('best_sellers', function (Blueprint $table) {
             $table->id();
             $table->text('name');
-            $table->text('notes')->nullable();
+            $table->longText('notes')->nullable();
             $table->boolean('status')->default(false);
             $table->decimal('price',8,2)->nullable();
             $table->timestamps();

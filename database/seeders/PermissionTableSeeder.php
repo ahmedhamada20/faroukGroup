@@ -92,6 +92,13 @@ class PermissionTableSeeder extends Seeder
             'deleted-event',
             'list-event',
 
+            //slider
+            'show-slider',
+            'create-slider',
+            'edit-slider',
+            'deleted-slider',
+            'list-slider',
+
             //news
             'show-news',
             'create-news',

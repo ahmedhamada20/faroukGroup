@@ -16,7 +16,7 @@ class CreatePackagesTable extends Migration
         Schema::create('packages', function (Blueprint $table) {
             $table->id();
             $table->text('name');
-            $table->text('notes')->nullable();
+            $table->longText('notes')->nullable();
             $table->decimal('price',8,2)->nullable();
             $table->boolean('status')->default(false);
             $table->timestamps();

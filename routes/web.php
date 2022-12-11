@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\Front\HomeController;
 use Illuminate\Support\Facades\Route;
+use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,18 +15,23 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', [HomeController::class, 'index'])->name('home');
-Route::get('/courses/list', [HomeController::class, 'courses_list'])->name('courses_list');
-Route::get('/courses/detail', [HomeController::class, 'courses_detail'])->name('courses_detail');
-Route::get('/events', [HomeController::class, 'event'])->name('events');
-Route::get('/event/detail', [HomeController::class, 'event_detail'])->name('event_detail');
-Route::get('/abouts', [HomeController::class, 'abouts'])->name('abouts');
-Route::get('/blogs', [HomeController::class, 'blog'])->name('blogs');
-Route::get('/blog/detail', [HomeController::class, 'blog_detail'])->name('blog_detail');
-Route::get('/contact_us', [HomeController::class, 'contact_us'])->name('contact_us');
-Route::get('/my_account', [HomeController::class, 'my_account'])->name('my_account');
-Route::get('/members', [HomeController::class, 'members'])->name('members');
-Route::get('/members/detail', [HomeController::class, 'members_detail'])->name('members_detail');
-Route::get('/register-sign', [HomeController::class, 'register_sign'])->name('register_sign');
+Route::group(
+    [
+        'prefix' => LaravelLocalization::setLocale(),
+        'middleware' => [ 'localeSessionRedirect', 'localizationRedirect', 'localeViewPath' ]
+    ], function(){
+
+
+    Route::get('/', [HomeController::class, 'index'])->name('home');
+    Route::get('/AboutUsFaroukGroup', [HomeController::class, 'aboutUs'])->name('home.aboutUs');
+    Route::get('/Consulting', [HomeController::class, 'consulting'])->name('home.consulting');
+    Route::get('/services', [HomeController::class, 'services'])->name('home.services');
+    Route::get('/servicesDetails', [HomeController::class, 'servicesDetails'])->name('home.servicesDetails');
+    Route::get('/contact', [HomeController::class, 'contact'])->name('home.contact');
+
+
+
+
+});
 
 

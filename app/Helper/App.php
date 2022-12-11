@@ -14,6 +14,7 @@ use App\Models\Number;
 use App\Models\Packages;
 use App\Models\PreviousWork;
 use App\Models\SettingSite;
+use App\Models\Slider;
 
 
 if (!function_exists('getActiveRoutesHome')) {
@@ -33,11 +34,21 @@ if (!function_exists('settingSite')) {
     }
 }
 
-if (!function_exists('silderActive')) {
-    function silderActive()
+if (!function_exists('sliderActive')) {
+    function sliderActive()
     {
-        $data = Ads::where('status', 1)->inRandomOrder()->limit(3)->get();
+        $data = Slider::where('status', 1)->inRandomOrder()->limit(1)->first();
         return $data;
+    }
+}
+
+if (!function_exists('aboutsActive')) {
+    function aboutsActive()
+    {
+        $data = AboutUs::where('status', 1)->inRandomOrder()->limit(1)->first();
+        if (!empty($data)) {
+            return $data;
+        }
     }
 }
 
@@ -62,15 +73,7 @@ if (!function_exists('alleventsActive')) {
         return $data;
     }
 }
-if (!function_exists('aboutsActive')) {
-    function aboutsActive()
-    {
-        $data = AboutUs::where('status', 1)->inRandomOrder()->limit(1)->first();
-        if (!empty($data)) {
-            return $data;
-        }
-    }
-}
+
 if (!function_exists('previousWorkActive')) {
     function previousWorkActive()
     {
