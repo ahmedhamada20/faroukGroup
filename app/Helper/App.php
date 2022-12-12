@@ -89,6 +89,14 @@ if (!function_exists('adsActive')) {
     }
 }
 
+if (!function_exists('NumberActive')) {
+    function NumberActive()
+    {
+        $data = Number::where('status', 1)->inRandomOrder()->limit(4)->get();
+        return $data;
+    }
+}
+
 if (!function_exists('newsActive')) {
     function newsActive()
     {

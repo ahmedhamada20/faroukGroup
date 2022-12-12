@@ -542,6 +542,7 @@
         </div>
 
         <div class="row">
+            @forelse (NumberActive() as $number)
             <div class="col-lg-3 col-md-6">
                 <div class="single-team-box">
                     <div class="image">
@@ -549,14 +550,18 @@
                     </div>
 
                     <div class="content">
-                        <h3>Alex Maxwel</h3>
-                        <span>CEO & Founder</span>
+                        <h3>{{ $number->name }}</h3>
+                        <span>{!! $number->name !!}</span>
                         <a href="" class="default-btn btn-small"
                             style="border-radius: 50%;padding: 0px 13px !important;"><i class="fa fa-phone"></i></a>
                     </div>
                 </div>
             </div>
 
+            @empty
+                
+            @endforelse
+{{--         
             <div class="col-lg-3 col-md-6">
                 <div class="single-team-box">
                     <div class="image">
@@ -663,7 +668,7 @@
                         <span>Android/IOS Developer</span>
                     </div>
                 </div>
-            </div>
+            </div> --}}
         </div>
     </div>
 </section>
