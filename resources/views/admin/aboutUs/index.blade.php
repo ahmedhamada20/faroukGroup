@@ -30,9 +30,9 @@
 
                     <div class="row">
                         <div class="col">
-                            @can('create-aboutUs')
+                            {{-- @can('create-aboutUs')
                             <a href="{{route('aboutUs.create')}}" class="btn btn-success">اضافه جديده</a>
-                            @endcan
+                            @endcan --}}
 
                         </div>
                     </div>
@@ -83,9 +83,9 @@
                                         @can('edit-aboutUs')
                                         <a href="{{route('aboutUs.edit',$row->id)}}" class="btn btn-success btn-sm"><i class="fa fa-edit"></i></a>
                                             @endcan
-                                            @can('deleted-aboutUs')
-                                            @endcan
-                                        <button class="btn btn-danger btn-sm" data-toggle="modal" data-target="#deleted{{$row->id}}"><i class="fa fa-trash"></i></button>
+                                            {{-- @can('deleted-aboutUs')
+                                            @endcan --}}
+                                        {{-- <button class="btn btn-danger btn-sm" data-toggle="modal" data-target="#deleted{{$row->id}}"><i class="fa fa-trash"></i></button> --}}
                                     </td>
                                     @include('admin.aboutUs.deleted')
 
