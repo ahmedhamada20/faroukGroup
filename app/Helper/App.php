@@ -63,6 +63,14 @@ if (!function_exists('activeProduct')) {
     }
 }
 
+if (!function_exists('categoryActive')) {
+    function categoryActive()
+    {
+        $data = Category::where('status', 1)->inRandomOrder()->limit(6)->get();
+        return $data;
+    }
+}
+
 if (!function_exists('newsActive')) {
     function newsActive()
     {
@@ -99,13 +107,7 @@ if (!function_exists('PackagesActive')) {
         return $data;
     }
 }
-if (!function_exists('categoryActive')) {
-    function categoryActive()
-    {
-        $data = Category::where('status', 1)->inRandomOrder()->limit(6)->get();
-        return $data;
-    }
-}
+
 if (!function_exists('courseActive')) {
     function courseActive()
     {
