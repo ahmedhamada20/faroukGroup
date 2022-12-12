@@ -211,6 +211,7 @@
                                             tempor incididunt ut labore et dolore magna aliqua.</p>
                                     </div>
                                 </div> --}}
+                                </div> 
                             </div>
 
                             <div class="col-lg-6">
