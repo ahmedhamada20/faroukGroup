@@ -311,6 +311,7 @@
         </div>
 
         <div class="portfolio-slider owl-carousel owl-theme">
+            @forelse (adsActive() as $ads)
             <div class="single-portfolio-item">
                 <div class="portfolio-image">
                     <a href="#">
@@ -320,12 +321,16 @@
 
                 <div class="portfolio-content">
                     <h3>
-                        <a href="#">Creative Work</a>
+                        <a href="#">{{ $ads->name }}</a>
                     </h3>
-                    <span>Web Design</span>
+                    <span>{!! $ads->notes !!}</span>
                 </div>
             </div>
-
+            @empty
+                
+            @endforelse
+          
+{{-- 
             <div class="single-portfolio-item">
                 <div class="portfolio-image">
                     <a href="#">
@@ -399,14 +404,14 @@
                     </h3>
                     <span>Agency</span>
                 </div>
-            </div>
+            </div> --}}
         </div>
     </div>
 </section>
 <!-- End Portfolio Area -->
 
 <!-- Start Client Area -->
-<section class="client-area ptb-100">
+{{-- <section class="client-area ptb-100">
     <div class="container">
         <div class="section-title">
             <span>Testimonials</span>
@@ -458,7 +463,7 @@
             </div>
         </div>
     </div>
-</section>
+</section> --}}
 <!-- End Client Area -->
 
 <!-- Start Quote Area -->

@@ -80,6 +80,15 @@ if (!function_exists('eventsActive')) {
     }
 }
 
+
+if (!function_exists('adsActive')) {
+    function adsActive()
+    {
+        $data = Ads::where('status', 1)->inRandomOrder()->limit(6)->get();
+        return $data;
+    }
+}
+
 if (!function_exists('newsActive')) {
     function newsActive()
     {
