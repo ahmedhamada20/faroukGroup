@@ -52,6 +52,15 @@ if (!function_exists('aboutsActive')) {
         }
     }
 }
+if (!function_exists('aboutsActivelastet')) {
+    function aboutsActivelastet()
+    {
+        $data = AboutUs::where('status', 1)->latest()->first();
+        if (!empty($data)) {
+            return $data;
+        }
+    }
+}
 
 if (!function_exists('activeProduct')) {
     function activeProduct()
