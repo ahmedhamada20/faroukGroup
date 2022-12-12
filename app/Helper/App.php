@@ -46,7 +46,7 @@ if (!function_exists('sliderActive')) {
 if (!function_exists('aboutsActive')) {
     function aboutsActive()
     {
-        $data = AboutUs::where('status', 1)->first();
+        $data = AboutUs::where('status', 1)->where('id',1)->first();
         if (!empty($data)) {
             return $data;
         }
@@ -55,7 +55,7 @@ if (!function_exists('aboutsActive')) {
 if (!function_exists('aboutsActivelastet')) {
     function aboutsActivelastet()
     {
-        $data = AboutUs::where('status', 1)->latest()->first();
+        $data = AboutUs::where('status', 1)->where('id',5)->first();
         if (!empty($data)) {
             return $data;
         }
