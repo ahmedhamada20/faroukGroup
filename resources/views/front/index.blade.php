@@ -216,53 +216,24 @@
 
             <div class="col-lg-6">
                 <div class="row">
+
+                    @forelse (eventsActive() as $event )
                     <div class="col-lg-6 col-md-6">
                         <div class="single-features-box top-1">
                             <div class="icon">
                                 <i class="flaticon-promotion"></i>
                             </div>
                             <h3>
-                                <a href="#">Marketing Analysis</a>
+                                <a href="#">{{ $event->name }}</a>
                             </h3>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</p>
+                            <p>{!! $event->notes !!}</p>
                         </div>
                     </div>
+                    @empty
+                        
+                    @endforelse
 
-                    <div class="col-lg-6 col-md-6">
-                        <div class="single-features-box top-2">
-                            <div class="icon">
-                                <i class="flaticon-speed"></i>
-                            </div>
-                            <h3>
-                                <a href="#">Website Optimization</a>
-                            </h3>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</p>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-6 col-md-6">
-                        <div class="single-features-box top-3">
-                            <div class="icon">
-                                <i class="flaticon-email"></i>
-                            </div>
-                            <h3>
-                                <a href="#">Email Marketing</a>
-                            </h3>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</p>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-6 col-md-6">
-                        <div class="single-features-box top-4">
-                            <div class="icon">
-                                <i class="flaticon-network"></i>
-                            </div>
-                            <h3>
-                                <a href="#">Social Media Marketing</a>
-                            </h3>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</p>
-                        </div>
-                    </div>
+                
                 </div>
             </div>
         </div>
