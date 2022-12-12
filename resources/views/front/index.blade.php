@@ -177,7 +177,7 @@
                             <div class="col-lg-6">
                                 <div class="digital-experience-content">
 
-                                    <p>{{ $notes->notes }}</p>
+                                    {!! $notes->notes !!}
                                 
                                     {{-- <h3>Real-Time Analytics</h3>
                                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
