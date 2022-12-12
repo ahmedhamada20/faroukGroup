@@ -108,15 +108,22 @@
 
             <div class="tab digital-experience-tab">
                 <ul class="tabs">
+
+                    @forelse (activeProduct() as $prodcut )
                     <li>
                         <a href="#">
                                 <span>
                                     <i class="flaticon-analysis"></i>
-                                    Real-Time Analytics
+                                   {{$prodcut->name}}
                                 </span>
                         </a>
                     </li>
+                    @empty
+                        
+                    @endforelse
 
+                  
+{{-- 
                     <li class="bg-5cbd12">
                         <a href="#">
                                 <span>
@@ -160,15 +167,19 @@
                                     Digital Marketing
                                 </span>
                         </a>
-                    </li>
+                    </li> --}}
                 </ul>
 
                 <div class="tab_content">
+                    @forelse (activeProduct() as $notes)
                     <div class="tabs_item">
                         <div class="row align-items-center">
                             <div class="col-lg-6">
                                 <div class="digital-experience-content">
-                                    <h3>Real-Time Analytics</h3>
+
+                                    <p>{{ $notes->notes }}</p>
+                                
+                                    {{-- <h3>Real-Time Analytics</h3>
                                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
                                         incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices
                                         gravida. Risus commodo viverra maecenas accumsan facilisis.</p>
@@ -199,7 +210,7 @@
                                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
                                             tempor incididunt ut labore et dolore magna aliqua.</p>
                                     </div>
-                                </div>
+                                </div> --}}
                             </div>
 
                             <div class="col-lg-6">
@@ -210,8 +221,12 @@
                             </div>
                         </div>
                     </div>
+                    @empty
+                        
+                    @endforelse
+               
 
-                    <div class="tabs_item">
+                    {{-- <div class="tabs_item">
                         <div class="row align-items-center">
                             <div class="col-lg-6">
                                 <div class="digital-experience-content">
@@ -444,7 +459,7 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </div> --}}
                 </div>
             </div>
         </div>

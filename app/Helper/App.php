@@ -13,6 +13,7 @@ use App\Models\News;
 use App\Models\Number;
 use App\Models\Packages;
 use App\Models\PreviousWork;
+use App\Models\Product;
 use App\Models\SettingSite;
 use App\Models\Slider;
 
@@ -46,6 +47,16 @@ if (!function_exists('aboutsActive')) {
     function aboutsActive()
     {
         $data = AboutUs::where('status', 1)->inRandomOrder()->limit(1)->first();
+        if (!empty($data)) {
+            return $data;
+        }
+    }
+}
+
+if (!function_exists('activeProduct')) {
+    function activeProduct()
+    {
+        $data = Product::where('status', 1)->inRandomOrder()->limit(6)->get();
         if (!empty($data)) {
             return $data;
         }
