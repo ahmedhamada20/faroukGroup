@@ -46,7 +46,7 @@ if (!function_exists('sliderActive')) {
 if (!function_exists('aboutsActive')) {
     function aboutsActive()
     {
-        $data = AboutUs::where('status', 1)->inRandomOrder()->limit(1)->first();
+        $data = AboutUs::where('status', 1)->first();
         if (!empty($data)) {
             return $data;
         }
