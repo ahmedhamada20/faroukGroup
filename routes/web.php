@@ -29,6 +29,7 @@ Route::group(
     Route::get('/servicesDetails', [HomeController::class, 'servicesDetails'])->name('home.servicesDetails');
     Route::get('/contact', [HomeController::class, 'contact'])->name('home.contact');
 
+    Route::post('sendmessage',[HomeController::class,'sendmessage'])->name('sendmessage');
 
 
 

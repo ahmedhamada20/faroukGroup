@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Admin\AboutUsController;
+use App\Http\Controllers\Admin\AdminController;
 use App\Http\Controllers\Admin\AdsController;
 use App\Http\Controllers\Admin\BestSellerController;
 use App\Http\Controllers\Admin\BlogController;
@@ -135,6 +136,7 @@ Route::middleware(['auth', 'checkInformation'])->group(function () {
     Route::post('customerReviews_photo_remove_image', [CustomerReviewsController::class, 'customerReviews_photo_remove_image'])->name('customerReviews_photo_remove_image');
 
 
+    Route::get('conteactIndex',[AdminController::class,'conteactIndex'])->name('conteactIndex');
 
 
     // Route::resource('bestSeller', BestSellerController::class);

@@ -5,6 +5,23 @@
 
 @section('content')
 
+@if(Session::has('success'))
+<div class="alert alert-success alert-dismissible">
+    <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+    <strong>{{ Session::get('success') }}</strong>
+</div>
+@endif
+
+@if ($errors->any())
+    <div class="alert alert-danger">
+        <ul>
+            @foreach ($errors->all() as $error)
+                <li>{{ $error }}</li>
+            @endforeach
+        </ul>
+    </div>
+@endif
+
 <!-- Start Main Banner Area -->
 <div class="main-banner">
     <div class="main-banner-item item-four">
@@ -473,40 +490,30 @@
             <div class="col-lg-6">
                 <div class="quote-form">
                     <div class="content">
-                        <h3>Get A free Spix Quote Now</h3>
+                        <h3>{{ __('index.Free_consultation_with_a_business_developer') }}</h3>
                     </div>
-                    <form>
+                    <form method="POST" action="{{ route('sendmessage') }}">
+                       @csrf
                         <div class="form-group">
-                            <input type="text" class="form-control" id="Name" placeholder="Name">
+                            <input type="text" class="form-control @error('name') is-invalid @enderror"  name="name"  required placeholder="{{ __('index.name') }}">
                         </div>
-
                         <div class="form-group">
-                            <input type="email" class="form-control" id="Email" placeholder="Email">
+                            <input type="text" class="form-control @error('activity') is-invalid @enderror"  name="activity"  required placeholder="{{ __('index.activity') }}">
                         </div>
-
                         <div class="form-group">
-                            <input type="phone" class="form-control" id="Phone" placeholder="Phone">
+                            <input type="text" class="form-control @error('name_comppany') is-invalid @enderror"  name="name_comppany"  required placeholder="{{ __('index.name_comppany') }}">
                         </div>
-
                         <div class="form-group">
-                            <select>
-                                <option value="">Company</option>
-                                <option value="">Ellison Estate</option>
-                                <option value="">Four Fairfield Pond</option>
-                                <option value="">Les Palais Bulles</option>
-                                <option value="">Villa Les Cèdres</option>
-                                <option value="">Villa Leopolda</option>
-                                <option value="">Buckingham Palace</option>
-                            </select>
+                            <input type="text" class="form-control @error('type_company') is-invalid @enderror"  name="type_company"  required placeholder="{{ __('index.type_company') }}">
                         </div>
-
+                
                         <div class="form-group">
-                            <textarea name="message" class="form-control" placeholder="Message"></textarea>
+                            <textarea  class="form-control" name="Message" required placeholder="{{ __('index.Message') }}"></textarea>
                         </div>
 
                         <div class="quote-btn">
                             <button type="submit" class="default-btn">
-                                Send Message
+                               {{__('index.sendMessage')}}
                             </button>
                         </div>
                     </form>
