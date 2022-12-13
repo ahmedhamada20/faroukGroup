@@ -35,7 +35,7 @@
                                 <p>
                                     {!!sliderActive()->notes!!}
                                 </p>
-                                <a href="" class="default-btn mt-3">Get Your Report</a>
+                                <a href="" class="default-btn mt-3">حدد احتياجاتك</a>
                             </div>
                         </div>
                         <div class="col-lg-6">
@@ -109,7 +109,7 @@
 
                         <div class="about-btn">
                             <a href="#" class="default-btn">
-                                Learn More
+                                لماذا نحن
                             </a>
                         </div>
                     </div>
@@ -131,7 +131,7 @@
 
         <div class="tab digital-experience-tab">
             <ul class="tabs">
-             
+
                 @forelse (activeProduct() as $product)
                 <li class="bg-5cbd12" id="{{ $product->id }}">
                     <a href="#{{ $product->id }}">
@@ -142,9 +142,9 @@
                     </a>
                 </li>
                 @empty
-                    
+
                 @endforelse
-               
+
 
             </ul>
 
@@ -166,11 +166,11 @@
                     </div>
                 </div>
                 @empty
-                    
-                @endforelse
-            
 
-              
+                @endforelse
+
+
+
             </div>
         </div>
     </div>
@@ -181,8 +181,8 @@
 <section class="services-area bg-fafafa pt-100 pb-70">
     <div class="container">
         <div class="section-title">
-            <span>Services we provided</span>
-            <h2>Our Digital Marketing Services</h2>
+            <span>حلولنا الرقمية</span>
+            <h2>حلول تقنية تخلق فرصاُ</h2>
             <div class="bar"></div>
         </div>
 
@@ -202,16 +202,16 @@
                         <span>{!! $category->notes !!}</span>
                     </div>
                 </div>
-            </div> 
+            </div>
             @empty
-                
+
             @endforelse
-           
+
 
         </div>
     </div>
 
-   
+
 </section>
 <!-- End Services Area -->
 
@@ -219,8 +219,8 @@
 <section class="features-area pt-100 pb-70">
     <div class="container">
         <div class="section-title text-width">
-            <span>Care Features</span>
-            <h2>Create Awesome Service With Our Tools</h2>
+            <span>خطوات العمل</span>
+            <h2>حلول تقنية تخلق فرصاُ</h2>
             <div class="bar"></div>
         </div>
 
@@ -247,10 +247,10 @@
                         </div>
                     </div>
                     @empty
-                        
+
                     @endforelse
 
-                
+
                 </div>
             </div>
         </div>
@@ -269,48 +269,60 @@
                     </div>
 
                     <h3>
-                        <span class="odometer" data-count="950">00</span>
+                        <span class="odometer" data-count="4020">00</span>
                     </h3>
-                    <p>Completed Project</p>
+                    <p>عميل قواعد بيانات تارجت </p>
                 </div>
             </div>
 
-            <div class="col-lg-3 col-md-6 col-sm-6">
+            <div class="col-lg-2 col-md-6 col-sm-6">
                 <div class="single-fun-fact-box">
                     <div class="icon">
                         <i class="flaticon-happy"></i>
                     </div>
 
                     <h3>
-                        <span class="odometer" data-count="850">00</span>
+                        <span class="odometer" data-count="45000">00</span>
                     </h3>
-                    <p>Happy Clients</p>
+                    <p>مسؤل مسجل بقواعد البيانات </p>
                 </div>
             </div>
 
-            <div class="col-lg-3 col-md-6 col-sm-6">
+            <div class="col-lg-2 col-md-6 col-sm-6">
                 <div class="single-fun-fact-box">
                     <div class="icon">
                         <i class="flaticon-technical-support"></i>
                     </div>
 
                     <h3>
-                        <span class="odometer" data-count="550">00</span>
+                        <span class="odometer" data-count="19">00</span>
                     </h3>
-                    <p>Multi Service</p>
+                    <p>خدمه على مدار 11 سنه</p>
                 </div>
             </div>
 
-            <div class="col-lg-3 col-md-6 col-sm-6">
+            <div class="col-lg-2 col-md-6 col-sm-6">
                 <div class="single-fun-fact-box">
                     <div class="icon">
                         <i class="flaticon-trophy"></i>
                     </div>
 
                     <h3>
-                        <span class="odometer" data-count="750">00</span>
+                        <span class="odometer" data-count="950">00</span>
                     </h3>
-                    <p>Winning Awards</p>
+                    <p>مشروع  مكتمل</p>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-12 col-sm-12">
+                <div class="single-fun-fact-box">
+                    <div class="icon">
+                        <i class="flaticon-trophy"></i>
+                    </div>
+
+                    <h3>
+                        <span class="odometer" data-count="28013">00</span>
+                    </h3>
+                    <p>شركة مسجله</p>
                 </div>
             </div>
         </div>
@@ -344,10 +356,10 @@
                 </div>
             </div>
             @empty
-                
+
             @endforelse
-          
-{{-- 
+
+{{--
             <div class="single-portfolio-item">
                 <div class="portfolio-image">
                     <a href="#">
@@ -566,9 +578,9 @@
             </div>
 
             @empty
-                
+
             @endforelse
-{{--         
+{{--
             <div class="col-lg-3 col-md-6">
                 <div class="single-team-box">
                     <div class="image">
