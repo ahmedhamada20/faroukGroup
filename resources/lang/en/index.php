@@ -36,4 +36,25 @@ return [
     'Messagerequired' => 'Message required',
     'Messagemin' => 'Message min',
     'sendsuccessfullyMessage' => 'send successfully Message',
+
+
+    'emailrequired' => 'Email is required',
+    'emailmin' => 'The email must be valid',
+    'emailmax' => 'This e-mail is incorrect',
+    'emailemail' => 'You only need to enter your email address',
+    'subjectrequired' => 'Subject is required',
+    'subjectmin' => 'This topic is very short',
+    'subjectmax' => 'I\'ve reached the limit on the subject',
+    'phonerequired' => 'Phone number is required',
+    'phonemin' => 'Phone number is incorrect',
+    'phonenumeric' => 'You must enter your phone number correctly',
+
+
+    'nameOne' => 'First Name',
+    'namelast' => 'last name',
+    'email' => 'email',
+    'phone' => 'Telephone number',
+    'subject' => 'the subject',
+    'message' => 'the message',
+    'sendMessage' => 'Send your message',
 ];

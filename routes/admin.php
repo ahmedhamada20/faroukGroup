@@ -137,6 +137,9 @@ Route::middleware(['auth', 'checkInformation'])->group(function () {
 
 
     Route::get('conteactIndex',[AdminController::class,'conteactIndex'])->name('conteactIndex');
+    Route::get('conteactMessageIndex',[AdminController::class,'conteactMessageIndex'])->name('conteactMessageIndex');
+    Route::get('downloadMesageContect',[AdminController::class,'downloadMesageContect'])->name('downloadMesageContect');
+    Route::get('downloadContect',[AdminController::class,'downloadContect'])->name('downloadContect');
 
 
     // Route::resource('bestSeller', BestSellerController::class);

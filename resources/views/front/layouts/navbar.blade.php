@@ -91,7 +91,7 @@
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="{{route('home.contact')}}" class="nav-link">
+                            <a href="{{route('home.contact')}}" class="nav-link  {{getActiveRoutesHome('home.contact')}}">
                                 {{__('index.Connect_with_us')}}
                             </a>
                         </li>

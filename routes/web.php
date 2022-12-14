@@ -30,6 +30,7 @@ Route::group(
     Route::get('/contact', [HomeController::class, 'contact'])->name('home.contact');
 
     Route::post('sendmessage',[HomeController::class,'sendmessage'])->name('sendmessage');
+    Route::post('sendcontect',[HomeController::class,'sendcontect'])->name('sendcontect');
 
 
 
