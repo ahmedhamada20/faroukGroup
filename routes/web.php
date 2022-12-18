@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\Front\CustomerLoginController;
+use App\Http\Controllers\Front\CustomerRegisterController;
 use App\Http\Controllers\Front\HomeController;
 use Illuminate\Support\Facades\Route;
 use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
@@ -22,6 +24,23 @@ Route::group(
     ], function(){
 
 
+        // Login And Register Customer In System
+
+    Route::middleware('guest')->group(function () {
+        Route::get('GuestRegister', [CustomerRegisterController::class, 'create'])
+            ->name('GuestRegister');
+
+        Route::post('GuestRegister', [CustomerRegisterController::class, 'store']);
+
+        Route::get('GuestLogin', [CustomerLoginController::class, 'create'])
+            ->name('GuestLogin');
+
+        Route::post('GuestLogin', [CustomerLoginController::class, 'store']);
+
+    });
+
+
+
     Route::get('/', [HomeController::class, 'index'])->name('home');
     Route::get('/AboutUsFaroukGroup', [HomeController::class, 'aboutUs'])->name('home.aboutUs');
     Route::get('/Consulting', [HomeController::class, 'consulting'])->name('home.consulting');
@@ -35,6 +54,13 @@ Route::group(
 
 
 
+});
+
+
+Route::middleware(['auth:customer','customerCheck'])->group(function (){
+    Route::get('/dashboard/customer', [CustomerLoginController::class, 'customer'])->name('/dashboard/customer');
+    Route::post('GuestLogout', [CustomerLoginController::class, 'destroy'])
+        ->name('GuestLogout');
 });
 
 

@@ -9,6 +9,7 @@ use App\Http\Controllers\Admin\CategoryController;
 use App\Http\Controllers\Admin\CertificatesController;
 use App\Http\Controllers\Admin\CourseController;
 use App\Http\Controllers\Admin\CustomerReviewsController;
+use App\Http\Controllers\Admin\CustomersController;
 use App\Http\Controllers\Admin\EventController;
 use App\Http\Controllers\Admin\ExamController;
 use App\Http\Controllers\Admin\FeaturesPackagesController;
@@ -55,6 +56,9 @@ Route::middleware(['auth', 'checkInformation'])->group(function () {
     Route::resource('roles', RoleController::class);
     Route::resource('users', UserController::class);
 
+    Route::resource('customers',CustomersController::class);
+    Route::get('customersWaiting',[CustomersController::class,'waiting'])->name('customers.waiting');
+    Route::post('customersChange',[CustomersController::class,'customersChange'])->name('customersChange');
 
     Route::resource('ads', AdsController::class);
     Route::get('updateAdsStatus', [AdsController::class, 'changeStatus'])->name('updateAdsStatus');

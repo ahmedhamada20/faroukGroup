@@ -104,12 +104,12 @@
 
                             <ul class="dropdown-menu">
                                 <li class="nav-item">
-                                    <a href="{{route('home.services')}}" class="nav-link">
+                                    <a href="{{route('GuestRegister')}}" class="nav-link">
                                        تسجيل جديد
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="{{route('home.services')}}" class="nav-link">
+                                    <a href="{{route('GuestLogin')}}" class="nav-link">
                                        تسجيل دخول
                                     </a>
                                 </li>
