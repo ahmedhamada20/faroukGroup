@@ -1,6 +1,6 @@
 @extends('front.layouts.master')
 @section('title')
-
+صفحه غير موجوده على النظام
 @endsection
 
 @section('content')
@@ -11,12 +11,12 @@
             <div class="d-table-cell">
                 <div class="container">
                     <div class="page-banner-content">
-                        <h2>Error Page</h2>
+                        <h2>صفحه غير موجوده</h2>
                         <ul>
                             <li>
-                                <a href="index.html">Home</a>
+                                <a href="{{route('home')}}">الصفحه الرئسيه</a>
                             </li>
-                            <li>Error Page</li>
+                            <li>صفحه غير موجوده</li>
                         </ul>
                     </div>
                 </div>
@@ -31,13 +31,11 @@
             <div class="d-table-cell">
                 <div class="container">
                     <div class="error-content">
-                        <img src="assets/img/404-error.png" alt="error">
+                        <img src="{{asset('front/assets/img/404-error.png')}}" alt="error">
 
-                        <h3>Error 404 : Page Not Found</h3>
-                        <p>The page you are looking for might have been removed had its name changed or is temporarily unavailable.</p>
-
-                        <a href="index.html" class="default-btn">
-                            Go to Home
+                        <h3>صفحه غير موجوده على النظام</h3>
+                        <a href="{{route('home')}}" class="default-btn">
+                            الذهاب الي الصفحه الرئسيه
                         </a>
                     </div>
                 </div>
