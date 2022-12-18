@@ -75,7 +75,50 @@ class HomeController extends Controller
             'name_comppany' => $request->name_comppany,
             'type_company' => $request->type_company,
             'Message' => $request->Message,
-            'type_contact'=> Contact::HOMECONTECT,
+            'type_contact' => Contact::HOMECONTECT,
+        ]);
+
+        return redirect()->back()->with(['success' => __('index.sendsuccessfullyMessage')]);
+    }
+
+
+    public function sendcontect(Request $request)
+    {
+        $request->validate([
+            'name' => 'required|min:2|max:200',
+            'email' => 'required|email|min:2|max:255',
+            'subject' => 'required|min:2|max:255',
+            'phone' => 'required|min:11|numeric',
+            'message' => 'required|min:2',
+        ], [
+            'name.required' => __('index.namerequired'),
+            'name.min' => __('index.namemin'),
+            'name.max' => __('index.namemax'),
+
+            'email.required' => __('index.emailrequired'),
+            'email.min' => __('index.emailmin'),
+            'email.max' => __('index.emailmax'),
+            'email.email' => __('index.emailemail'),
+
+            'subject.required' => __('index.subjectrequired'),
+            'subject.min' => __('index.subjectmin'),
+            'subject.max' => __('index.subjectmax'),
+
+            'phone.required' => __('index.phonerequired'),
+            'phone.min' => __('index.phonemin'),
+            'phone.numeric' => __('index.phonenumeric'),
+
+            'message.required' => __('index.Messagerequired'),
+            'message.min' => __('index.Messagemin'),
+        ]);
+
+        Contact::create([
+            'name' => $request->name . $request->name_laset,
+            'email' => $request->email,
+            'subject' => $request->subject,
+            'phone' => $request->phone,
+            'Message' => $request->message,
+            'type_contact' => Contact::PAGECONTENTUS,
         ]);
 
         return redirect()->back()->with(['success' => __('index.sendsuccessfullyMessage')]);
