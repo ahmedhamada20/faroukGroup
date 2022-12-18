@@ -109,7 +109,7 @@
                 overwriteInitial: false,
                 initialPreview: [
                     @if($data->photo)
-                        "{{asset('admin/pictures/news/' . $data->id . '/'  . $data->photo->Filename)}}"
+                        "{{asset('admin/pictures/category/' . $data->id . '/'  . $data->photo->Filename)}}"
                     @endif
                 ],
                 initialPreviewAsData: true,
@@ -121,7 +121,7 @@
                         caption: "{{$data->photo->Filename}}",
                         size: '111',
                         width: "120px",
-                        url: "{{route('news_photo_remove_image',['data_id' => $data->id,'photo_id' => $data->photo->id ,'photo_name' => $data->photo->Filename, '_token' => csrf_token()])}}",
+                        url: "{{route('category_photo_remove_image',['data_id' => $data->id,'photo_id' => $data->photo->id ,'photo_name' => $data->photo->Filename, '_token' => csrf_token()])}}",
                         key: {{$data->photo->id}}
                     }
                 ]

@@ -94,7 +94,18 @@
 
                         <br>
 
-                        
+                        <div class="row">
+                            <div class="col">
+                                <h5 class="text-danger">صوره </h5>
+                                <input type="file" name="cover" id="image_updload"  accept="image/*"
+                                       class="file-input-overview">
+                            </div>
+                        </div>
+
+
+                        <br>
+
+
                         <div class="row">
                             <div class="col">
                                 <button class="btn btn-success">حفظ</button>

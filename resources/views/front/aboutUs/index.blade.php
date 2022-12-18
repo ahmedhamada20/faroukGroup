@@ -30,13 +30,14 @@ About Us
         <div class="container-fluid">
             <div class="row">
                 <div class="col-lg-6">
-                    <div class="about-image-warp image-three">
+                    <div class="" >
+                        <img src="{{ asset(aboutsActive()->image) }}" width="1000px" height="593px" alt="image">
                         <a href="https://www.youtube.com/watch?v=ODfy2YIKS1M" class="video-btn popup-youtube">
                             <i class='bx bx-play'></i>
                         </a>
                     </div>
                 </div>
-    
+
                 <div class="col-lg-6">
                     <div class="about-content warp">
                         <span>{{__('index.aboutsUs')}}</span>
@@ -45,15 +46,15 @@ About Us
                         <div class="about-inner-content">
                             <p>{!! aboutsActive()->notes!!}</p>
                             {{-- <div class="icon">--}}
-    
+
                                 {{-- </div>--}}
-    
+
                             {{-- <strong>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
                                 incididunt labore dolore magna aliqua.</strong>--}}
                             {{-- <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
                                 incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus
                                 commodo viverra maecenas accumsan lacus vel facilisis.</p>--}}
-    
+
                             {{-- <div class="about-inner-content">--}}
                                 {{-- <div class="icon">--}}
                                     {{-- <i class="flaticon-check"></i>--}}
@@ -62,7 +63,7 @@ About Us
                                 {{-- <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
                                     incididunt ut labore et dolore magna aliqua.</p>--}}
                                 {{-- </div>--}}
-    
+
                             {{-- <div class="about-inner-content">--}}
                                 {{-- <div class="icon">--}}
                                     {{-- <i class="flaticon-check"></i>--}}
@@ -71,7 +72,7 @@ About Us
                                 {{-- <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
                                     incididunt ut labore et dolore magna aliqua.</p>--}}
                                 {{-- </div>--}}
-    
+
                             {{-- <div class="about-inner-content">--}}
                                 {{-- <div class="icon">--}}
                                     {{-- <i class="flaticon-check"></i>--}}
@@ -80,7 +81,7 @@ About Us
                                 {{-- <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
                                     incididunt ut labore et dolore magna aliqua.</p>--}}
                                 {{-- </div>--}}
-    
+
                             <div class="about-btn">
                                 <a href="#" class="default-btn">
                                     Learn More
@@ -94,7 +95,7 @@ About Us
     <!-- End About Area -->
 
     <p class="">{!! aboutsActivelastet()->notes !!}</p>
-    
+
   <!-- Start Team Area -->
 <section class="team-area pb-70">
     <div class="container">
@@ -122,9 +123,9 @@ About Us
             </div>
 
             @empty
-                
+
             @endforelse
-{{--         
+{{--
             <div class="col-lg-3 col-md-6">
                 <div class="single-team-box">
                     <div class="image">

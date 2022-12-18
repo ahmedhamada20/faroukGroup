@@ -1,6 +1,6 @@
 @extends('admin.layouts.master')
 @section('title')
-إستشاره مجانية مع مطور أعمال 
+إستشاره مجانية مع مطور أعمال
 @endsection
 @section('css')
 
@@ -29,11 +29,11 @@
 
                     <div class="row">
                         <div class="col">
-                           
+
                         </div>
                     </div>
 
-                    
+
                 </div>
                 <div class="card-body">
                     <div class="table-responsive">
@@ -64,12 +64,12 @@
                                     <td>
                                         <button class="btn btn-danger btn-sm"><i class="fa fa-trash"></i></button>
                                     </td>
-                                  
+
 
                                 </tr>
                             @empty
                                 <tr>
-                                    <td colspan="6" class="table-active text-center">No Data !</td>
+                                    <td colspan="7" class="table-active text-center">No Data !</td>
                                 </tr>
                             @endforelse
                         </table>

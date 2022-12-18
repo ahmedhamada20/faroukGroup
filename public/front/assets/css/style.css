@@ -2150,7 +2150,8 @@ About Area CSS
 }
 
 .about-content span {
-  color: #fd9b5f;
+  color: #000000;
+  /*color: #fd9b5f;*/
   font-weight: bold;
   text-transform: uppercase;
 }

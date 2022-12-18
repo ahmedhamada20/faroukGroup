@@ -55,8 +55,9 @@
 <section class="about-area mt-5 pb-100">
     <div class="container-fluid">
         <div class="row">
-            <div class="col-lg-6">
-                <div class="about-image-warp image-three">
+            <div class="col-lg-6" >
+                <div class="" >
+                    <img src="{{ asset(aboutsActive()->image) }}" width="1000px" height="593px" alt="image">
                     <a href="https://www.youtube.com/watch?v=ODfy2YIKS1M" class="video-btn popup-youtube">
                         <i class='bx bx-play'></i>
                     </a>
@@ -69,43 +70,7 @@
                     <h3>{{aboutsActive()->name}}</h3>
                     <div class="bar"></div>
                     <div class="about-inner-content">
-                        <p>{!! aboutsActive()->notes!!}</p>
-                        {{-- <div class="icon">--}}
-
-                            {{-- </div>--}}
-
-                        {{-- <strong>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                            incididunt labore dolore magna aliqua.</strong>--}}
-                        {{-- <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                            incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus
-                            commodo viverra maecenas accumsan lacus vel facilisis.</p>--}}
-
-                        {{-- <div class="about-inner-content">--}}
-                            {{-- <div class="icon">--}}
-                                {{-- <i class="flaticon-check"></i>--}}
-                                {{-- </div>--}}
-                            {{-- <h4>Online Presence</h4>--}}
-                            {{-- <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                                incididunt ut labore et dolore magna aliqua.</p>--}}
-                            {{-- </div>--}}
-
-                        {{-- <div class="about-inner-content">--}}
-                            {{-- <div class="icon">--}}
-                                {{-- <i class="flaticon-check"></i>--}}
-                                {{-- </div>--}}
-                            {{-- <h4>Marketing Strategy</h4>--}}
-                            {{-- <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                                incididunt ut labore et dolore magna aliqua.</p>--}}
-                            {{-- </div>--}}
-
-                        {{-- <div class="about-inner-content">--}}
-                            {{-- <div class="icon">--}}
-                                {{-- <i class="flaticon-check"></i>--}}
-                                {{-- </div>--}}
-                            {{-- <h4>Promote local Sale</h4>--}}
-                            {{-- <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                                incididunt ut labore et dolore magna aliqua.</p>--}}
-                            {{-- </div>--}}
+                        <p class="text-success">{!! aboutsActive()->notes!!}</p>
 
                         <div class="about-btn">
                             <a href="#" class="default-btn">
@@ -359,140 +324,13 @@
 
             @endforelse
 
-{{--
-            <div class="single-portfolio-item">
-                <div class="portfolio-image">
-                    <a href="#">
-                        <img src="{{asset('front/assets/img/portfolio/portfolio-9.jpg')}}" alt="image">
-                    </a>
-                </div>
-
-                <div class="portfolio-content">
-                    <h3>
-                        <a href="#">Ecommerce Work</a>
-                    </h3>
-                    <span>Creative Agency</span>
-                </div>
-            </div>
-
-            <div class="single-portfolio-item">
-                <div class="portfolio-image">
-                    <a href="#">
-                        <img src="{{asset('front/assets/img/portfolio/portfolio-3.jpg')}}" alt="image">
-                    </a>
-                </div>
-
-                <div class="portfolio-content">
-                    <h3>
-                        <a href="#">App Development</a>
-                    </h3>
-                    <span>IOS Android</span>
-                </div>
-            </div>
-
-            <div class="single-portfolio-item">
-                <div class="portfolio-image">
-                    <a href="#">
-                        <img src="{{asset('front/assets/img/portfolio/portfolio-4.jpg')}}" alt="image">
-                    </a>
-                </div>
-
-                <div class="portfolio-content">
-                    <h3>
-                        <a href="#">Dashboard App</a>
-                    </h3>
-                    <span>Web Development</span>
-                </div>
-            </div>
-
-            <div class="single-portfolio-item">
-                <div class="portfolio-image">
-                    <a href="#">
-                        <img src="{{asset('front/assets/img/portfolio/portfolio-5.jpg')}}" alt="image">
-                    </a>
-                </div>
-
-                <div class="portfolio-content">
-                    <h3>
-                        <a href="#">Web Application</a>
-                    </h3>
-                    <span>Marketing</span>
-                </div>
-            </div>
-
-            <div class="single-portfolio-item">
-                <div class="portfolio-image">
-                    <a href="#">
-                        <img src="{{asset('front/assets/img/portfolio/portfolio-6.jpg')}}" alt="image">
-                    </a>
-                </div>
-
-                <div class="portfolio-content">
-                    <h3>
-                        <a href="#">Logo & Branding</a>
-                    </h3>
-                    <span>Agency</span>
-                </div>
-            </div> --}}
         </div>
     </div>
 </section>
 <!-- End Portfolio Area -->
 
 <!-- Start Client Area -->
-{{-- <section class="client-area ptb-100">
-    <div class="container">
-        <div class="section-title">
-            <span>Testimonials</span>
-            <h2>Client’s Review</h2>
-            <div class="bar"></div>
-        </div>
 
-        <div class="client-slider owl-carousel owl-theme">
-            <div class="client-item">
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                    labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra
-                    maecenas accumsan lacus vel facilisis.Lorem Ipsum is simply dummy text of the printing and
-                    typesetting industry. Lorem Ipsum has been the industry standard dummy text ever since the
-                    1500s, when an unknown printer took a galley</p>
-
-                <div class="client-info">
-                    <img src="{{asset('front/assets/img/client/client-1.jpg')}}" alt="image">
-                    <h3>Jacinda Meri</h3>
-                    <span>CEO & Founder</span>
-                </div>
-            </div>
-
-            <div class="client-item">
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                    labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra
-                    maecenas accumsan lacus vel facilisis.Lorem Ipsum is simply dummy text of the printing and
-                    typesetting industry. Lorem Ipsum has been the industry standard dummy text ever since the
-                    1500s, when an unknown printer took a galley</p>
-
-                <div class="client-info">
-                    <img src="{{asset('front/assets/img/client/client-2.jpg')}}" alt="image">
-                    <h3>Miraj Alex</h3>
-                    <span>Chief Executive Officer</span>
-                </div>
-            </div>
-
-            <div class="client-item">
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                    labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra
-                    maecenas accumsan lacus vel facilisis.Lorem Ipsum is simply dummy text of the printing and
-                    typesetting industry. Lorem Ipsum has been the industry standard dummy text ever since the
-                    1500s, when an unknown printer took a galley</p>
-
-                <div class="client-info">
-                    <img src="{{asset('front/assets/img/client/client-3.jpg')}}" alt="image">
-                    <h3>Edward Bold</h3>
-                    <span>Web Developer</span>
-                </div>
-            </div>
-        </div>
-    </div>
-</section> --}}
 <!-- End Client Area -->
 
 <!-- Start Quote Area -->
@@ -518,7 +356,7 @@
                         <div class="form-group">
                             <input type="text" class="form-control @error('type_company') is-invalid @enderror"  name="type_company"  required placeholder="{{ __('index.type_company') }}">
                         </div>
-                
+
                         <div class="form-group">
                             <textarea  class="form-control" name="Message" required placeholder="{{ __('index.Message') }}"></textarea>
                         </div>
@@ -580,114 +418,7 @@
             @empty
 
             @endforelse
-{{--
-            <div class="col-lg-3 col-md-6">
-                <div class="single-team-box">
-                    <div class="image">
-                        <img src="{{asset('front/assets/img/team/team-7.jpg')}}" alt="image">
 
-                        <ul class="social">
-                            <li>
-                                <a href="#" target="_blank">
-                                    <i class='bx bxl-facebook'></i>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#" target="_blank">
-                                    <i class='bx bxl-twitter'></i>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#" target="_blank">
-                                    <i class='bx bxl-linkedin'></i>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#" target="_blank">
-                                    <i class='bx bxl-instagram'></i>
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-
-                    <div class="content">
-                        <h3>Justin Roberto</h3>
-                        <span>Head Of Marketing</span>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-lg-3 col-md-6">
-                <div class="single-team-box">
-                    <div class="image">
-                        <img src="{{asset('front/assets/img/team/team-8.jpg')}}" alt="image">
-
-                        <ul class="social">
-                            <li>
-                                <a href="#" target="_blank">
-                                    <i class='bx bxl-facebook'></i>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#" target="_blank">
-                                    <i class='bx bxl-twitter'></i>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#" target="_blank">
-                                    <i class='bx bxl-linkedin'></i>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#" target="_blank">
-                                    <i class='bx bxl-instagram'></i>
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-
-                    <div class="content">
-                        <h3>Louis Agassiz</h3>
-                        <span>Web Developer</span>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-lg-3 col-md-6">
-                <div class="single-team-box">
-                    <div class="image">
-                        <img src="{{asset('front/assets/img/team/team-9.jpg')}}" alt="image">
-
-                        <ul class="social">
-                            <li>
-                                <a href="#" target="_blank">
-                                    <i class='bx bxl-facebook'></i>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#" target="_blank">
-                                    <i class='bx bxl-twitter'></i>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#" target="_blank">
-                                    <i class='bx bxl-linkedin'></i>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#" target="_blank">
-                                    <i class='bx bxl-instagram'></i>
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-
-                    <div class="content">
-                        <h3>Carl Anderson</h3>
-                        <span>Android/IOS Developer</span>
-                    </div>
-                </div>
-            </div> --}}
         </div>
     </div>
 </section>

@@ -13,6 +13,13 @@ class SettingSite extends Model
 
     public $translatable = ['name','notes'];
 
+    protected $appends = ['image'];
+
+    public function getImageAttribute()
+    {
+        return $this->photo != null ? asset('admin/pictures/setting/' . $this->id . '/' . $this->photo->Filename) : null;
+    }
+
     protected $fillable = [
         'name',
         'status',

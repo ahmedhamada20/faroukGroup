@@ -14,8 +14,8 @@
             <div class="main-responsive-menu">
                 <div class="logo">
                     <a href="{{route('home')}}">
-                        <img src="{{asset('front/assets/img/logo.png')}}" class="black-logo" alt="image">
-                        <img src="{{asset('front/assets/img/logo-2.png')}}" class="white-logo" alt="image">
+                        <img src="{{asset(settingSite()->image)}}" width="120px" height="40px" class="black-logo" alt="image">
+                        <img src="{{asset(settingSite()->image)}}" width="120px" height="40px" class="white-logo" alt="image">
                     </a>
                 </div>
             </div>
@@ -26,8 +26,8 @@
         <div class="container">
             <nav class="navbar navbar-expand-md navbar-light">
                 <a class="navbar-brand" href="{{route('home')}}">
-                    <img src="{{asset('front/assets/img/logo.png')}}" class="black-logo" alt="image">
-                    <img src="{{asset('front/assets/img/logo-2.png')}}" class="white-logo" alt="image">
+                    <img src="{{asset(settingSite()->image)}}"  width="120px" height="40px" class="black-logo" alt="image">
+                    <img src="{{asset(settingSite()->image)}}"  width="120px" height="40px" class="white-logo" alt="image">
                 </a>
 
                 <div class="collapse navbar-collapse mean-menu" id="navbarSupportedContent">
@@ -94,6 +94,26 @@
                             <a href="{{route('home.contact')}}" class="nav-link">
                                 {{__('index.Connect_with_us')}}
                             </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a href="" class="nav-link {{getActiveRoutesHome('home.services')}}">
+                               سجل حسابك الان
+                                <i class='bx bx-chevron-down'></i>
+                            </a>
+
+                            <ul class="dropdown-menu">
+                                <li class="nav-item">
+                                    <a href="{{route('home.services')}}" class="nav-link">
+                                       تسجيل جديد
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="{{route('home.services')}}" class="nav-link">
+                                       تسجيل دخول
+                                    </a>
+                                </li>
+                            </ul>
                         </li>
                     </ul>
 
