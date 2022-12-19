@@ -31,21 +31,11 @@
             <div class="row">
                 <div class="col-lg-8 col-md-12">
                     <div class="services-details-image">
-                        <img src="{{asset('front/assets/img/services-details/services-details-1.jpg')}}" alt="image">
+                        <img src="{{asset($data->image)}}" width="1000px" height="600px" alt="image">
                     </div>
 
                     <div class="services-details-desc">
-                        <h3>Creative Solutions, Creative Results</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetLorem ipsum dolor sit amet, consectetur adipisicing
-                            elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor
-                            sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
-                            magna aliqua.</p>
-
-                        <h3>Solving Problems, Building Brands</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                            labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo
-                            viverra maecenas accumsan lacus Lorem Ipsum is simply dummy text of the printing and
-                            typesetting industry.</p>
+                        {!! $data->notes !!}
 
                         <div class="services-details-features">
                             <div class="row align-items-center">
@@ -58,85 +48,57 @@
 
                                 <div class="col-lg-6">
                                     <ul class="features-list">
-                                        <li>
-                                            <i class="flaticon-check"></i>
-                                            Offering All Jobs Guaranteed & Neatly Done
-                                        </li>
-                                        <li>
-                                            <i class="flaticon-check"></i>
-                                            The Problem
-                                        </li>
-                                        <li>
-                                            <i class="flaticon-check"></i>
-                                            Dedicated and Knowledgeable Professionals
-                                        </li>
-                                        <li>
-                                            <i class="flaticon-check"></i>
-                                            The Skills
-                                        </li>
-                                        <li>
-                                            <i class="flaticon-check"></i>
-                                            We provide 24/7 on Time
-                                        </li>
-                                        <li>
-                                            <i class="flaticon-check"></i>
-                                            We Use Technology To Do The Job More Quickly
-                                        </li>
+                                        {!! $data->notes1 !!}
                                     </ul>
                                 </div>
                             </div>
                         </div>
 
                         <div class="text-result">
-                            <h3>Challenge and Solutions</h3>
-                            <p>Surrounded by their possessions, pets, and a familiar environment, our clients receive
-                                the support they ned to enjoy their regular activities and continue living well at
-                                home.</p>
+                            {!! $data->notes2 !!}
                         </div>
 
                         <div class="services-details-faq">
                             <ul class="accordion">
+                                @foreach($data->questions as $row)
                                 <li class="accordion-item">
                                     <a class="accordion-title" href="javascript:void(0)">
                                         <i class='bx bx-plus'></i>
-                                        What is digital marketing?
+                                        {{$row->name}}
                                     </a>
 
                                     <p class="accordion-content">
-                                        Digital marketing involves marketing to people using Internet-connected
-                                        electronic devices, namely computers, smartphones and tablets. Digital marketing
-                                        focuses on channels such as search engines, social media, email, websites and
-                                        apps to connect with prospects and customers.
+                                        {!! $row->notes !!}
                                     </p>
                                 </li>
+                                @endforeach
+{{--                                <li class="accordion-item">--}}
+{{--                                    <a class="accordion-title" href="javascript:void(0)">--}}
+{{--                                        <i class='bx bx-plus'></i>--}}
+{{--                                        Would my business benefit from digital marketing?--}}
+{{--                                    </a>--}}
 
-                                <li class="accordion-item">
-                                    <a class="accordion-title" href="javascript:void(0)">
-                                        <i class='bx bx-plus'></i>
-                                        Would my business benefit from digital marketing?
-                                    </a>
+{{--                                    <p class="accordion-content">--}}
+{{--                                        Digital marketing involves marketing to people using Internet-connected--}}
+{{--                                        electronic devices, namely computers, smartphones and tablets. Digital marketing--}}
+{{--                                        focuses on channels such as search engines, social media, email, websites and--}}
+{{--                                        apps to connect with prospects and customers.--}}
+{{--                                    </p>--}}
+{{--                                </li>--}}
 
-                                    <p class="accordion-content">
-                                        Digital marketing involves marketing to people using Internet-connected
-                                        electronic devices, namely computers, smartphones and tablets. Digital marketing
-                                        focuses on channels such as search engines, social media, email, websites and
-                                        apps to connect with prospects and customers.
-                                    </p>
-                                </li>
+{{--                                <li class="accordion-item">--}}
+{{--                                    <a class="accordion-title" href="javascript:void(0)">--}}
+{{--                                        <i class='bx bx-plus'></i>--}}
+{{--                                        What’s the biggest mistake digital marketers make?--}}
+{{--                                    </a>--}}
 
-                                <li class="accordion-item">
-                                    <a class="accordion-title" href="javascript:void(0)">
-                                        <i class='bx bx-plus'></i>
-                                        What’s the biggest mistake digital marketers make?
-                                    </a>
-
-                                    <p class="accordion-content">
-                                        Digital marketing involves marketing to people using Internet-connected
-                                        electronic devices, namely computers, smartphones and tablets. Digital marketing
-                                        focuses on channels such as search engines, social media, email, websites and
-                                        apps to connect with prospects and customers.
-                                    </p>
-                                </li>
+{{--                                    <p class="accordion-content">--}}
+{{--                                        Digital marketing involves marketing to people using Internet-connected--}}
+{{--                                        electronic devices, namely computers, smartphones and tablets. Digital marketing--}}
+{{--                                        focuses on channels such as search engines, social media, email, websites and--}}
+{{--                                        apps to connect with prospects and customers.--}}
+{{--                                    </p>--}}
+{{--                                </li>--}}
                             </ul>
                         </div>
                     </div>

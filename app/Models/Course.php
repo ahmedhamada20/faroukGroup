@@ -38,6 +38,12 @@ class Course extends Model
         'category_id',
     ];
 
+
+    public function questions()
+    {
+        return $this->hasMany(Question::class,'courses_id');
+    }
+
     public function Status()
     {
         return $this->status ? "Active" : 'In Active';

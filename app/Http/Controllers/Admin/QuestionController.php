@@ -116,6 +116,7 @@ class QuestionController extends Controller
         $data = [
             'data' => $this->data['Models']::findorfail($id),
         ];
+
         return view($this->data['folder'] . $this->data['folderBlade'] . '.edit', $data);
     }
 
