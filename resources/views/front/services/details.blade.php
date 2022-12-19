@@ -11,12 +11,12 @@
             <div class="d-table-cell">
                 <div class="container">
                     <div class="page-banner-content">
-                        <h2>Services Details</h2>
+                        <h2>{{$data->category->name ?? ''}}</h2>
                         <ul>
                             <li>
-                                <a href="index.html">Home</a>
+                                <a href="{{route('home')}}">الصفحه الرئسيه</a>
                             </li>
-                            <li>Services Details</li>
+                            <li>{{$data->name ?? ''}}</li>
                         </ul>
                     </div>
                 </div>
@@ -36,27 +36,52 @@
 
                     <div class="services-details-desc">
                         <h3>Creative Solutions, Creative Results</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetLorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                        <p>Lorem ipsum dolor sit amet, consectetLorem ipsum dolor sit amet, consectetur adipisicing
+                            elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor
+                            sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
+                            magna aliqua.</p>
 
                         <h3>Solving Problems, Building Brands</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                            labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo
+                            viverra maecenas accumsan lacus Lorem Ipsum is simply dummy text of the printing and
+                            typesetting industry.</p>
 
                         <div class="services-details-features">
                             <div class="row align-items-center">
                                 <div class="col-lg-6">
                                     <div class="features-image">
-                                        <img src="{{asset('front/assets/img/services-details/services-details-2.jpg')}}" alt="image">
+                                        <img src="{{asset('front/assets/img/services-details/services-details-2.jpg')}}"
+                                             alt="image">
                                     </div>
                                 </div>
 
                                 <div class="col-lg-6">
                                     <ul class="features-list">
-                                        <li><i class="flaticon-check"></i> Offering All Jobs Guaranteed & Neatly Done</li>
-                                        <li><i class="flaticon-check"></i> The Problem</li>
-                                        <li><i class="flaticon-check"></i> Dedicated and Knowledgeable Professionals</li>
-                                        <li><i class="flaticon-check"></i> The Skills</li>
-                                        <li><i class="flaticon-check"></i> We provide 24/7 on Time Services</li>
-                                        <li><i class="flaticon-check"></i> We Use Technology To Do The Job More Quickly</li>
+                                        <li>
+                                            <i class="flaticon-check"></i>
+                                            Offering All Jobs Guaranteed & Neatly Done
+                                        </li>
+                                        <li>
+                                            <i class="flaticon-check"></i>
+                                            The Problem
+                                        </li>
+                                        <li>
+                                            <i class="flaticon-check"></i>
+                                            Dedicated and Knowledgeable Professionals
+                                        </li>
+                                        <li>
+                                            <i class="flaticon-check"></i>
+                                            The Skills
+                                        </li>
+                                        <li>
+                                            <i class="flaticon-check"></i>
+                                            We provide 24/7 on Time
+                                        </li>
+                                        <li>
+                                            <i class="flaticon-check"></i>
+                                            We Use Technology To Do The Job More Quickly
+                                        </li>
                                     </ul>
                                 </div>
                             </div>
@@ -64,7 +89,9 @@
 
                         <div class="text-result">
                             <h3>Challenge and Solutions</h3>
-                            <p>Surrounded by their possessions, pets, and a familiar environment, our clients receive the support they ned to enjoy their regular activities and continue living well at home.</p>
+                            <p>Surrounded by their possessions, pets, and a familiar environment, our clients receive
+                                the support they ned to enjoy their regular activities and continue living well at
+                                home.</p>
                         </div>
 
                         <div class="services-details-faq">
@@ -76,7 +103,10 @@
                                     </a>
 
                                     <p class="accordion-content">
-                                        Digital marketing involves marketing to people using Internet-connected electronic devices, namely computers, smartphones and tablets. Digital marketing focuses on channels such as search engines, social media, email, websites and apps to connect with prospects and customers.
+                                        Digital marketing involves marketing to people using Internet-connected
+                                        electronic devices, namely computers, smartphones and tablets. Digital marketing
+                                        focuses on channels such as search engines, social media, email, websites and
+                                        apps to connect with prospects and customers.
                                     </p>
                                 </li>
 
@@ -87,7 +117,10 @@
                                     </a>
 
                                     <p class="accordion-content">
-                                        Digital marketing involves marketing to people using Internet-connected electronic devices, namely computers, smartphones and tablets. Digital marketing focuses on channels such as search engines, social media, email, websites and apps to connect with prospects and customers.
+                                        Digital marketing involves marketing to people using Internet-connected
+                                        electronic devices, namely computers, smartphones and tablets. Digital marketing
+                                        focuses on channels such as search engines, social media, email, websites and
+                                        apps to connect with prospects and customers.
                                     </p>
                                 </li>
 
@@ -98,7 +131,10 @@
                                     </a>
 
                                     <p class="accordion-content">
-                                        Digital marketing involves marketing to people using Internet-connected electronic devices, namely computers, smartphones and tablets. Digital marketing focuses on channels such as search engines, social media, email, websites and apps to connect with prospects and customers.
+                                        Digital marketing involves marketing to people using Internet-connected
+                                        electronic devices, namely computers, smartphones and tablets. Digital marketing
+                                        focuses on channels such as search engines, social media, email, websites and
+                                        apps to connect with prospects and customers.
                                     </p>
                                 </li>
                             </ul>
@@ -124,8 +160,9 @@
                             <h3>Brochures</h3>
 
                             <ul>
-                                <li><a href="#">PDF Download <i class='bx bxs-file-pdf'></i></a></li>
-                                <li><a href="#">Services Details.txt <i class='bx bxs-file-txt'></i></a></li>
+                                <li>
+                                    <a href="{{asset('admin/bdf/course/'.( $data->id ?? '') . '/' . ($data->pdf->Filename??''))}}">PDF
+                                        Download <i class='bx bxs-file-pdf'></i></a></li>
                             </ul>
                         </div>
 
@@ -138,21 +175,22 @@
                                         <i class='bx bx-user-pin'></i>
                                     </div>
                                     <span>Phone:</span>
-                                    <a href="tel:+21453545413">+2145 354 5413</a>
+                                    <a href="tel:{{settingSite()->phone}}">{{settingSite()->phone}}</a>
                                 </li>
                                 <li>
                                     <div class="icon">
                                         <i class='bx bx-map'></i>
                                     </div>
                                     <span>Location:</span>
-                                    New York, USA
+                                    {{settingSite()->address}}
                                 </li>
                                 <li>
                                     <div class="icon">
                                         <i class='bx bx-envelope'></i>
                                     </div>
                                     <span>Email:</span>
-                                    <a href="https://templates.envytheme.com/cdn-cgi/l/email-protection#f69e939a9a99b685869f8ed895999b"><span class="__cf_email__" data-cfemail="2c44494040436c5f5c4554024f4341">[email&#160;protected]</span></a>
+                                    <span class="__cf_email__"
+                                          data-cfemail="2c44494040436c5f5c4554024f4341">  {{settingSite()->email}}</span>
                                 </li>
                             </ul>
                         </div>

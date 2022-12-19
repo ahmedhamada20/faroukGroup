@@ -17,7 +17,7 @@ class Customer extends Authenticatable
             'customers.name' => 10,
             'customers.email' => 10,
             'customers.address' => 10,
-            'customers.phone' => 10,
+            'customers.phone' => 11,
         ],
     ];
 

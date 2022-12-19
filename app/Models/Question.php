@@ -27,11 +27,17 @@ class Question extends Model
         'name',
         'notes',
         'status',
+        'courses_id',
     ];
 
     public function Status()
     {
         return $this->status ? "Active" : 'In Active';
+    }
+
+    public function courses()
+    {
+        return $this->belongsTo(Course::class,'courses_id');
     }
 
 

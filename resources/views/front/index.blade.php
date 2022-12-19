@@ -156,13 +156,13 @@
             <div class="col-lg-4 col-md-6">
                 <div class="single-services-item">
                     <div class="image">
-                        <a href="services-details.html">
+                        <a href="{{route('home.servicesDetails',$category->id)}}">
                             <img src="{{asset('front/assets/img/services/services-7.jpg')}}" alt="image">
                         </a>
                     </div>
                     <div class="content">
                         <h3>
-                            <a href="services-details.html">{{ $category->name }}</a>
+                            <a href="{{route('home.servicesDetails',$category->id)}}">{{ $category->name }}</a>
                         </h3>
                         <span>{!! $category->notes !!}</span>
                     </div>

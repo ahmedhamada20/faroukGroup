@@ -45,7 +45,7 @@ Route::group(
     Route::get('/AboutUsFaroukGroup', [HomeController::class, 'aboutUs'])->name('home.aboutUs');
     Route::get('/Consulting', [HomeController::class, 'consulting'])->name('home.consulting');
     Route::get('/services', [HomeController::class, 'services'])->name('home.services');
-    Route::get('/servicesDetails', [HomeController::class, 'servicesDetails'])->name('home.servicesDetails');
+    Route::get('/servicesDetails/{id}', [HomeController::class, 'servicesDetails'])->name('home.servicesDetails');
     Route::get('/contact', [HomeController::class, 'contact'])->name('home.contact');
 
     Route::post('sendmessage',[HomeController::class,'sendmessage'])->name('sendmessage');

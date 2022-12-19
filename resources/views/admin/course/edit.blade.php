@@ -47,9 +47,9 @@
                     <br>
                     <div class="row">
                         <div class="col">
-                            <label>Category</label>
+                            <label>فئات الخدمات</label>
                             <select class="form-control" name="category_id" required>
-                                <option value="" disabled selected>-- Choose Category --</option>
+                                <option value="" disabled selected>-- فئات الخدمات --</option>
                                 @forelse($categories as $category)
                                 <option value="{{$category->id}}" {{$category->id == $data->category_id ? 'selected' :
                                     ''}}>{{$category->name}}</option>
@@ -99,9 +99,55 @@
 
                     <div class="row">
                         <div class="col">
-                            <label>الوصف بالغه الانجليزيه</label>
+                            <label>الوصف  2بالغه الانجليزيه</label>
                             <textarea class="form-control" name="notes_en" rows="5" id="summernote2">
                             {{$data->getTranslation('notes','en')}}
+                                </textarea>
+                        </div>
+                    </div>
+
+                     <br>
+
+                    <div class="row">
+                        <div class="col">
+                            <label>الوصف 2بالغه العربيه </label>
+                            <textarea class="form-control" name="notes1" rows="5" id="summernote3">
+                        {{$data->getTranslation('notes1','ar')}}
+                                </textarea>
+                        </div>
+                    </div>
+
+                    <br>
+
+
+                    <div class="row">
+                        <div class="col">
+                            <label>الوصف2 بالغه الانجليزيه</label>
+                            <textarea class="form-control" name="notes1_en" rows="5" id="summernote4">
+                            {{$data->getTranslation('notes1','en')}}
+                                </textarea>
+                        </div>
+                    </div>
+
+                     <br>
+
+                    <div class="row">
+                        <div class="col">
+                            <label>الوصف 3بالغه العربيه </label>
+                            <textarea class="form-control" name="notes2" rows="5" id="summernote5">
+                        {{$data->getTranslation('notes2','ar')}}
+                                </textarea>
+                        </div>
+                    </div>
+
+                    <br>
+
+
+                    <div class="row">
+                        <div class="col">
+                            <label>الوصف3 بالغه الانجليزيه</label>
+                            <textarea class="form-control" name="notes2_en" rows="5" id="summernote6">
+                            {{$data->getTranslation('notes2','en')}}
                                 </textarea>
                         </div>
                     </div>
@@ -119,11 +165,9 @@
                     <br>
                     <div class="row">
                         <div class="col">
-                            <label>الصوره</label>
-                            <input type="file" name="FilenameMany[]" id="image_updload" multiple accept="image/*"
-                                class="file-input-overview">
-
-
+                            <label>صوره الموقع</label>
+                            <input type="file" name="cover" id="image_updload" multiple accept="image/*" class="file-input-overview">
+                            <input type="hidden" name="oldfile" value="{{$data->photo->Filename ?? ''}}">
                         </div>
                     </div>
                     <br>
@@ -147,43 +191,39 @@
 @endsection
 @section('js')
 
-<script>
-    $(function () {
+    <script>
+        $(function () {
             $("#image_updload").fileinput({
                 theme: "fa5",
-                maxFileCount: 10,
+                maxFileCount: 1,
                 allowedFileTypes: ['image'],
                 showCancel: true,
                 showRemove: false,
                 showUpload: false,
                 overwriteInitial: false,
                 initialPreview: [
-                    @if($data->photos)
-                        @foreach($data->photos as $row)
-                        "{{asset('admin/pictures/course/' . $data->id . '/'  . $row->Filename)}}",
-                    @endforeach
-
+                    @if($data->photo)
+                        "{{asset('admin/pictures/course/' . $data->id . '/'  . $data->photo->Filename)}}"
                     @endif
                 ],
                 initialPreviewAsData: true,
                 initialPreviewFileType: 'image',
 
+                @if($data->photo)
                 initialPreviewConfig: [
-                        @if($data->photos)
-                        @foreach($data->photos as $row)
                     {
-                        caption: "{{$row->Filename}}",
+                        caption: "{{$data->photo->Filename}}",
                         size: '111',
                         width: "120px",
-                        url: "{{route('course_photo_remove_image',['data_id' => $data->id,'photo_id' => $row->id ,'photo_name' => $row->Filename, '_token' => csrf_token()])}}",
-                        key: {{$row->id}}
-                    },
-                    @endforeach
-                    @endif
+                        url: "{{route('course_photo_remove_image',['data_id' => $data->id,'photo_id' => $data->photo->id ,'photo_name' => $data->photo->Filename, '_token' => csrf_token()])}}",
+                        key: {{$data->photo->id}}
+                    }
                 ]
+                @endif
+
             });
         });
-</script>
+    </script>
 
 <script>
     $(function () {

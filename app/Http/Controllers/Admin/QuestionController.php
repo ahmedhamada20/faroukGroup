@@ -67,6 +67,7 @@ class QuestionController extends Controller
             'name' => ['ar' => $request->name, 'en' => $request->name_en],
             'notes' => ['ar' => $request->notes, 'en' => $request->notes_en],
             'status' => $request->status,
+            'courses_id' => $request->courses_id,
 
 
         ]);
@@ -132,6 +133,7 @@ class QuestionController extends Controller
         $data->update([
             'name' => ['ar' => $request->name, 'en' => $request->name_en],
             'notes' => ['ar' => $request->notes, 'en' => $request->notes_en],
+            'courses_id'=> $request->courses_id,
         ]);
 
 

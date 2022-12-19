@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Models\Category;
 use App\Models\PDF;
 use App\Models\Photo;
+use App\Models\Question;
 use App\Models\Seo;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\File;
@@ -66,11 +67,13 @@ class CourseController extends Controller
      */
     public function store(Request $request)
     {
-
+//dd($request->all());
 
         $data = $this->data['Models']::create([
             'name' => ['ar' => $request->name, 'en' => $request->name_en],
             'notes' => ['ar' => $request->notes, 'en' => $request->notes_en],
+            'notes1' => ['ar' => $request->notes1, 'en' => $request->notes1_en],
+            'notes2' => ['ar' => $request->notes2, 'en' => $request->notes2_en],
             'status' => $request->status,
             'url' => $request->url,
             'price' => $request->price,
@@ -87,14 +90,14 @@ class CourseController extends Controller
         ]);
 
         // Insert Many Photos
-        if ($request->hasfile('FilenameMany')) {
-            foreach ($request->file('FilenameMany') as $file) {
-                $name = $file->getClientOriginalName();
-                $file->move('admin/pictures/' . '/' . $this->data['folderBlade'] . '/' . $data->id, $file->getClientOriginalName());
+        if ($file = $request->file('cover')) {
+            $file_name = $file->getClientOriginalName();
+            $file_name_Extension = $request->file('cover')->getClientOriginalExtension();
+            $file_to_store = time() . '_' . explode('.', $file_name)[0] . '_.' . $file_name_Extension;
 
-                // Inset Date
+            if ($file->move('admin/pictures/' . $this->data['folderBlade'] . '/' . $data->id, $file_to_store)) {
                 Photo::create([
-                    'Filename' => $name,
+                    'Filename' => $file_to_store,
                     'photoable_id' => $data->id,
                     'photoable_type' => $this->data['Models'],
                 ]);
@@ -161,6 +164,8 @@ class CourseController extends Controller
         $data->update([
             'name' => ['ar' => $request->name, 'en' => $request->name_en],
             'notes' => ['ar' => $request->notes, 'en' => $request->notes_en],
+            'notes1' => ['ar' => $request->notes1, 'en' => $request->notes1_en],
+            'notes2' => ['ar' => $request->notes2, 'en' => $request->notes2_en],
             'url' => $request->url,
             'price' => $request->price,
             'category_id' => $request->category_id,
@@ -179,14 +184,17 @@ class CourseController extends Controller
         // Inset One Photo
 
         // Insert Many Photos
-        if ($request->hasfile('FilenameMany')) {
-            foreach ($request->file('FilenameMany') as $file) {
-                $name = $file->getClientOriginalName();
-                $file->move('admin/pictures/' . '/' . $this->data['folderBlade'] . '/' . $data->id, $file->getClientOriginalName());
-
-                // Inset Date
-                Photo::create([
-                    'Filename' => $name,
+        if ($file = $request->file('cover')) {
+            File::delete(public_path('admin/pictures/' . $this->data['folderBlade'] . '/' . $request->id . '/' . $request->oldfile));
+            $file_name = $file->getClientOriginalName();
+            $file_name_Extension = $request->file('cover')->getClientOriginalExtension();
+            $file_to_store = time() . '_' . explode('.', $file_name)[0] . '_.' . $file_name_Extension;
+            if ($file->move('admin/pictures/' . $this->data['folderBlade'] . '/' . $request->id, $file_to_store)) {
+                Photo::updateOrCreate([
+                    'photoable_id' => $request->id,
+                    'photoable_type' => $this->data['Models'],
+                ], [
+                    'Filename' => $file_to_store,
                     'photoable_id' => $data->id,
                     'photoable_type' => $this->data['Models'],
                 ]);
@@ -226,13 +234,22 @@ class CourseController extends Controller
 
     public function destroy(Request $request)
     {
-        $this->data['Models']::destroy($request->id);
-        if ($request->oldfile) {
-            File::delete(public_path('admin/pictures/' . $this->data['folderBlade'] . '/' . $request->id . '/' . $request->oldfile));
-            Photo::where('photoable_id', $request->id)->where('photoable_type', $this->data['Models'])->delete();
+
+
+        if (Question::where('courses_id',$request->id)->first()){
+            toastr()->error('Error Deleted Place Deleted Question\'s First');
+            return redirect($this->data['route']);
+        }else{
+            $this->data['Models']::destroy($request->id);
+            if ($request->oldfile) {
+                File::delete(public_path('admin/pictures/' . $this->data['folderBlade'] . '/' . $request->id . '/' . $request->oldfile));
+                Photo::where('photoable_id', $request->id)->where('photoable_type', $this->data['Models'])->delete();
+            }
+            toastr()->success('Done Deleted Successfully');
+            return redirect($this->data['route']);
         }
-        toastr()->success('Done Deleted Successfully');
-        return redirect($this->data['route']);
+
+
     }
 
 

@@ -42,14 +42,12 @@
                         <br>
                         <div class="row">
                             <div class="col">
-                                <label>Category</label>
+                                <label>فئات الخدمات</label>
                                 <select class="form-control" name="category_id" required>
-                                    <option value="" disabled selected>-- Choose Category --</option>
-                                    @forelse($categories as $category)
+                                    <option value="" disabled selected>-- اختر من فئات الخدمات --</option>
+                                    @foreach($categories as $category)
                                         <option value="{{$category->id}}">{{$category->name}}</option>
-                                    @empty
-                                        <option value="" disabled selected>-- No Category Active --</option>
-                                    @endforelse
+                                        @endforeach
                                 </select>
                             </div>
                         </div>
@@ -94,6 +92,7 @@
                             </div>
                         </div>
                         <br>
+
                         <div class="row">
                             <div class="col">
                                 <label>الوصف بالغه العربيه </label>
@@ -116,6 +115,50 @@
                         </div>
 
                         <br>
+                        <div class="row">
+                            <div class="col">
+                                <label>الوصف   2بالغه العربيه </label>
+                                <textarea class="form-control" name="notes1" rows="5" id="summernote3">
+
+                                </textarea>
+                            </div>
+                        </div>
+
+                        <br>
+
+
+                        <div class="row">
+                            <div class="col">
+                                <label>الوصف2 بالغه الانجليزيه</label>
+                                <textarea class="form-control" name="notes1_en" rows="5" id="summernote4">
+
+                                </textarea>
+                            </div>
+                        </div>
+
+                        <br>
+                        <div class="row">
+                            <div class="col">
+                                <label>الوصف   3بالغه العربيه </label>
+                                <textarea class="form-control" name="notes2" rows="5" id="summernote5">
+
+                                </textarea>
+                            </div>
+                        </div>
+
+                        <br>
+
+
+                        <div class="row">
+                            <div class="col">
+                                <label>الوصف3 بالغه الانجليزيه</label>
+                                <textarea class="form-control" name="notes2_en" rows="5" id="summernote6">
+
+                                </textarea>
+                            </div>
+                        </div>
+
+                        <br>
 
                         <br>
 
@@ -131,8 +174,8 @@
 
                         <div class="row">
                             <div class="col">
-                                <label>الصوره</label>
-                                <input type="file" name="FilenameMany[]" id="image_updload" multiple accept="image/*"
+                                <h5 class="text-danger">صوره الموقع</h5>
+                                <input type="file" name="cover" id="image_updload"  accept="image/*"
                                        class="file-input-overview">
                             </div>
                         </div>
@@ -161,7 +204,7 @@
         $(function () {
             $("#image_updload").fileinput({
                 theme: "fa5",
-                maxFileCount: 20,
+                maxFileCount: 1,
                 allowedFileTypes: ['image'],
                 showCancel: true,
                 showRemove: false,

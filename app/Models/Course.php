@@ -13,7 +13,7 @@ class Course extends Model
     use HasTranslations;
     use SearchableTrait;
 
-    public $translatable = ['name', 'notes'];
+    public $translatable = ['name', 'notes' , 'notes1', 'notes2'];
     protected $appends = ['image','file'];
 
     public function getImageAttribute()
@@ -32,6 +32,8 @@ class Course extends Model
         'notes',
         'url',
         'status',
+        'notes1',
+        'notes2',
         'price',
         'category_id',
     ];
@@ -53,10 +55,10 @@ class Course extends Model
         return $this->morphOne(Photo::class, 'photoable');
     }
 
-    public function photos()
-    {
-        return $this->morphMany(Photo::class, 'photoable');
-    }
+//    public function photos()
+//    {
+//        return $this->morphMany(Photo::class, 'photoable');
+//    }
 
     public function pdf()
     {

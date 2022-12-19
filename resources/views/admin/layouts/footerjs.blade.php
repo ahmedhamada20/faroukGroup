@@ -106,6 +106,41 @@
     });
 
     $(document).ready(function () {
+        $('#summernote3').summernote({
+            placeholder: 'Text Notes',
+            tabsize: 2,
+            height: 100,
+            rows: 20
+        });
+    });
+    $(document).ready(function () {
+        $('#summernote4').summernote({
+            placeholder: 'Text Notes',
+            tabsize: 2,
+            height: 100,
+            rows: 20
+        });
+    });
+
+    $(document).ready(function () {
+        $('#summernote5').summernote({
+            placeholder: 'Text Notes',
+            tabsize: 2,
+            height: 100,
+            rows: 20
+        });
+    });
+
+    $(document).ready(function () {
+        $('#summernote6').summernote({
+            placeholder: 'Text Notes',
+            tabsize: 2,
+            height: 100,
+            rows: 20
+        });
+    });
+
+    $(document).ready(function () {
         $('.js-example-basic-multiple').select2();
     });
 </script>

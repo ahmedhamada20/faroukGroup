@@ -18,6 +18,7 @@ class CreateQuestionsTable extends Migration
             $table->text('name');
             $table->longText('notes')->nullable();
             $table->boolean('status')->default(false);
+            $table->foreignId('courses_id')->constrained('courses')->cascadeOnDelete()->cascadeOnUpdate();
             $table->timestamps();
         });
     }

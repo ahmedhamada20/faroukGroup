@@ -152,10 +152,10 @@ Route::middleware(['auth', 'checkInformation'])->group(function () {
 
 
 
-    // Route::resource('question', QuestionController::class);
-    // Route::get('updateQuestionStatus', [QuestionController::class, 'changeStatus'])->name('updateQuestionStatus');
-    // Route::post('question_remove_image', [QuestionController::class, 'question_remove_image'])->name('question_remove_image');
-    // Route::post('question_photo_remove_image', [QuestionController::class, 'question_photo_remove_image'])->name('question_photo_remove_image');
+     Route::resource('question', QuestionController::class);
+     Route::get('updateQuestionStatus', [QuestionController::class, 'changeStatus'])->name('updateQuestionStatus');
+     Route::post('question_remove_image', [QuestionController::class, 'question_remove_image'])->name('question_remove_image');
+     Route::post('question_photo_remove_image', [QuestionController::class, 'question_photo_remove_image'])->name('question_photo_remove_image');
 
 
 

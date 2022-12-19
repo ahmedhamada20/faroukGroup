@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Front;
 
 use App\Http\Controllers\Controller;
 use App\Models\Contact;
+use App\Models\Course;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
 
@@ -30,9 +31,10 @@ class HomeController extends Controller
         return view('front.services.index');
     }
 
-    public function servicesDetails()
+    public function servicesDetails($id)
     {
-        return view('front.services.details');
+        $data = Course::where('category_id',$id)->first();
+        return view('front.services.details',compact('data'));
     }
 
     public function contact()

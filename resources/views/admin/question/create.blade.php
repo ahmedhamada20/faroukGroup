@@ -59,6 +59,17 @@
                                 </select>
                             </div>
 
+
+                            <div class="col">
+                                <label>صفحه الخدمات</label>
+                                <select class="form-control" name="courses_id" required>
+                                    <option value="" disabled selected>-- اختر من صفحه الخدمات --</option>
+                                    @foreach(App\Models\Course::where('status',true)->get() as $courses)
+                                        <option value="{{$courses->id}}">{{$courses->name}}</option>
+                                    @endforeach
+                                </select>
+                            </div>
+
                         </div>
 
                         <br>
