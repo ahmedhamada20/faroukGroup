@@ -49,7 +49,7 @@
                             </a>
 
                             <ul class="dropdown-menu">
-                                @foreach(App\Models\Category::where('status',true)->limit(3)->get() as $row)
+                                @foreach(App\Models\Category::where('status',true)->limit(4)->get() as $row)
                                     <li class="nav-item">
                                         <a href="{{route('home.servicesDetails',$row->id)}}" class="nav-link ">
                                            {{$row->name}}
