@@ -122,12 +122,17 @@
                         </ul>
 
                         <div class="download-file">
-                            <h3>Brochures</h3>
+                            <h3>المرفقات</h3>
 
                             <ul>
+                                @if($data->pdf->Filename ?? '')
                                 <li>
                                     <a href="{{asset('admin/bdf/course/'.( $data->id ?? '') . '/' . ($data->pdf->Filename??''))}}">PDF
                                         Download <i class='bx bxs-file-pdf'></i></a></li>
+
+                                @else
+                                    لا يوجد مرفقات لهده الخدمه
+                                @endif
                             </ul>
                         </div>
 

@@ -18,7 +18,6 @@ return [
     'name_comppany' => 'Company Name',
     'type_company' => 'Define the problem',
     'Message' => 'Message',
-    'sendMessage' => ' Send Message',
     'Free_consultation_with_a_business_developer' => 'Free consultation with a business developer',
 
     'namerequired' => 'name required',

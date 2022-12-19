@@ -46,6 +46,7 @@
                             <tr>
                                 <th>#</th>
                                 <th>الإسم</th>
+                                <th>رقم الهاتف</th>
                                 <th>النشاط</th>
                                 <th>إسم الشركة</th>
                                 <th>حدد المشكلة</th>
@@ -60,6 +61,7 @@
                                 <tr>
                                     <td>{{$loop->index+1}}</td>
                                     <td>{{$row->name}}</td>
+                                    <td>{{$row->phone}}</td>
                                     <td>{{$row->activity}}</td>
                                     <td>{{$row->name_comppany}}</td>
                                     <td>{{$row->type_company}}</td>

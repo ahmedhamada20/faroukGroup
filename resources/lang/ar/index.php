@@ -58,5 +58,4 @@ return [
     'phone' => 'رقم الهاتف',
     'subject' => 'الموضوع',
     'message' => 'الرساله',
-    'sendMessage' => 'ارسل رسالتك',
 ];

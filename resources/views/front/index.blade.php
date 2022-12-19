@@ -35,7 +35,7 @@
                                 <p>
                                     {!!sliderActive()->notes!!}
                                 </p>
-                                <a href="" class="default-btn mt-3">حدد احتياجاتك</a>
+                                <a href="{{route('home.contactUs')}}" class="default-btn mt-3">حدد احتياجاتك</a>
                             </div>
                         </div>
                         <div class="col-lg-6">
@@ -55,9 +55,17 @@
 <section class="about-area mt-5 pb-100">
     <div class="container-fluid">
         <div class="row">
-            <div class="col-lg-6" >
-                <div class="" >
-                    <img src="{{ asset(aboutsActive()->image) }}" width="1000px" height="593px" alt="image">
+{{--            <div class="col-lg-6" >--}}
+{{--                <div class="" >--}}
+{{--                    <img src="{{ asset(aboutsActive()->image) }}" width="1000px" height="593px" alt="image">--}}
+{{--                    <a href="https://www.youtube.com/watch?v=ODfy2YIKS1M" class="video-btn popup-youtube">--}}
+{{--                        <i class='bx bx-play'></i>--}}
+{{--                    </a>--}}
+{{--                </div>--}}
+{{--            </div>--}}
+
+            <div class="col-lg-6">
+                <div class="about-image-warp image-three">
                     <a href="https://www.youtube.com/watch?v=ODfy2YIKS1M" class="video-btn popup-youtube">
                         <i class='bx bx-play'></i>
                     </a>
@@ -89,58 +97,375 @@
 <section class="digital-experience-area ptb-100">
     <div class="container">
         <div class="section-title">
-            <span>Digital Experience</span>
-            <h2>Outstanding Digital Experience</h2>
+            <h2>خدماتنا</h2>
             <div class="bar"></div>
         </div>
 
         <div class="tab digital-experience-tab">
             <ul class="tabs">
-
-                @forelse (activeProduct() as $product)
-                <li class="bg-5cbd12" id="{{ $product->id }}">
-                    <a href="#{{ $product->id }}">
-                        <span>
-                            <i class="flaticon-profit"></i>
-                            {{ $product->name }}
-                        </span>
+                <li>
+                    <a href="#">
+                                <span>
+                                    <i class="flaticon-analysis"></i>
+                                   المدير الرقمي
+                                </span>
                     </a>
                 </li>
-                @empty
 
-                @endforelse
+                <li class="bg-5cbd12">
+                    <a href="#">
+                                <span>
+                                    <i class="flaticon-profit"></i>
+                                   التسويق الرقمي
+                                </span>
+                    </a>
+                </li>
 
+                <li class="bg-e2851b">
+                    <a href="#">
+                                <span>
+                                    <i class="flaticon-digital-marketing"></i>
+                                   منصة تارجت
+                                </span>
+                    </a>
+                </li>
 
+                <li class="bg-04b893">
+                    <a href="#">
+                                <span>
+                                    <i class="flaticon-email-marketing"></i>
+                                    قاعدة بيانات تارجت
+                                </span>
+                    </a>
+                </li>
+
+                <li class="bg-785eda">
+                    <a href="#">
+                                <span>
+                                    <i class="flaticon-network"></i>
+                                    تارجت لتصميم وتطوير المواقع
+                                </span>
+                    </a>
+                </li>
+
+                <li class="bg-d0465a">
+                    <a href="#">
+                                <span>
+                                    <i class="flaticon-digital-marketing-2"></i>
+                                   تطوير الأعمال
+                                </span>
+                    </a>
+                </li>
             </ul>
 
             <div class="tab_content">
-                @forelse (activeProduct() as $product)
-                <div class="tabs_item" id="{{ $product->id}}">
+                <div class="tabs_item">
                     <div class="row align-items-center">
                         <div class="col-lg-6">
                             <div class="digital-experience-content">
-                                {!! $product->notes !!}
+
+
+                                <div class="experience-inner-content">
+                                    <div class="icon">
+                                        <i class="flaticon-check"></i>
+                                    </div>
+                                    <h3>أول نظام للإدارة الإلكترونية</h3>
+                                    <p>تهيئة خاصة لإدارة شركتك وإنشاء نظام إداري متكامل للمدراء ورؤساء مجلس الإدارة والمدراء التنفيذيين</p>
+                                </div>
+
+                                <div class="experience-inner-content">
+                                    <div class="icon">
+                                        <i class="flaticon-check"></i>
+                                    </div>
+                                    <h3>رؤية المدير الرقمي</h3>
+                                    <p>توظيف علوم تكنولوجيا المعلومات والإدارة لتقديم حلول تقنية تساعد المدير التنفيذي في المتابعة والإشراف والرقابة على أهداف الإدارات وتوجيه السياسات والإجراءات نحو تحقيق أهداف المؤسسة وتوفير المرونة اللازمة للاستجابة للمتغيرات المتلاحقة سواء الداخلية أو الخارجية.</p>
+                                </div>
+
+                                <div class="experience-inner-content">
+                                    <div class="icon">
+                                        <i class="flaticon-check"></i>
+                                    </div>
+                                    <h3>مهمة المدير الرقمي</h3>
+                                    <p>فهم احتياجات المدير التنفيذي وتحليل استراتيجيات العمل لابتكار حلول تكنولوجية لتحقيق النتائج المستهدفة في نظام رقمي متكامل</p>
+                                </div>
                             </div>
                         </div>
 
                         <div class="col-lg-6">
                             <div class="digital-experience-image">
-                                <img src="{{ asset('front/assets/img/digital-experience/digital-experience-1.png') }}" alt="image">
+                                <img src="{{asset('front/assets/img/digital-experience/digital-experience-1.png')}}" alt="image">
                             </div>
                         </div>
                     </div>
                 </div>
-                @empty
 
-                @endforelse
+                <div class="tabs_item">
+                    <div class="row align-items-center">
+                        <div class="col-lg-6">
+                            <div class="digital-experience-content">
+
+                                <div class="experience-inner-content">
+                                    <div class="icon">
+                                        <i class="flaticon-check"></i>
+                                    </div>
+                                    <h3>تصميم الهوية البصرية وإبتكار القيمة</h3>
+                                    <p>نقدم خدمة التسويق الرقمي وندير علامتك التجارية لخلق فرصا جديدة لأعمالك</p>
+                                </div>
+
+                                <div class="experience-inner-content">
+                                    <div class="icon">
+                                        <i class="flaticon-check"></i>
+                                    </div>
+                                    <h3>
+                                        رؤيته</h3>
+                                    <p>تطوير وتسويق محتوى خاص بك؛ لإشراك عملاءك المحتملين وجمهورك المستهدف والاحتفاظ بهم وتحويل منتجاتك وخدماتك إلى علامة مميزة.</p>
+                                </div>
+
+                                <div class="experience-inner-content">
+                                    <div class="icon">
+                                        <i class="flaticon-check"></i>
+                                    </div>
+                                    <h3>مهمه</h3>
+                                    <p>تسويق وكتابة وتصميم المحتوى للتواصل والتفاعل مع جمهورك وجذبهم، وإلهام عملائك المحتملين وتحويلهم الى جمهور أساسي لعملك</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-6">
+                            <div class="digital-experience-image">
+                                <img src="{{asset('front/assets/img/digital-experience/digital-experience-3.png')}}" alt="image">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tabs_item">
+                    <div class="row align-items-center">
+                        <div class="col-lg-6">
+                            <div class="digital-experience-content">
 
 
+                                <div class="experience-inner-content">
+                                    <div class="icon">
+                                        <i class="flaticon-check"></i>
+                                    </div>
+                                    <h3>أول مجتمع رقمي للشركات فى مصر</h3>
+                                    <p>إنضم إلي المجتمع المستهدف للشركات</p>
+                                </div>
 
+                                <div class="experience-inner-content">
+                                    <div class="icon">
+                                        <i class="flaticon-check"></i>
+                                    </div>
+                                    <h3>رؤية منصة تارجت</h3>
+                                    <p>توظيف علوم تكنولوجيا المعلومات والإدارة لإنشاء مجتمع متواصل موجه لمؤسسات الأعمال من خلال منصة رقمية تقدم حلولاً تقنية لخلق فرصاُ جديدة تبدأ من جمهورية مصر العربية وتمتد لوطننا العربي.
+
+                                    </p>
+                                </div>
+
+                                <div class="experience-inner-content">
+                                    <div class="icon">
+                                        <i class="flaticon-check"></i>
+                                    </div>
+                                    <h3>مهمة منصة تارجت</h3>
+                                    <p>فهم إحتياجات عملائنا وتحليل استراتيجات العلاقات بين مؤسسات الأعمال وبين المستهلكين والشركات لابتكار حلول تكنولوجية لتحقيق النتائج المستهدفة للتحول الرقمي.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-6">
+                            <div class="digital-experience-image">
+                                <img src="{{asset('front/assets/img/digital-experience/digital-experience-2.png')}}" alt="image">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="tabs_item">
+                    <div class="row align-items-center">
+                        <div class="col-lg-6">
+                            <div class="digital-experience-content">
+
+                                <div class="experience-inner-content">
+                                    <div class="icon">
+                                        <i class="flaticon-check"></i>
+                                    </div>
+                                    <h3>أكبر قاعدة بيانات مبوبه ومصنفة فى مصر</h3>
+                                    <p>إنشئ قاعدة البيانات الخاصة بك وحدد عملائك</p>
+                                </div>
+
+                                <div class="experience-inner-content">
+                                    <div class="icon">
+                                        <i class="flaticon-check"></i>
+                                    </div>
+                                    <h3>رؤيته بيانات تارجت</h3>
+                                    <p>أكبر قاعدة بيانات الكترونية مصنفة ومبوبة حسب احتياجات العملاء في الوطن العربي
+
+                                    </p>
+                                </div>
+
+                                <div class="experience-inner-content">
+                                    <div class="icon">
+                                        <i class="flaticon-check"></i>
+                                    </div>
+                                    <h3>مهمة بيانات تارجت</h3>
+                                    <p>توفير أكبر مصدر موثوق للبيانات مصنفة ومبوبه حسب إجتيادات عملائنا وسهوله التواصل معهم</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-6">
+                            <div class="digital-experience-image">
+                                <img src="{{asset('front/assets/img/digital-experience/digital-experience-4.png')}}" alt="image">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tabs_item">
+                    <div class="row align-items-center">
+                        <div class="col-lg-6">
+                            <div class="digital-experience-content">
+
+                                <div class="experience-inner-content">
+                                    <div class="icon">
+                                        <i class="flaticon-check"></i>
+                                    </div>
+                                    <h3>نفهم ونحلل ونوظف البرمجيات لخلق فرص إستثمارية</h3>
+                                    <p>نصنع مرآة تعكس منتجاتك وأعمالك بصورة أفضل بعد دراسة السوق وطبيعة المؤسسة والمنافسين</p>
+                                </div>
+
+                                <div class="experience-inner-content">
+                                    <div class="icon">
+                                        <i class="flaticon-check"></i>
+                                    </div>
+                                    <h3>رؤيته تطوير تارجت للمواقع</h3>
+                                    <p>فهم إحتياجات عملائنا وتحليل استراتيجات العمل لابتكار حلول تكنولوجية لتحقيق النتائج المستهدفة للتحول الرقمي</p>
+                                </div>
+
+                                <div class="experience-inner-content">
+                                    <div class="icon">
+                                        <i class="flaticon-check"></i>
+                                    </div>
+                                    <h3>المهمة</h3>
+                                    <p>
+                                        <li> تعظيم رؤية الموقع</li>
+                                       <li> زيادة حركة المرور على الموقع</li>
+                                       <li>   تحويل الزائرين إلى حجوزات بيعية</li>
+                                     <li>  تعظيم عائد الاستثمار [ROI]</li>
+
+
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-6">
+                            <div class="digital-experience-image">
+                                <img src="{{asset('front/assets/img/digital-experience/digital-experience-5.png')}}" alt="image">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tabs_item">
+                    <div class="row align-items-center">
+                        <div class="col-lg-6">
+                            <div class="digital-experience-content">
+
+                                <div class="experience-inner-content">
+                                    <div class="icon">
+                                        <i class="flaticon-check"></i>
+                                    </div>
+                                    <h3>رؤيتنا </h3>
+                                    <p>تمكين القدرات الإدارية والبشرية والتسويقية من خلال تحسين الأداء التنظيمي للمؤسسة واستغلال الفرص الاستثمارية لتقديم حلولاً تخلق فرصاُ جديدة لعملائنا؛ وتحقيق أعلى معدلات الأداء الإداري والتسويقي والمالي للمؤسسة.
+
+                                        .</p>
+                                </div>
+
+                                <div class="experience-inner-content">
+                                    <div class="icon">
+                                        <i class="flaticon-check"></i>
+                                    </div>
+                                    <h3>مهمتنا</h3>
+                                    <p>فهم إحتياجات عملائنا وتحليل استراتيجات العمل لابتكار حلول إدارية لتمكين التحول التكنولوجي لتحقيق النتائج المستهدفة من التحول الرقمي.</p>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <div class="col-lg-6">
+                            <div class="digital-experience-image">
+                                <img src="{{asset('front/assets/img/digital-experience/digital-experience-6.png')}}" alt="image">
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
 </section>
 <!-- End Digital Experience Area -->
+
+
+
+{{--<!-- Start Digital Experience Area -->--}}
+{{--<section class="digital-experience-area ptb-100">--}}
+{{--    <div class="container">--}}
+{{--        <div class="section-title">--}}
+{{--            <span>Digital Experience</span>--}}
+{{--            <h2>Outstanding Digital Experience</h2>--}}
+{{--            <div class="bar"></div>--}}
+{{--        </div>--}}
+
+{{--        <div class="tab digital-experience-tab">--}}
+{{--            <ul class="tabs">--}}
+
+{{--                @forelse (activeProduct() as $product)--}}
+{{--                <li class="bg-5cbd12" id="{{ $product->id }}">--}}
+{{--                    <a href="#{{ $product->id }}">--}}
+{{--                        <span>--}}
+{{--                            <i class="flaticon-profit"></i>--}}
+{{--                            {{ $product->name }}--}}
+{{--                        </span>--}}
+{{--                    </a>--}}
+{{--                </li>--}}
+{{--                @empty--}}
+
+{{--                @endforelse--}}
+
+
+{{--            </ul>--}}
+
+{{--            <div class="tab_content">--}}
+{{--                @forelse (activeProduct() as $product)--}}
+{{--                <div class="tabs_item" id="{{ $product->id}}">--}}
+{{--                    <div class="row align-items-center">--}}
+{{--                        <div class="col-lg-6">--}}
+{{--                            <div class="digital-experience-content">--}}
+{{--                                {!! $product->notes !!}--}}
+{{--                            </div>--}}
+{{--                        </div>--}}
+
+{{--                        <div class="col-lg-6">--}}
+{{--                            <div class="digital-experience-image">--}}
+{{--                                <img src="{{ asset('front/assets/img/digital-experience/digital-experience-1.png') }}" alt="image">--}}
+{{--                            </div>--}}
+{{--                        </div>--}}
+{{--                    </div>--}}
+{{--                </div>--}}
+{{--                @empty--}}
+
+{{--                @endforelse--}}
+
+
+
+{{--            </div>--}}
+{{--        </div>--}}
+{{--    </div>--}}
+{{--</section>--}}
+{{--<!-- End Digital Experience Area -->--}}
 
 <!-- Start Services Area -->
 <section class="services-area bg-fafafa pt-100 pb-70">
@@ -234,7 +559,7 @@
                     </div>
 
                     <h3>
-                        <span class="odometer" data-count="4020">00</span>
+                        <span  data-count="4020">4020</span>
                     </h3>
                     <p>عميل قواعد بيانات تارجت </p>
                 </div>
@@ -247,7 +572,7 @@
                     </div>
 
                     <h3>
-                        <span class="odometer" data-count="45000">00</span>
+                        <span  data-count="45000">45000</span>
                     </h3>
                     <p>مسؤل مسجل بقواعد البيانات </p>
                 </div>
@@ -260,7 +585,7 @@
                     </div>
 
                     <h3>
-                        <span class="odometer" data-count="19">00</span>
+                        <span  data-count="19">19</span>
                     </h3>
                     <p>خدمه على مدار 11 سنه</p>
                 </div>
@@ -273,7 +598,7 @@
                     </div>
 
                     <h3>
-                        <span class="odometer" data-count="950">00</span>
+                        <span  data-count="950">950</span>
                     </h3>
                     <p>مشروع  مكتمل</p>
                 </div>
@@ -285,7 +610,7 @@
                     </div>
 
                     <h3>
-                        <span class="odometer" data-count="28013">00</span>
+                        <span  data-count="28013">28013</span>
                     </h3>
                     <p>شركة مسجله</p>
                 </div>
@@ -299,8 +624,8 @@
 <section class="portfolio-area pb-100">
     <div class="container-fluid">
         <div class="section-title">
-            <span>Portfolio Showcase</span>
-            <h2>Our Impressive Portfolio</h2>
+
+            <h2>أحدث المشاريع المكتملة</h2>
             <div class="bar"></div>
         </div>
 
@@ -346,6 +671,10 @@
                        @csrf
                         <div class="form-group">
                             <input type="text" class="form-control @error('name') is-invalid @enderror"  name="name"  required placeholder="{{ __('index.name') }}">
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-control @error('phone') is-invalid @enderror" name="phone"
+                                   required placeholder="{{ __('index.phone') }}">
                         </div>
                         <div class="form-group">
                             <input type="text" class="form-control @error('activity') is-invalid @enderror"  name="activity"  required placeholder="{{ __('index.activity') }}">

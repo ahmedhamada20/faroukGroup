@@ -20,6 +20,10 @@ class HomeController extends Controller
     {
         return view('front.aboutUs.index');
     }
+    public function contactUs()
+    {
+        return view('front.contactUs.index');
+    }
 
     public function consulting()
     {
@@ -50,6 +54,7 @@ class HomeController extends Controller
             'name_comppany' => 'required|min:2|max:255',
             'type_company' => 'required|min:2|max:255',
             'Message' => 'required|min:2',
+            'phone' => 'required|min:11|numeric',
         ], [
             'name.required' => __('index.namerequired'),
             'name.min' => __('index.namemin'),
@@ -69,10 +74,15 @@ class HomeController extends Controller
 
             'Message.required' => __('index.Messagerequired'),
             'Message.min' => __('index.Messagemin'),
+
+            'phone.required' => __('index.phonerequired'),
+            'phone.min' => __('index.phonemin'),
+            'phone.numeric' => __('index.phonenumeric'),
         ]);
 
         Contact::create([
             'name' => $request->name,
+            'phone' => $request->phone,
             'activity' => $request->activity,
             'name_comppany' => $request->name_comppany,
             'type_company' => $request->type_company,

@@ -44,12 +44,14 @@ Route::group(
     Route::get('/', [HomeController::class, 'index'])->name('home');
     Route::get('/AboutUsFaroukGroup', [HomeController::class, 'aboutUs'])->name('home.aboutUs');
     Route::get('/Consulting', [HomeController::class, 'consulting'])->name('home.consulting');
+    Route::get('/contactUs', [HomeController::class, 'contactUs'])->name('home.contactUs');
     Route::get('/services', [HomeController::class, 'services'])->name('home.services');
     Route::get('/servicesDetails/{id}', [HomeController::class, 'servicesDetails'])->name('home.servicesDetails');
     Route::get('/contact', [HomeController::class, 'contact'])->name('home.contact');
 
     Route::post('sendmessage',[HomeController::class,'sendmessage'])->name('sendmessage');
     Route::post('sendcontect',[HomeController::class,'sendcontect'])->name('sendcontect');
+    Route::post('sendContactUs',[HomeController::class,'sendContactUs'])->name('sendContactUs');
 
 
 
