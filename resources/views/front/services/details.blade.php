@@ -127,7 +127,7 @@
                             <ul>
                                 @if($data->pdf->Filename ?? '')
                                 <li>
-                                    <a href="{{asset('admin/bdf/course/'.( $data->id ?? '') . '/' . ($data->pdf->Filename??''))}}">PDF
+                                    <a href="{{asset('admin/bdf/course/'.( $data->id ?? '') . '/' . ($data->pdf->Filename??''))}}" download>PDF
                                         Download <i class='bx bxs-file-pdf'></i></a></li>
 
                                 @else

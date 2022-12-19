@@ -757,62 +757,32 @@
 <section class="blog-area pt-100 pb-70">
     <div class="container">
         <div class="section-title">
-            <span>Blog</span>
-            <h2>Latest News From Blog</h2>
+            <h2>المقالات</h2>
             <div class="bar"></div>
         </div>
 
         <div class="row">
-            <div class="col-lg-4 col-md-6">
-                <div class="single-blog">
-                    <div class="image">
-                        <a href="blog-details.html">
-                            <img src="{{asset('front/assets/img/blog/blog-1.jpg')}}" alt="image">
-                        </a>
-                    </div>
-                    <div class="content">
-                        <span>20 March, 2022</span>
-                        <h3>
-                            <a href="blog-details.html">7 Great Tips For Earn More Money From Digital Industry</a>
-                        </h3>
-                        <a href="blog-details.html" class="blog-btn">Read More <i class='bx bx-chevrons-right'></i></a>
+            @foreach(App\Models\Blog::where('status',true)->get() as $blog)
+                <div class="col-lg-4 col-md-6">
+                    <div class="single-blog">
+                        <div class="image">
+                            <a href="blog-details.html">
+                                <img src="{{asset('front/assets/img/blog/blog-1.jpg')}}" alt="image">
+                            </a>
+                        </div>
+                        <div class="content">
+                            <span>
+{{$blog->created_at->format('Y-m-d')}}
+                            </span>
+                            <h3>
+                                <a href="blog-details.html">{{$blog->name}}</a>
+                            </h3>
+                            <a href="blog-details.html" class="blog-btn">Read More <i class='bx bx-chevrons-right'></i></a>
+                        </div>
                     </div>
                 </div>
-            </div>
+            @endforeach
 
-            <div class="col-lg-4 col-md-6">
-                <div class="single-blog">
-                    <div class="image">
-                        <a href="blog-details.html">
-                            <img src="{{asset('front/assets/img/blog/blog-2.jpg')}}" alt="image">
-                        </a>
-                    </div>
-                    <div class="content">
-                        <span>25 March, 2022</span>
-                        <h3>
-                            <a href="blog-details.html">How To Boost Your Digital Marketing Agency</a>
-                        </h3>
-                        <a href="blog-details.html" class="blog-btn">Read More <i class='bx bx-chevrons-right'></i></a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-lg-4 col-md-6">
-                <div class="single-blog">
-                    <div class="image">
-                        <a href="blog-details.html">
-                            <img src="{{asset('front/assets/img/blog/blog-3.jpg')}}" alt="image">
-                        </a>
-                    </div>
-                    <div class="content">
-                        <span>28 March, 2022</span>
-                        <h3>
-                            <a href="blog-details.html">The Billionaire Guide On Design That will Get You Rich</a>
-                        </h3>
-                        <a href="blog-details.html" class="blog-btn">Read More <i class='bx bx-chevrons-right'></i></a>
-                    </div>
-                </div>
-            </div>
         </div>
     </div>
 

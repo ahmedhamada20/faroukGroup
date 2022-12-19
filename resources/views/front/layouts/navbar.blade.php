@@ -49,21 +49,14 @@
                             </a>
 
                             <ul class="dropdown-menu">
-                                <li class="nav-item">
-                                    <a href="{{route('home.services')}}" class="nav-link ">
-                                        {{__('index.digital_transformation')}}
-                                    </a>
-                                </li>
-                                <li class="nav-item">
-                                    <a href="{{route('home.services')}}" class="nav-link">
-                                        {{__('index.digital_content')}}
-                                    </a>
-                                </li>
-                                <li class="nav-item">
-                                    <a href="{{route('home.services')}}" class="nav-link">
-                                        {{__('index.digital_marketing')}}
-                                    </a>
-                                </li>
+                                @foreach(App\Models\Category::where('status',true)->limit(3)->get() as $row)
+                                    <li class="nav-item">
+                                        <a href="{{route('home.servicesDetails',$row->id)}}" class="nav-link ">
+                                           {{$row->name}}
+                                        </a>
+                                    </li>
+                                @endforeach
+
                             </ul>
                         </li>
                         <li class="nav-item">
@@ -73,16 +66,14 @@
                             </a>
 
                             <ul class="dropdown-menu">
+                                @foreach(App\Models\Category::where('status',true)->skip(3)->limit(3)->get() as $row)
                                 <li class="nav-item">
-                                    <a href="{{route('home.services')}}" class="nav-link">
-                                        {{__('index.digital_trade')}}
+                                    <a href="{{route('home.servicesDetails',$row->id)}}" class="nav-link">
+                                       {{$row->name}}
                                     </a>
                                 </li>
-                                <li class="nav-item">
-                                    <a href="{{route('home.services')}}" class="nav-link">
-                                        {{__('index.Digital_Director')}}
-                                    </a>
-                                </li>
+                                @endforeach
+
                             </ul>
                         </li>
                         <li class="nav-item">

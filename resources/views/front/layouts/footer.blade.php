@@ -5,15 +5,15 @@
             <div class="col-lg-3 col-sm-6">
                 <div class="single-footer-widget">
                     <div class="logo">
-                        <a href="index.html">
-                            <img src="{{asset('front/assets/img/logo.png')}}" class="black-logo" alt="image">
-                            <img src="{{asset('front/assets/img/logo-2.png')}}" class="white-logo" alt="image">
+                        <a href="{{route('home')}}">
+                            <img src="{{asset(settingSite()->image)}}"  width="120px" height="40px" class="black-logo" alt="image">
+                            <img src="{{asset(settingSite()->image)}}"  width="120px" height="40px" class="white-logo" alt="image">
                         </a>
                     </div>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.</p>
+                    <p>{!! settingSite()->notes!!}</p>
                     <ul class="social">
                         <li>
-                            <a href="#" class="facebook" target="_blank">
+                            <a href="{{settingSite()->facebook}}" class="facebook" target="_blank">
                                 <i class='bx bxl-facebook'></i>
                             </a>
                         </li>
@@ -92,25 +92,34 @@
 
             <div class="col-lg-3 col-sm-6">
                 <div class="single-footer-widget pl-5">
-                    <h3>Information</h3>
+                    <h3>معلومات التواصل</h3>
 
                     <ul class="footer-contact-info">
                         <li>
-                            <i class="flaticon-call"></i>
-                            <span>Phone</span>
-                            <a href="tel:882569756">882-569-756</a>
+                            <div class="icon">
+                                <i class='bx bx-user-pin'></i>
+                            </div>
+                            <span>Phone:</span>
+                            <a href="tel:{{settingSite()->phone}}">{{settingSite()->phone}}</a>
                         </li>
                         <li>
-                            <i class="flaticon-email-1"></i>
-                            <span>Email</span>
-                            <a href="https://templates.envytheme.com/cdn-cgi/l/email-protection#ee868b828281ae9d9e8796c08d8183"><span class="__cf_email__" data-cfemail="a1c9c4cdcdcee1d2d1c8d98fc2cecc">[email&#160;protected]</span></a>
+                            <div class="icon">
+                                <i class='bx bx-map'></i>
+                            </div>
+                            <span>Location:</span>
+                            {{settingSite()->address}}
                         </li>
                         <li>
-                            <i class="flaticon-pin"></i>
-                            <span>Address</span>
-                            <a href="https://www.google.com/maps/@51.5287718,-0.2416804,11z" target="_blank">50 Nortambiya, UK.</a>
+                            <div class="icon">
+                                <i class='bx bx-envelope'></i>
+                            </div>
+                            <span>Email:</span>
+                            <span class="__cf_email__"
+                                  data-cfemail="2c44494040436c5f5c4554024f4341">  {{settingSite()->email}}</span>
                         </li>
                     </ul>
+
+
                 </div>
             </div>
         </div>
