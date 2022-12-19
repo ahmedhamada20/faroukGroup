@@ -722,8 +722,8 @@
 <section class="team-area pb-70">
     <div class="container">
         <div class="section-title">
-            <span>Team Member</span>
-            <h2>Our Expert Team</h2>
+{{--            <span>Team Member</span>--}}
+            <h2>الهيكل التنظمي للشركة</h2>
             <div class="bar"></div>
         </div>
 
