@@ -45,6 +45,23 @@
 
                         <br>
                         <div class="row">
+
+
+                            <div class="col">
+                                <label>فئات الخدمات</label>
+                                <select class="form-control" name="courses_id" required>
+                                    <option value="" disabled selected>-- فئات الخدمات --</option>
+                                    @forelse(App\Models\Course::where('status',true)->get() as $courses)
+                                        <option value="{{$courses->id}}" {{$courses->id == $data->courses_id ? 'selected' :
+                                    ''}}>{{$courses->name}}</option>
+                                    @empty
+                                        <option value="" disabled selected>-- No Category Active --</option>
+                                    @endforelse
+                                </select>
+                            </div>
+
+
+
                             <div class="col">
                                 <label>رابط فديو</label>
                                 <input type="text" name="url"  class="form-control" value="{{$data->url}}">

@@ -51,6 +51,7 @@
                                 <th>photo</th>
                                 <th>name</th>
                                 <th>status</th>
+                                <th>صفحه الخدمات</th>
 
                                 <th>Action</th>
 
@@ -77,7 +78,7 @@
                                                data-on="Active" data-off="InActive" {{ $row->status ? 'checked' : '' }}>
 
                                     </td>
-
+                                    <td>{{$row->courses->name}}</td>
                                     <td>
                                         @if($row->file)
                                             <a href="{{ $row->file }}" class="btn btn-info btn-sm">

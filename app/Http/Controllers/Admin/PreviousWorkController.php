@@ -67,6 +67,7 @@ class PreviousWorkController extends Controller
             'notes' => ['ar' => $request->notes, 'en' => $request->notes_en],
             'status' => $request->status,
             'url' => $request->url,
+            'courses_id' => $request->courses_id,
 
 
         ]);
@@ -145,6 +146,7 @@ class PreviousWorkController extends Controller
             'name' => ['ar' => $request->name, 'en' => $request->name_en],
             'notes' => ['ar' => $request->notes, 'en' => $request->notes_en],
             'url' => $request->url,
+            'courses_id' => $request->courses_id,
 
         ]);
 

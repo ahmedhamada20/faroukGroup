@@ -32,7 +32,15 @@ class PreviousWork extends Model
         'notes',
         'url',
         'status',
+        'courses_id',
     ];
+
+
+
+    public function courses()
+    {
+        return $this->belongsTo(Course::class,'courses_id');
+    }
 
     public function Status()
     {

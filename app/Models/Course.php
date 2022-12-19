@@ -44,6 +44,11 @@ class Course extends Model
         return $this->hasMany(Question::class,'courses_id');
     }
 
+    public function previousWorks()
+    {
+        return $this->hasMany(PreviousWork::class,'courses_id');
+    }
+
     public function Status()
     {
         return $this->status ? "Active" : 'In Active';

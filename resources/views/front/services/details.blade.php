@@ -1,6 +1,6 @@
 @extends('front.layouts.master')
 @section('title')
-    Services Details
+    {{$data->name ?? ''}}
 @endsection
 
 @section('content')
@@ -107,15 +107,18 @@
                 <div class="col-lg-4 col-md-12">
                     <div class="services-details-information">
                         <ul class="services-list">
-                            <li><a href="#" class="active">Creative Web Design</a></li>
-                            <li><a href="#">Complex Dashboard</a></li>
-                            <li><a href="#">Digital Agency</i></a></li>
-                            <li><a href="#">Software Engineers</a></li>
-                            <li><a href="#">Marketing Agency</a></li>
-                            <li><a href="#">Data Analysis</a></li>
-                            <li><a href="#">App Development</a></li>
-                            <li><a href="#">Web Application</a></li>
-                            <li><a href="#">Logo & Branding</a></li>
+                            @foreach($data->previousWorks as $previousWork)
+                                <li><a href="#" class="{{$loop->first ? 'active' : null}}">{{$previousWork->name}}</a></li>
+                            @endforeach
+
+{{--                            <li><a href="#">Complex Dashboard</a></li>--}}
+{{--                            <li><a href="#">Digital Agency</i></a></li>--}}
+{{--                            <li><a href="#">Software Engineers</a></li>--}}
+{{--                            <li><a href="#">Marketing Agency</a></li>--}}
+{{--                            <li><a href="#">Data Analysis</a></li>--}}
+{{--                            <li><a href="#">App Development</a></li>--}}
+{{--                            <li><a href="#">Web Application</a></li>--}}
+{{--                            <li><a href="#">Logo & Branding</a></li>--}}
                         </ul>
 
                         <div class="download-file">
