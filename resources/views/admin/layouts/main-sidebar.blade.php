@@ -72,6 +72,7 @@
                 <ul class="slide-menu">
                     <li><a class="slide-item" href="{{ route('conteactIndex') }}">إستشاره مجانية مع مطور أعمال </a></li>
                     <li><a class="slide-item" href="{{ route('conteactMessageIndex') }}">تواصل معانا</a></li>
+                    <li><a class="slide-item" href="{{ route('consultingIndex') }}">استشارات مجانيه</a></li>
                 </ul>
             </li>
 
@@ -259,7 +260,7 @@
 
                 </ul>
             </li>
-            @endcan 
+            @endcan
 
 
             @can('list-number')

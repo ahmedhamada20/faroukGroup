@@ -18,8 +18,11 @@ class Contact extends Model
         'type_company',
         'Message',
         'type_contact',
+        'data',
+        'time',
     ];
 
     const HOMECONTECT = 0;
     const PAGECONTENTUS = 1;
+    const PAGECONSULTING= 2;
 }

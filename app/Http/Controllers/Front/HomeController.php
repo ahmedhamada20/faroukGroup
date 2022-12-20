@@ -94,6 +94,57 @@ class HomeController extends Controller
     }
 
 
+    public function sendConsulting(Request $request)
+    {
+        $request->validate([
+            'name' => 'required|min:2|max:200',
+            'phone' => 'required|min:11|numeric',
+            'activity' => 'required|min:2|max:255',
+            'name_comppany' => 'required|min:2|max:255',
+            'data' => 'required',
+            'time' => 'required',
+            'Message' => 'required|min:2',
+
+        ], [
+            'name.required' => __('index.namerequired'),
+            'name.min' => __('index.namemin'),
+            'name.max' => __('index.namemax'),
+
+            'activity.required' => __('index.activityrequired'),
+            'activity.min' => __('index.activitymin'),
+            'activity.max' => __('index.activitymax'),
+
+            'name_comppany.required' => __('index.name_comppanyrequired'),
+            'name_comppany.min' => __('index.name_comppanymin'),
+            'name_comppany.max' => __('index.name_comppanymax'),
+
+            'data.required' => __('index.type_companyrequired'),
+            'time.required' => __('index.type_companyrequired'),
+
+
+            'Message.required' => __('index.Messagerequired'),
+            'Message.min' => __('index.Messagemin'),
+
+            'phone.required' => __('index.phonerequired'),
+            'phone.min' => __('index.phonemin'),
+            'phone.numeric' => __('index.phonenumeric'),
+        ]);
+
+        Contact::create([
+            'name' => $request->name,
+            'phone' => $request->phone,
+            'activity' => $request->activity,
+            'name_comppany' => $request->name_comppany,
+            'data' => $request->data,
+            'time' => $request->time,
+            'Message' => $request->Message,
+            'type_contact' => Contact::PAGECONSULTING,
+        ]);
+
+        return redirect()->back()->with(['success' => __('index.sendsuccessfullyMessage')]);
+    }
+
+
     public function sendcontect(Request $request)
     {
         $request->validate([

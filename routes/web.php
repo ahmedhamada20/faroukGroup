@@ -49,6 +49,7 @@ Route::group(
     Route::get('/servicesDetails/{id}', [HomeController::class, 'servicesDetails'])->name('home.servicesDetails');
     Route::get('/contact', [HomeController::class, 'contact'])->name('home.contact');
 
+    Route::post('sendConsulting',[HomeController::class,'sendConsulting'])->name('sendConsulting');
     Route::post('sendmessage',[HomeController::class,'sendmessage'])->name('sendmessage');
     Route::post('sendcontect',[HomeController::class,'sendcontect'])->name('sendcontect');
     Route::post('sendContactUs',[HomeController::class,'sendContactUs'])->name('sendContactUs');

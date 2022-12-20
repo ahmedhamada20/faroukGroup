@@ -19,8 +19,16 @@ class AdminController extends Controller
         return view('admin.Contact.index', $data);
     }
 
+    public function consultingIndex()
+    {
+        $data = [
+            'data' => Contact::where('type_contact', Contact::PAGECONSULTING)->paginate(10),
+        ];
+        return view('admin.Contact.consulting', $data);
+    }
 
-    public function downloadContect() 
+
+    public function downloadContect()
     {
         return Excel::download(new ContactExport, 'ContactExport.xlsx');
     }
@@ -34,7 +42,7 @@ class AdminController extends Controller
     }
 
 
-    public function downloadMesageContect() 
+    public function downloadMesageContect()
     {
         return Excel::download(new ContactMessageExport, 'ContactMessageExport.xlsx');
     }
