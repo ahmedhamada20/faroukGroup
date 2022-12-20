@@ -28,7 +28,7 @@
                             </a>
                         </li>
                         <li>
-                            <a href="#" class="linkedin" target="_blank">
+                            <a href="{{settingSite()->instagram}}" class="linkedin" target="_blank">
                                 <i class='fa fa-linkedin'></i>
                             </a>
                         </li>
