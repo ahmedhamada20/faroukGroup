@@ -18,7 +18,7 @@
                             </a>
                         </li>
                         <li>
-                            <a href="#" class="twitter" target="_blank">
+                            <a href="{{settingSite()->twitter}}" class="twitter" target="_blank">
                                 <i class='bx bxl-twitter'></i>
                             </a>
                         </li>
