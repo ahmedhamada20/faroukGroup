@@ -8005,6 +8005,27 @@ Footer Area CSS
   background-color: #f64c67;
 }
 
+.single-footer-widget .social li a.whatsapp {
+  background-color: #0b0b0b;
+  border-color: #007bb5;
+  color: #ffffff;
+}
+
+.single-footer-widget .social li a.whatsapp:hover, .single-footer-widget .social li a.whatsapp:focus {
+  color: #ffffff;
+  background-color: #0000FF;
+}
+.single-footer-widget .social li a.youtube {
+  background-color: #0b0b0b;
+  border-color: #007bb5;
+  color: #ffffff;
+}
+
+.single-footer-widget .social li a.youtube:hover, .single-footer-widget .social li a.youtube:focus {
+  color: #ffffff;
+  background-color: #0000FF;
+}
+
 .single-footer-widget .social li a.pinterest {
   background-color: #c13584;
   border-color: #c13584;

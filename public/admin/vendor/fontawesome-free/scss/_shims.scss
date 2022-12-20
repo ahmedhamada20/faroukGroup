@@ -345,6 +345,11 @@
   font-family: 'Font Awesome 5 Brands';
   font-weight: 400;
 }
+
+.#{$fa-css-prefix}.#{$fa-css-prefix}whatsapp {
+  font-family: 'Font Awesome 5 Brands';
+  font-weight: 400;
+}
 .#{$fa-css-prefix}.#{$fa-css-prefix}-linkedin:before { content: fa-content($fa-var-linkedin-in); }
 
 .#{$fa-css-prefix}.#{$fa-css-prefix}-rotate-left:before { content: fa-content($fa-var-undo); }

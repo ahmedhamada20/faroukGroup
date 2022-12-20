@@ -23,13 +23,18 @@
                             </a>
                         </li>
                         <li>
-                            <a href="#" class="pinterest" target="_blank">
-                                <i class='bx bxl-pinterest-alt'></i>
+                            <a href="{{settingSite()->YouTube}}" class="youtube" target="_blank">
+                                <i class='fa fa-youtube'></i>
                             </a>
                         </li>
                         <li>
                             <a href="#" class="linkedin" target="_blank">
-                                <i class='bx bxl-instagram-alt'></i>
+                                <i class='fa fa-linkedin'></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://wa.me/2{{settingSite()->phone}}" class="whatsapp" target="_blank">
+                                <i class='fa fa-whatsapp'></i>
                             </a>
                         </li>
                     </ul>
@@ -38,23 +43,23 @@
 
             <div class="col-lg-3 col-sm-6">
                 <div class="single-footer-widget pl-5">
-                    <h3>روابط مفيدة</h3>
+                    <h3>روابط هامة</h3>
 
                     <ul class="quick-links">
                         <li>
-                            <a href="portfolio-2.html">المشاريع</a>
+                            <a href="portfolio-2.html">الإستشارات المجانية</a>
                         </li>
                         <li>
-                            <a href="services-2.html">الخدمات</a>
-                        </li>
-                        <li>
-                            <a href="about-2.html">الإدارات</a>
-                        </li>
-                        <li>
-                            <a href="blog-2.html">المدونة</a>
+                            <a href="services-2.html">تسجيل عضوية</a>
                         </li>
                         <li>
                             <a href="contact-1.html">طلب وكالة</a>
+                        </li>
+                        <li>
+                            <a href="blog-2.html">وظائف شاغرة </a>
+                        </li>
+                        <li>
+                            <a href="contact-1.html">المدونة</a>
                         </li>
                         <li>
                             <a href="privacy-policy.html">السياسات</a>
@@ -80,14 +85,14 @@
 
             <div class="col-lg-3 col-sm-6">
                 <div class="single-footer-widget pl-5">
-                    <h3>معلومات التواصل</h3>
+                    <h3>نسعد بإتصالك</h3>
 
                     <ul class="footer-contact-info">
                         <li>
                             <div class="icon">
                                 <i class='bx bx-user-pin'></i>
                             </div>
-                            <span>Phone:</span>
+                            <span>الموبايل : </span>
                             <a href="tel:{{settingSite()->phone}}">{{settingSite()->phone}}</a>
                         </li>
                         <li>
@@ -101,7 +106,7 @@
                             <div class="icon">
                                 <i class='bx bx-envelope'></i>
                             </div>
-                            <span>Email:</span>
+                            <span>البريد الإلكتروني :</span>
                             <span class="__cf_email__"
                                   data-cfemail="2c44494040436c5f5c4554024f4341">  {{settingSite()->email}}</span>
                         </li>
@@ -122,7 +127,9 @@
             <div class="row align-items-center">
                 <div class="col-lg-6 col-md-6">
                     <p>
-                        جميع الحقوق @<script data-cfasync="false" src="../../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>document.write(new Date().getFullYear())</script> فاروق جروب
+                        جميع الحقوق @<script data-cfasync="false" src="../../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js">
+
+                        </script><script>document.write(new Date().getFullYear())</script> شركة فاروق جروب للتجارة الإلكترونية والبرمجة
                     </p>
                 </div>
 

@@ -807,11 +807,11 @@
 <section class="subscribe-area ptb-100">
     <div class="container">
         <div class="subscribe-content">
-            <span>Get Started Instantly!</span>
-            <h2>Get Only New Update from this Newsletter</h2>
+{{--            <span>Get Started Instantly!</span>--}}
+            <h2>إترك رقمك لإرسال البرمو الترويجي على الواتساب </h2>
 
             <form class="newsletter-form" data-toggle="validator">
-                <input type="email" class="input-newsletter" placeholder="Enter Whatsapp Number with country code   "
+                <input type="email" class="input-newsletter" placeholder="برجاء إترك رقمك متبوعاً بكود الدولة   "
                     name="EMAIL" required autocomplete="off">
 
                 <button type="submit">Subscribe</button>
