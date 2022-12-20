@@ -89,7 +89,7 @@
 
                         <li class="nav-item">
                             <a href="{{route('GuestRegister')}}" class="nav-link {{getActiveRoutesHome('GuestRegister')}} ">
-                               سجل حسابك الان
+                               سجل الدخول
                             </a>
 
 {{--                            <ul class="dropdown-menu">--}}
