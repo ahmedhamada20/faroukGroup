@@ -82,7 +82,7 @@
                             <div class="row align-items-center">
 
                                 <div class="col-lg-12 col-md-12 col-sm-12 lost-your-password">
-                                    <a href="{{route('GuestLogin')}}" class="lost-your-password">تسجيل الدخول</a>
+                                    <a href="{{route('GuestLogin')}}" class="lost-your-password text-danger">تسجيل الدخول</a>
                                 </div>
                             </div>
 

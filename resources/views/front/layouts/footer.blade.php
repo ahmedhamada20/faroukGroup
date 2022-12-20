@@ -68,24 +68,12 @@
                     <h3>عروض خاصة</h3>
 
                     <ul class="quick-links">
+                        @foreach(App\Models\Category::whereStatus(true)->get() as $category)
                         <li>
-                            <a href="#">المدير الرقمي</a>
+                            <a href="{{route('home.servicesDetails',$category->id)}}">{{$category->name}}</a>
                         </li>
-                        <li>
-                            <a href="#">التسويق الرقمي</a>
-                        </li>
-                        <li>
-                            <a href="#">التجارة الرقمية</a>
-                        </li>
-                        <li>
-                            <a href="#">الهوية البصرية</a>
-                        </li>
-                        <li>
-                            <a href="#">مواقع ومنصات</a>
-                        </li>
-                        <li>
-                            <a href="#">خدمات السوشيال</a>
-                        </li>
+                        @endforeach
+
                     </ul>
                 </div>
             </div>

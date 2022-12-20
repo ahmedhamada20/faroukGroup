@@ -88,23 +88,22 @@
                         </li>
 
                         <li class="nav-item">
-                            <a href="" class="nav-link {{getActiveRoutesHome('home.services')}}">
+                            <a href="{{route('GuestRegister')}}" class="nav-link {{getActiveRoutesHome('GuestRegister')}} ">
                                سجل حسابك الان
-                                <i class='bx bx-chevron-down'></i>
                             </a>
 
-                            <ul class="dropdown-menu">
-                                <li class="nav-item">
-                                    <a href="{{route('GuestRegister')}}" class="nav-link">
-                                       تسجيل جديد
-                                    </a>
-                                </li>
-                                <li class="nav-item">
-                                    <a href="{{route('GuestLogin')}}" class="nav-link">
-                                       تسجيل دخول
-                                    </a>
-                                </li>
-                            </ul>
+{{--                            <ul class="dropdown-menu">--}}
+{{--                                <li class="nav-item">--}}
+{{--                                    <a href="{{route('GuestRegister')}}" class="nav-link">--}}
+{{--                                       تسجيل جديد--}}
+{{--                                    </a>--}}
+{{--                                </li>--}}
+{{--                                <li class="nav-item">--}}
+{{--                                    <a href="{{route('GuestLogin')}}" class="nav-link">--}}
+{{--                                       تسجيل دخول--}}
+{{--                                    </a>--}}
+{{--                                </li>--}}
+{{--                            </ul>--}}
                         </li>
                     </ul>
 
