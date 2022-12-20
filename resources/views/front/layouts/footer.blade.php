@@ -4,7 +4,7 @@
         <div class="row">
             <div class="col-lg-3 col-sm-6">
                 <div class="single-footer-widget">
-                    <div class="logo">
+                    <div class="logo" >
                         <a href="{{route('home')}}">
                             <img src="{{asset(settingSite()->image)}}"  width="120px" height="40px" class="black-logo" alt="image">
                             <img src="{{asset(settingSite()->image)}}"  width="120px" height="40px" class="white-logo" alt="image">

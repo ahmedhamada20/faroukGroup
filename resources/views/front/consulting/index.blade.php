@@ -11,12 +11,12 @@
             <div class="d-table-cell">
                 <div class="container">
                     <div class="page-banner-content">
-                        <h2>Contact Style Two</h2>
+                        <h2>إستشارة مجانية لتحديد الإحتياجات</h2>
                         <ul>
                             <li>
-                                <a href="{{route('home')}}">Home</a>
+                                <a href="{{route('home')}}">الرئيسية</a>
                             </li>
-                            <li>Contact Style Two</li>
+                            <li>إستشارة مجانية لتحديد الإحتياجات</li>
                         </ul>
                     </div>
                 </div>
@@ -29,8 +29,8 @@
     <section class="contact-area ptb-100">
         <div class="container">
             <div class="section-title">
-                <span>Get in Touch</span>
-                <h2>Ready to Get Started?</h2>
+                <span>سجل بياناتك الآن وسيقوم بالتواصل معك أحد مطورين الأعمال</span>
+                <h2>هل أنت جاهز لمعرفة نقاط القوة والضعف بشركتك ؟</h2>
                 <div class="bar"></div>
             </div>
 
@@ -47,35 +47,35 @@
                             <div class="row">
                                 <div class="col-lg-6 col-md-6">
                                     <div class="form-group">
-                                        <input type="date" name="name" id="name" class="form-control" required data-error="Please enter your name" placeholder="Name">
+                                        <input type="text" name="name" id="name" class="form-control" required data-error="Please enter your name" placeholder="الاسم ">
                                         <div class="help-block with-errors"></div>
                                     </div>
                                 </div>
 
                                 <div class="col-lg-6 col-md-6">
                                     <div class="form-group">
-                                        <input type="time" name="email" id="email" class="form-control" required data-error="Please enter your email" placeholder="Email">
+                                        <input type="email" name="email" id="email" class="form-control" required data-error="Please enter your email" placeholder="Email">
                                         <div class="help-block with-errors"></div>
                                     </div>
                                 </div>
 
                                 <div class="col-lg-6 col-md-6">
                                     <div class="form-group">
-                                        <input type="text" name="phone_number" id="phone_number" required data-error="Please enter your number" class="form-control" placeholder="Phone">
+                                        <input type="text" name="phone_number" id="phone_number" required data-error="Please enter your number" class="form-control" placeholder="الهاتف ">
                                         <div class="help-block with-errors"></div>
                                     </div>
                                 </div>
 
                                 <div class="col-lg-6 col-md-6">
                                     <div class="form-group">
-                                        <input type="text" name="msg_subject" id="msg_subject" class="form-control" required data-error="Please enter your subject" placeholder="Subject">
+                                        <input type="text" name="msg_subject" id="msg_subject" class="form-control" required data-error="Please enter your subject" placeholder="النشاط ">
                                         <div class="help-block with-errors"></div>
                                     </div>
                                 </div>
 
                                 <div class="col-lg-12 col-md-12">
                                     <div class="form-group">
-                                        <textarea name="message" class="form-control" id="message" cols="30" rows="5" required data-error="Write your message" placeholder="Your Message"></textarea>
+                                        <textarea name="message" class="form-control" id="message" cols="30" rows="5" required data-error="Write your message" placeholder="رسالتك ؟"></textarea>
                                         <div class="help-block with-errors"></div>
                                     </div>
                                 </div>
