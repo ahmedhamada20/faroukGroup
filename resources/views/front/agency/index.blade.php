@@ -1,6 +1,6 @@
 @extends('front.layouts.master')
 @section('title')
-    اتصل بنا
+    طلب وكاله
 @endsection
 
 @section('content')
@@ -94,12 +94,12 @@
         <div class="container">
             <div class="section-title">
                 {{-- <span>Get in Touch</span> --}}
-                <h2>تواصل معانا</h2>
+                <h2>طلب وكاله</h2>
                 <div class="bar"></div>
             </div>
 
             <div class="contact-form">
-                <form action="{{ route('sendcontect') }}" method="POST">
+                <form action="{{ route('sendAgency') }}" method="POST">
                     @csrf
                     <div class="row">
                         <div class="col-lg-6 col-md-6">
@@ -174,7 +174,7 @@
 
                         <div class="col-lg-12 col-md-12">
                             <button type="submit" class="default-btn">
-                                {{ __('index.sendMessage') }}
+                               ارسال طلب وكاله
                             </button>
 
                             {{-- <div id="msgSubmit" class="h3 text-center hidden"></div> --}}

@@ -73,6 +73,8 @@
                     <li><a class="slide-item" href="{{ route('conteactIndex') }}">إستشاره مجانية مع مطور أعمال </a></li>
                     <li><a class="slide-item" href="{{ route('conteactMessageIndex') }}">تواصل معانا</a></li>
                     <li><a class="slide-item" href="{{ route('consultingIndex') }}">استشارات مجانيه</a></li>
+                    <li><a class="slide-item" href="{{ route('agencyIndex') }}">طلب وكاله</a></li>
+                    <li><a class="slide-item" href="{{ route('jopsIndex') }}">طلب توظيف</a></li>
                 </ul>
             </li>
 

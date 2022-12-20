@@ -1,6 +1,6 @@
 @extends('front.layouts.master')
 @section('title')
-    اتصل بنا
+    وظائف شاغرة
 @endsection
 
 @section('content')
@@ -28,12 +28,12 @@
             <div class="d-table-cell">
                 <div class="container">
                     <div class="page-banner-content">
-                        <h2>Contact Style One</h2>
+                        <h2>وظائف شاغرة</h2>
                         <ul>
                             <li>
                                 <a href="{{route('home')}}">Home</a>
                             </li>
-                            <li>Contact Style One</li>
+                            <li>وظائف شاغرة</li>
                         </ul>
                     </div>
                 </div>
@@ -94,12 +94,12 @@
         <div class="container">
             <div class="section-title">
                 {{-- <span>Get in Touch</span> --}}
-                <h2>تواصل معانا</h2>
+                <h2>وظائف شاغرة</h2>
                 <div class="bar"></div>
             </div>
 
             <div class="contact-form">
-                <form action="{{ route('sendcontect') }}" method="POST">
+                <form action="{{ route('sendJop') }}" method="POST" enctype="multipart/form-data">
                     @csrf
                     <div class="row">
                         <div class="col-lg-6 col-md-6">
@@ -144,7 +144,7 @@
 
                         <div class="col-lg-6 col-md-6">
                             <div class="form-group">
-                                <label>النشاط<span class="text-danger">*</span></label>
+                                <label>المسمي الوظيفي الحالي<span class="text-danger">*</span></label>
                                 <input type="text" name="subject"  id="msg_subject" class="form-control @error('subject') is-invalid
 
                                 @enderror" required data-error="{{ __('index.subjectrequired') }}">
@@ -154,7 +154,7 @@
 
                         <div class="col-lg-6 col-md-6">
                             <div class="form-group">
-                                <label>الشركه<span class="text-danger">*</span></label>
+                                <label>الوظيفه التي ترغب التقدم لها<span class="text-danger">*</span></label>
                                 <input type="text" name="name_comppany"  id="msg_subject" class="form-control @error('subject') is-invalid
 
                                 @enderror" required data-error="{{ __('index.subjectrequired') }}">
@@ -164,17 +164,15 @@
 
                         <div class="col-lg-12 col-md-12">
                             <div class="form-group">
-                                <label>{{ __('index.message') }}<span class="text-danger">*</span></label>
-                                <textarea name="message"  class="form-control @error('message') is-invalid
-
-                                @enderror" id="message" cols="30" rows="6" required data-error="{{ __('index.Messagerequired') }}"></textarea>
+                                <label>ارفاق Cv<span class="text-danger">*</span></label>
+                                <input type="file" class="form-control" required accept="application/pdf" name="image">
                                 <div class="help-block with-errors"></div>
                             </div>
                         </div>
 
                         <div class="col-lg-12 col-md-12">
                             <button type="submit" class="default-btn">
-                                {{ __('index.sendMessage') }}
+                               ارسال طلب وظفيه
                             </button>
 
                             {{-- <div id="msgSubmit" class="h3 text-center hidden"></div> --}}

@@ -11,6 +11,22 @@ use Maatwebsite\Excel\Facades\Excel;
 
 class AdminController extends Controller
 {
+    public function jopsIndex()
+    {
+        $data = [
+            'data' => Contact::where('type_contact', Contact::JOP)->paginate(10),
+        ];
+        return view('admin.Contact.JOP', $data);
+    }
+
+    public function AgencyIndex()
+    {
+        $data = [
+            'data' => Contact::where('type_contact', Contact::AGENCY)->paginate(10),
+        ];
+        return view('admin.Contact.Agency', $data);
+    }
+
     public function conteactIndex()
     {
         $data = [

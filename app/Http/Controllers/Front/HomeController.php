@@ -20,6 +20,11 @@ class HomeController extends Controller
     {
         return view('front.aboutUs.index');
     }
+
+    public function Agency()
+    {
+        return view('front.agency.index');
+    }
     public function contactUs()
     {
         return view('front.contactUs.index');
@@ -152,6 +157,7 @@ class HomeController extends Controller
             'email' => 'required|email|min:2|max:255',
             'subject' => 'required|min:2|max:255',
             'phone' => 'required|min:11|numeric',
+            'name_comppany' => 'required|min:11|numeric',
             'message' => 'required|min:2',
         ], [
             'name.required' => __('index.namerequired'),
@@ -181,8 +187,107 @@ class HomeController extends Controller
             'subject' => $request->subject,
             'phone' => $request->phone,
             'Message' => $request->message,
+            'name_comppany' => $request->name_comppany,
             'type_contact' => Contact::PAGECONTENTUS,
         ]);
+
+        return redirect()->back()->with(['success' => __('index.sendsuccessfullyMessage')]);
+    }
+
+
+    public function sendAgency(Request $request)
+    {
+        $request->validate([
+            'name' => 'required|min:2|max:200',
+            'email' => 'required|email|min:2|max:255',
+            'subject' => 'required|min:2|max:255',
+            'phone' => 'required|min:11|numeric',
+            'name_comppany' => 'required|min:2',
+            'message' => 'required|min:2',
+        ], [
+            'name.required' => __('index.namerequired'),
+            'name.min' => __('index.namemin'),
+            'name.max' => __('index.namemax'),
+
+            'email.required' => __('index.emailrequired'),
+            'email.min' => __('index.emailmin'),
+            'email.max' => __('index.emailmax'),
+            'email.email' => __('index.emailemail'),
+
+            'subject.required' => __('index.subjectrequired'),
+            'subject.min' => __('index.subjectmin'),
+            'subject.max' => __('index.subjectmax'),
+
+            'phone.required' => __('index.phonerequired'),
+            'phone.min' => __('index.phonemin'),
+            'phone.numeric' => __('index.phonenumeric'),
+
+            'message.required' => __('index.Messagerequired'),
+            'message.min' => __('index.Messagemin'),
+        ]);
+
+        Contact::create([
+            'name' => $request->name . $request->name_laset,
+            'email' => $request->email,
+            'subject' => $request->subject,
+            'phone' => $request->phone,
+            'Message' => $request->message,
+            'name_comppany' => $request->name_comppany,
+            'type_contact' => Contact::AGENCY,
+        ]);
+
+        return redirect()->back()->with(['success' => __('index.sendsuccessfullyMessage')]);
+    }
+
+
+    public function sendJop(Request $request)
+    {
+//        dd($request->all());
+        $request->validate([
+            'name' => 'required|min:2|max:200',
+            'email' => 'required|email|min:2|max:255',
+            'subject' => 'required|min:2|max:255',
+            'phone' => 'required|min:11|numeric',
+            'name_comppany' => 'required|min:2',
+            'image' => 'required|mimes:png,jpg,jpeg,pdf|max:2065',
+        ], [
+            'name.required' => __('index.namerequired'),
+            'name.min' => __('index.namemin'),
+            'name.max' => __('index.namemax'),
+
+            'email.required' => __('index.emailrequired'),
+            'email.min' => __('index.emailmin'),
+            'email.max' => __('index.emailmax'),
+            'email.email' => __('index.emailemail'),
+
+            'subject.required' => __('index.subjectrequired'),
+            'subject.min' => __('index.subjectmin'),
+            'subject.max' => __('index.subjectmax'),
+
+            'phone.required' => __('index.phonerequired'),
+            'phone.min' => __('index.phonemin'),
+            'phone.numeric' => __('index.phonenumeric'),
+
+            'message.required' => __('index.Messagerequired'),
+            'message.min' => __('index.Messagemin'),
+        ]);
+
+        if($request->file('image')){
+            $file= $request->file('image');
+            $filename= date('YmdHi').$file->getClientOriginalName();
+            $file-> move(public_path('public/Image'), $filename);
+        }
+
+        $new  = new Contact();
+        $new->name = $request->name . $request->name_laset;
+        $new->email = $request->email;
+        $new->subject = $request->subject;
+        $new->phone = $request->phone;
+        $new->name_comppany = $request->name_comppany;
+        $new->image = $filename;
+        $new->type_contact = Contact::JOP;
+        $new->save();
+
 
         return redirect()->back()->with(['success' => __('index.sendsuccessfullyMessage')]);
     }

@@ -25,4 +25,6 @@ class Contact extends Model
     const HOMECONTECT = 0;
     const PAGECONTENTUS = 1;
     const PAGECONSULTING= 2;
+    const AGENCY= 3;
+    const JOP= 4;
 }

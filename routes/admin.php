@@ -141,6 +141,8 @@ Route::middleware(['auth', 'checkInformation'])->group(function () {
 
 
     Route::get('consultingIndex',[AdminController::class,'consultingIndex'])->name('consultingIndex');
+    Route::get('agencyIndex',[AdminController::class,'AgencyIndex'])->name('agencyIndex');
+    Route::get('jopsIndex',[AdminController::class,'jopsIndex'])->name('jopsIndex');
     Route::get('conteactIndex',[AdminController::class,'conteactIndex'])->name('conteactIndex');
     Route::get('conteactMessageIndex',[AdminController::class,'conteactMessageIndex'])->name('conteactMessageIndex');
     Route::get('downloadMesageContect',[AdminController::class,'downloadMesageContect'])->name('downloadMesageContect');

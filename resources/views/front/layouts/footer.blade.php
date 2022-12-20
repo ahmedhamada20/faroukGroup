@@ -47,16 +47,16 @@
 
                     <ul class="quick-links">
                         <li>
-                            <a href="portfolio-2.html">الإستشارات المجانية</a>
+                            <a href="{{route('home.consulting')}}">الإستشارات المجانية</a>
                         </li>
                         <li>
-                            <a href="services-2.html">تسجيل عضوية</a>
+                            <a href="{{route('GuestRegister')}}">تسجيل عضوية</a>
                         </li>
                         <li>
-                            <a href="contact-1.html">طلب وكالة</a>
+                            <a href="{{route('home.Agency')}}">طلب وكالة</a>
                         </li>
                         <li>
-                            <a href="blog-2.html">وظائف شاغرة </a>
+                            <a href="{{route('home.jops')}}">وظائف شاغرة </a>
                         </li>
                         <li>
                             <a href="contact-1.html">المدونة</a>
