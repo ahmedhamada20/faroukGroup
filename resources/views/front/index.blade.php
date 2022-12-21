@@ -701,7 +701,7 @@
 
             <div class="col-lg-6">
                 <div class="quote-image">
-                    <img src="{{asset('front/assets/img/quote/quote-1.png')}}" alt="image">
+                    <img src="{{asset('front/assets/img/digital-experience/contact.jpg')}}" width="585px" height="555px" alt="image">
                 </div>
             </div>
         </div>
@@ -827,23 +827,23 @@
     <div class="container">
         <div class="partner-slider owl-carousel owl-theme">
             <div class="partner-item">
-                <img src="{{asset('front/assets/img/partner/partner-1.png')}}" alt="image">
+                <img src="{{asset('front/assets/img/partner/arbitration.png')}}" alt="image">
             </div>
 
             <div class="partner-item">
-                <img src="{{asset('front/assets/img/partner/partner-2.png')}}" alt="image">
+                <img src="{{asset('front/assets/img/partner/go_green.png')}}" alt="image">
             </div>
 
             <div class="partner-item">
-                <img src="{{asset('front/assets/img/partner/partner-3.png')}}" alt="image">
+                <img src="{{asset('front/assets/img/partner/imct.png')}}" alt="image">
             </div>
 
             <div class="partner-item">
-                <img src="{{asset('front/assets/img/partner/partner-4.png')}}" alt="image">
+                <img src="{{asset('front/assets/img/partner/aa.jpg')}}" alt="image">
             </div>
 
             <div class="partner-item">
-                <img src="{{asset('front/assets/img/partner/partner-5.png')}}" alt="image">
+                <img src="{{asset('front/assets/img/partner/ca.jpg')}}" alt="image">
             </div>
 
             <div class="partner-item">

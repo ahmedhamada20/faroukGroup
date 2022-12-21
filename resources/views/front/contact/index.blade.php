@@ -28,12 +28,12 @@
             <div class="d-table-cell">
                 <div class="container">
                     <div class="page-banner-content">
-                        <h2>Contact Style One</h2>
+                        <h2>اتصل بنا</h2>
                         <ul>
                             <li>
-                                <a href="{{route('home')}}">Home</a>
+                                <a href="{{route('home')}}">الرئيسية</a>
                             </li>
-                            <li>Contact Style One</li>
+                            <li>اتصل بنا</li>
                         </ul>
                     </div>
                 </div>
@@ -52,7 +52,7 @@
                             <i class="flaticon-email-1"></i>
                         </div>
 
-                        <h3>Email Here</h3>
+                        <h3>الإميل</h3>
 
                         <p>{{ settingSite()->email }}</p>
                         {{-- <p><a href="https://templates.envytheme.com/cdn-cgi/l/email-protection#c1a9a4adadae81b2b1a8b9efa2aeac"><span class="__cf_email__" data-cfemail="1e767b7272715e6d6e7766307d7173">[email&#160;protected]</span></a></p> --}}
@@ -65,7 +65,7 @@
                             <i class="flaticon-pin"></i>
                         </div>
 
-                        <h3>Location Here</h3>
+                        <h3>العنوان</h3>
                         <p>{{ settingSite()->address }}</p>
                         {{-- <p><a href="https://www.google.com/maps/@24.9045273,91.8523559,15z" target="_blank">2750 Quadra Street Victoria Road, New York, Canada</a></p> --}}
                     </div>
@@ -77,7 +77,10 @@
                             <i class="flaticon-call"></i>
                         </div>
 
-                        <h3>Call Here</h3>
+                        <h3>الهاتف</h3>
+                        <p>
+                            0235858737 - 0235821622 - 0235826260
+                        </p>
                         <p><a href="tel:{{ settingSite()->phone }}">{{ settingSite()->phone }}</a></p>
                         {{-- <p><a href="tel:1234567890">+123 456 7890</a></p> --}}
                         {{-- <p><a href="tel:2414524526">+241 452 4526</a></p> --}}

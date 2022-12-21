@@ -45,10 +45,10 @@
     <section class="contact-area ptb-100">
         <div class="container">
             <div class="section-title">
-                <span>سجل بياناتك الآن وسيقوم بالتواصل معك أحد مطورين الأعمال</span>
+                <p>سجل بياناتك الآن وسيقوم بالتواصل معك أحد مطورين الأعمال</p>
                 <h2>هل أنت جاهز لمعرفة نقاط القوة والضعف بشركتك ؟</h2>
                 <div class="bar"></div>
-                <p class="text-danger strong">يجب اختيار معاد من السبت الي الخميس من الساعه 10 ص الي الساعه 5 م</p>
+                <p class="strong">يجب اختيار معاد من السبت الي الخميس من الساعه 10 ص الي الساعه 5 م</p>
                 <div class="bar"></div>
             </div>
 
