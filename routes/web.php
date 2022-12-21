@@ -49,9 +49,15 @@ Route::group(
     Route::get('/servicesDetails/{id}', [HomeController::class, 'servicesDetails'])->name('home.servicesDetails');
     Route::get('/contact', [HomeController::class, 'contact'])->name('home.contact');
     Route::get('/Agency', [HomeController::class, 'Agency'])->name('home.Agency');
+
+
     Route::get('/jops', function (){
      return view('front.jops.index');
     })->name('home.jops');
+
+    Route::get('/policy', function (){
+     return view('front.policy.index');
+    })->name('home.policy');
 
     Route::post('sendConsulting',[HomeController::class,'sendConsulting'])->name('sendConsulting');
     Route::post('sendmessage',[HomeController::class,'sendmessage'])->name('sendmessage');

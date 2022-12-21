@@ -62,7 +62,7 @@
                             <a href="contact-1.html">المدونة</a>
                         </li>
                         <li>
-                            <a href="privacy-policy.html">السياسات</a>
+                            <a href="policy">السياسات</a>
                         </li>
                     </ul>
                 </div>
@@ -92,14 +92,17 @@
                             <div class="icon">
                                 <i class='bx bx-user-pin'></i>
                             </div>
-                            <span>الموبايل : </span>
+                            <span>الهاتف : </span>
+                            <p>
+                                0235858737 - 0235821622 - 0235826260
+                            </p>
                             <a href="tel:{{settingSite()->phone}}">{{settingSite()->phone}}</a>
                         </li>
                         <li>
                             <div class="icon">
                                 <i class='bx bx-map'></i>
                             </div>
-                            <span>Location:</span>
+                            <span>العنوان:</span>
                             {{settingSite()->address}}
                         </li>
                         <li>
