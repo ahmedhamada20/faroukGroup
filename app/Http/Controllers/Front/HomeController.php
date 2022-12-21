@@ -13,7 +13,7 @@ class HomeController extends Controller
     public function index()
     {
         return view('front.index');
-//        return view('front.User.index');
+//        return view('front.user.index');
     }
 
     public function aboutUs()

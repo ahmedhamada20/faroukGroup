@@ -5,16 +5,16 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    @include('front.User.layouts.head')
+    @include('front.user.layouts.head')
 </head>
 <body class="fixed-left">
-@include('front.User.layouts.Loader')
+@include('front.user.layouts.Loader')
 
 <div id="wrapper">
-    @include('front.User.layouts.Sidebar')
+    @include('front.user.layouts.Sidebar')
     <div class="content-page">
         <div class="content">
-            @include('front.User.layouts.topbar')
+            @include('front.user.layouts.topbar')
             <div class="page-content-wrapper ">
 
                 <div class="container-fluid">
@@ -25,9 +25,9 @@
 
             </div>
         </div>
-  @include('front.User.layouts.footer')
+  @include('front.user.layouts.footer')
     </div>
 </div>
-@include('front.User.layouts.footerjs')
+@include('front.user.layouts.footerjs')
 </body>
 </html>

@@ -18,7 +18,7 @@ class CustomerRegisterController extends Controller
      */
     public function create()
     {
-        return view('front.User.auth.register');
+        return view('front.user.auth.register');
     }
 
     /**

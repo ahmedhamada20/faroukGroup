@@ -517,7 +517,7 @@
         <div class="row align-items-center">
             <div class="col-lg-6">
                 <div class="features-image-warp">
-                    <img src="{{asset('front/assets/img/features/features-2.png')}}" alt="image">
+                    <img src="{{asset('front/assets/img/features/work.png')}}" alt="image">
                 </div>
             </div>
 

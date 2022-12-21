@@ -15,7 +15,7 @@ class CustomerLoginController extends Controller
 
     public function customer()
     {
-        return view('front.User.index');
+        return view('front.user.index');
     }
 
     /**

@@ -63,7 +63,7 @@ class UserController extends Controller
         $user->assignRole($request->input('roles'));
 
         return redirect()->route('users.index')
-            ->with('success','User created successfully');
+            ->with('success','user created successfully');
     }
 
     public function show($id)
@@ -103,13 +103,13 @@ class UserController extends Controller
         $user->assignRole($request->input('roles'));
 
         return redirect()->route('users.index')
-            ->with('success','User updated successfully');
+            ->with('success','user updated successfully');
     }
 
     public function destroy($id)
     {
         User::find($id)->delete();
         return redirect()->route('admin.users.index')
-            ->with('success','User deleted successfully');
+            ->with('success','user deleted successfully');
     }
 }
