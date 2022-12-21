@@ -93,6 +93,9 @@ Route::middleware(['auth', 'checkInformation'])->group(function () {
 
     Route::resource('category', CategoryController::class);
     Route::post('import-category', [CategoryController::class, 'import_category'])->name('import-category');
+
+    Route::post('category_photo_remove_image', [CategoryController::class, 'category_photo_remove_image'])->name('category_photo_remove_image');
+
     Route::get('updateCategoryStatus', [CategoryController::class, 'changeStatus'])->name('updateCategoryStatus');
     Route::post('question_remove_image', [CategoryController::class, 'question_remove_image'])->name('question_remove_image');
     Route::post('question_photo_remove_image', [CategoryController::class, 'question_photo_remove_image'])->name('question_photo_remove_image');

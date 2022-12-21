@@ -77,6 +77,14 @@
 
 
                         <br>
+                        <div class="row">
+                            <div class="col">
+                                <label>صوره الموقع</label>
+                                <input type="file" name="cover" id="image_updload" multiple accept="image/*" class="file-input-overview">
+                                <input type="hidden" name="oldfile" value="{{$data->photo->Filename ?? ''}}">
+                            </div>
+                        </div>
+                        <br>
 
                         <div class="row">
                             <div class="col">

@@ -40,7 +40,7 @@
                         </div>
                         <div class="col-lg-6">
                             <div class="main-banner-image">
-                                <img src="{{asset('front/assets/img/banner/banner-image-4.jpg')}}" alt="image">
+                                <img src="{{asset(sliderActive()->image)}}" width="750px" height="650px" alt="image">
                             </div>
                         </div>
                     </div>
@@ -482,7 +482,7 @@
                 <div class="single-services-item">
                     <div class="image">
                         <a href="{{route('home.servicesDetails',$category->id)}}">
-                            <img src="{{asset('front/assets/img/services/services-7.jpg')}}" alt="image">
+                            <img src="{{asset($category->image ?? 'front/assets/img/services/services-7.jpg')}}" alt="image">
                         </a>
                     </div>
                     <div class="content">

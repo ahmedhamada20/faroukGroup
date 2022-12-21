@@ -56,7 +56,7 @@
                             <thead>
                             <tr>
                                 <th>#</th>
-{{--                                <th>photo</th>--}}
+                                <th>photo</th>
                                 <th>name</th>
                                 <th>status</th>
 
@@ -69,14 +69,14 @@
                             @forelse($data as $row)
                                 <tr>
                                     <td>{{$loop->index+1}}</td>
-{{--                                    <td>--}}
-{{--                                        @if($row->image)--}}
-{{--                                            <a href="{{ $row->image }}">--}}
-{{--                                                <img src="{{ $row->image }}" alt="{{ $row->name }}"--}}
-{{--                                                     class="list-thumbnail border-0" width="50" height="50">--}}
-{{--                                            </a>--}}
-{{--                                        @endif--}}
-{{--                                    </td>--}}
+                                    <td>
+                                        @if($row->image)
+                                            <a href="{{ $row->image }}">
+                                                <img src="{{ $row->image }}" alt="{{ $row->name }}"
+                                                     class="list-thumbnail border-0" width="50" height="50">
+                                            </a>
+                                        @endif
+                                    </td>
                                     <td>{{$row->name}}</td>
                                     <td>
 

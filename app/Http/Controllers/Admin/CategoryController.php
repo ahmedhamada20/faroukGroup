@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use App\Imports\CategoryImport;
+use App\Models\PDF;
 use App\Models\Photo;
 use App\Models\Seo;
 use Illuminate\Http\Request;
@@ -215,6 +216,20 @@ class CategoryController extends Controller
         $data->status = $request->status;
         $data->save();
 
+        return true;
+    }
+
+
+
+
+
+    public function category_photo_remove_image(Request $request)
+    {
+        $photo = Photo::findorfail($request->photo_id);
+        if (File::exists('admin/pictures/category/' . $request->data_id . '/' . $photo->Filename)) {
+            File::delete(public_path('admin/pictures/' . $this->data['folderBlade'] . '/' . $request->data_id . '/' . $photo->Filename));
+            Photo::where('photoable_id', $request->data_id)->where('Filename', $request->photo_name)->where('photoable_type', $this->data['Models'])->delete();
+        };
         return true;
     }
 }

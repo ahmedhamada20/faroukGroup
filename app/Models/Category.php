@@ -15,6 +15,13 @@ class Category extends Model
 
     public $translatable = ['name', 'notes'];
 
+    protected $appends = ['image'];
+
+    public function getImageAttribute()
+    {
+        return $this->photo != null ? asset('admin/pictures/category/' . $this->id .'/'.$this->photo->Filename ) : null;
+    }
+
     protected $fillable = [
         'name',
         'notes',
@@ -42,4 +49,10 @@ class Category extends Model
     {
         return $this->morphOne(Seo::class, 'seoable');
     }
+
+    public function photo()
+    {
+        return $this->morphOne(Photo::class, 'photoable');
+    }
+
 }
