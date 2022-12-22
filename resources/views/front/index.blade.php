@@ -482,7 +482,7 @@
                 <div class="single-services-item">
                     <div class="image">
                         <a href="{{route('home.servicesDetails',$category->id)}}">
-                            <img src="{{asset($category->image ?? 'front/assets/img/services/services-7.jpg')}}" alt="image">
+                            <img src="{{asset($category->image ?? 'front/assets/img/services/services-7.jpg')}}" width="403px" height="310px" alt="image">
                         </a>
                     </div>
                     <div class="content">
@@ -766,8 +766,8 @@
                 <div class="col-lg-4 col-md-6">
                     <div class="single-blog">
                         <div class="image">
-                            <a href="blog-details.html">
-                                <img src="{{asset('front/assets/img/blog/blog-1.jpg')}}" alt="image">
+                            <a href="{{route('home.blogDetails',$blog->id)}}">
+                                <img src="{{asset($blog->image ?? 'front/assets/img/blog/blog-1.jpg')}}" width="403px" height="310px" alt="image">
                             </a>
                         </div>
                         <div class="content">
@@ -775,9 +775,9 @@
 {{$blog->created_at->format('Y-m-d')}}
                             </span>
                             <h3>
-                                <a href="blog-details.html">{{$blog->name}}</a>
+                                <a href="{{route('home.blogDetails',$blog->id)}}">{{$blog->name}}</a>
                             </h3>
-                            <a href="blog-details.html" class="blog-btn">Read More <i class='bx bx-chevrons-right'></i></a>
+                            <a href="{{route('home.blogDetails',$blog->id)}}" class="blog-btn">Read More <i class='bx bx-chevrons-right'></i></a>
                         </div>
                     </div>
                 </div>
