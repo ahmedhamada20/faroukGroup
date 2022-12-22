@@ -662,48 +662,125 @@
 <section class="quote-area ptb-100">
     <div class="container">
         <div class="row align-items-center">
-            <div class="col-lg-6">
+            <div class="quote-image">
+                <img src="{{asset('front/assets/img/digital-experience/contact.jpg')}}" width="585px" height="555px" alt="image">
+            </div>
+
                 <div class="quote-form">
                     <div class="content">
                         <h3>{{ __('index.Free_consultation_with_a_business_developer') }}</h3>
                     </div>
                     <form method="POST" action="{{ route('sendmessage') }}">
                        @csrf
-                        <div class="form-group">
-                            <input type="text" class="form-control @error('name') is-invalid @enderror"  name="name"  required placeholder="{{ __('index.name') }}">
+                        <div class="row">
+                        <div class="col-lg-6">
+                            <div class="form-group">
+                                <input type="text" class="form-control @error('name') is-invalid @enderror"  name="name"  required placeholder="{{ __('index.name') }}">
+                            </div>
+                            <div class="form-group">
+                                <input type="text" class="form-control @error('activity') is-invalid @enderror"  name="activity"  required placeholder="{{ __('index.activity') }}">
+                            </div>
+                            <div class="form-group">
+                                <input type="text" class="form-control @error('type_company') is-invalid @enderror"  name="type_company"  required placeholder="{{ __('index.type_company') }}">
+                            </div>
                         </div>
-                        <div class="form-group">
-                            <input type="text" class="form-control @error('phone') is-invalid @enderror" name="phone"
-                                   required placeholder="{{ __('index.phone') }}">
+                        <div class="col-lg-6">
+                            <div class="form-group">
+                                <input type="text" class="form-control @error('phone') is-invalid @enderror" name="phone"
+                                       required placeholder="{{ __('index.phone') }}">
+                            </div>
+                            <div class="form-group">
+                                <input type="text" class="form-control @error('name_comppany') is-invalid @enderror"  name="name_comppany"  required placeholder="{{ __('index.name_comppany') }}">
+                            </div>
                         </div>
-                        <div class="form-group">
-                            <input type="text" class="form-control @error('activity') is-invalid @enderror"  name="activity"  required placeholder="{{ __('index.activity') }}">
                         </div>
-                        <div class="form-group">
-                            <input type="text" class="form-control @error('name_comppany') is-invalid @enderror"  name="name_comppany"  required placeholder="{{ __('index.name_comppany') }}">
-                        </div>
-                        <div class="form-group">
-                            <input type="text" class="form-control @error('type_company') is-invalid @enderror"  name="type_company"  required placeholder="{{ __('index.type_company') }}">
+
+
+
+
+                        <div class="row">
+                            <div class="col-lg-3">
+                                <h4 >إنشاء/ تطوير</h4>
+
+
+                                <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
+                                <label for="vehicle1">موقع الكتروني</label><br>
+                                <input type="checkbox" id="vehicle2" name="vehicle2" value="Car">
+                                <label for="vehicle2">تطبيق موبايل</label><br>
+                                <input type="checkbox" id="vehicle3" name="vehicle3" value="Boat">
+                                <label for="vehicle3">منصة</label><br>
+                                <input type="checkbox" id="vehicle4" name="vehicle4" value="Boat">
+                                <label for="vehicle4">نظام</label><br>
+                                <input type="checkbox" id="vehicle5" name="vehicle5" value="Boat">
+                                <label for="vehicle5">استضافة</label><br>
+
+
+                            </div>
+                            <div class="col-lg-3">
+                                <h4 >محتوى الكتروني</h4>
+
+
+                                <input type="checkbox" id="vehicle6" name="vehicle6" value="Bike">
+                                <label for="vehicle6">الهوية البصرية</label><br>
+                                <input type="checkbox" id="vehicle7" name="vehicle7" value="Car">
+                                <label for="vehicle7">تصميم الجرافيك</label><br>
+                                <input type="checkbox" id="vehicle8" name="vehicle8" value="Boat">
+                                <label for="vehicle8">الموشنن جرافيك</label><br>
+                                <input type="checkbox" id="vehicle9" name="vehicle9" value="Boat">
+                                <label for="vehicle9">كتابة المحتوى</label><br>
+                                <input type="checkbox" id="vehicle10" name="vehicle10" value="Boat">
+                                <label for="vehicle10">إنشاء مدونات</label><br>
+
+
+                            </div>
+                            <div class="col-lg-3">
+                                <h4 >التسويق</h4>
+
+
+                                <input type="checkbox" id="vehicle11" name="vehicle11" value="Bike">
+                                <label for="vehicle11">تسويق الكتروني</label><br>
+                                <input type="checkbox" id="vehicle12" name="vehicle12" value="Car">
+                                <label for="vehicle12">حملات إيميل</label><br>
+                                <input type="checkbox" id="vehicle13" name="vehicle13" value="Boat">
+                                <label for="vehicle13">حملات واتس آآب</label><br>
+                                <input type="checkbox" id="vehicle14" name="vehicle14" value="Boat">
+                                <label for="vehicle14">إدارة صفحات الكترونية</label><br>
+
+
+
+                            </div>
+                            <div class="col-lg-3">
+                                <h4 >برامج تارجت</h4>
+
+
+                                <input type="checkbox" id="vehicle15" name="vehicle15" value="Bike">
+                                <label for="vehicle15">التجارة الرقمية</label><br>
+                                <input type="checkbox" id="vehicle16" name="vehicle16" value="Car">
+                                <label for="vehicle16">الإدارة الرقمية</label><br>
+                                <input type="checkbox" id="vehicle17" name="vehicle17" value="Boat">
+                                <label for="vehicle17">البيانات الرقمية</label><br>
+                                <input type="checkbox" id="vehicle18" name="vehicle18" value="Boat">
+                                <label for="vehicle18">الفاتورة الرقمية</label><br>
+
+
+
+                            </div>
                         </div>
 
                         <div class="form-group">
                             <textarea  class="form-control" name="Message" required placeholder="{{ __('index.Message') }}"></textarea>
                         </div>
-
-                        <div class="quote-btn">
-                            <button type="submit" class="default-btn">
-                               {{__('index.sendMessage')}}
-                            </button>
+                        <div class="col-lg-push-4 col-lg-4">
+                            <div class="quote-btn">
+                                <button type="submit" class="default-btn">
+                                    {{__('index.sendMessage')}}
+                                </button>
+                            </div>
                         </div>
                     </form>
                 </div>
-            </div>
 
-            <div class="col-lg-6">
-                <div class="quote-image">
-                    <img src="{{asset('front/assets/img/digital-experience/contact.jpg')}}" width="585px" height="555px" alt="image">
-                </div>
-            </div>
+
         </div>
     </div>
 

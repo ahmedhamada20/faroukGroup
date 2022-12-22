@@ -40,6 +40,11 @@ class Category extends Model
         ],
     ];
 
+    public function packages()
+    {
+        return $this->hasMany(Packages::class, 'category_id');
+    }
+
     public function course()
     {
         return $this->hasMany(Course::class, 'category_id');

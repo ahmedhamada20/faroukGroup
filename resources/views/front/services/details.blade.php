@@ -61,44 +61,18 @@
                         <div class="services-details-faq">
                             <ul class="accordion">
                                 @foreach($data->questions as $row)
-                                <li class="accordion-item">
-                                    <a class="accordion-title" href="javascript:void(0)">
-                                        <i class='bx bx-plus'></i>
-                                        {{$row->name}}
-                                    </a>
+                                    <li class="accordion-item">
+                                        <a class="accordion-title" href="javascript:void(0)">
+                                            <i class='bx bx-plus'></i>
+                                            {{$row->name}}
+                                        </a>
 
-                                    <p class="accordion-content">
-                                        {!! $row->notes !!}
-                                    </p>
-                                </li>
+                                        <p class="accordion-content">
+                                            {!! $row->notes !!}
+                                        </p>
+                                    </li>
                                 @endforeach
-{{--                                <li class="accordion-item">--}}
-{{--                                    <a class="accordion-title" href="javascript:void(0)">--}}
-{{--                                        <i class='bx bx-plus'></i>--}}
-{{--                                        Would my business benefit from digital marketing?--}}
-{{--                                    </a>--}}
 
-{{--                                    <p class="accordion-content">--}}
-{{--                                        Digital marketing involves marketing to people using Internet-connected--}}
-{{--                                        electronic devices, namely computers, smartphones and tablets. Digital marketing--}}
-{{--                                        focuses on channels such as search engines, social media, email, websites and--}}
-{{--                                        apps to connect with prospects and customers.--}}
-{{--                                    </p>--}}
-{{--                                </li>--}}
-
-{{--                                <li class="accordion-item">--}}
-{{--                                    <a class="accordion-title" href="javascript:void(0)">--}}
-{{--                                        <i class='bx bx-plus'></i>--}}
-{{--                                        What’s the biggest mistake digital marketers make?--}}
-{{--                                    </a>--}}
-
-{{--                                    <p class="accordion-content">--}}
-{{--                                        Digital marketing involves marketing to people using Internet-connected--}}
-{{--                                        electronic devices, namely computers, smartphones and tablets. Digital marketing--}}
-{{--                                        focuses on channels such as search engines, social media, email, websites and--}}
-{{--                                        apps to connect with prospects and customers.--}}
-{{--                                    </p>--}}
-{{--                                </li>--}}
                             </ul>
                         </div>
                     </div>
@@ -108,17 +82,10 @@
                     <div class="services-details-information">
                         <ul class="services-list">
                             @foreach($data->previousWorks as $previousWork)
-                                <li><a href="#" class="{{$loop->first ? 'active' : null}}">{{$previousWork->name}}</a></li>
+                                <li><a href="#" class="{{$loop->first ? 'active' : null}}">{{$previousWork->name}}</a>
+                                </li>
                             @endforeach
 
-{{--                            <li><a href="#">Complex Dashboard</a></li>--}}
-{{--                            <li><a href="#">Digital Agency</i></a></li>--}}
-{{--                            <li><a href="#">Software Engineers</a></li>--}}
-{{--                            <li><a href="#">Marketing Agency</a></li>--}}
-{{--                            <li><a href="#">Data Analysis</a></li>--}}
-{{--                            <li><a href="#">App Development</a></li>--}}
-{{--                            <li><a href="#">Web Application</a></li>--}}
-{{--                            <li><a href="#">Logo & Branding</a></li>--}}
                         </ul>
 
                         <div class="download-file">
@@ -126,9 +93,10 @@
 
                             <ul>
                                 @if($data->pdf->Filename ?? '')
-                                <li>
-                                    <a href="{{asset('admin/bdf/course/'.( $data->id ?? '') . '/' . ($data->pdf->Filename??''))}}" download>PDF
-                                        Download <i class='bx bxs-file-pdf'></i></a></li>
+                                    <li>
+                                        <a href="{{asset('admin/bdf/course/'.( $data->id ?? '') . '/' . ($data->pdf->Filename??''))}}"
+                                           download>PDF
+                                            Download <i class='bx bxs-file-pdf'></i></a></li>
 
                                 @else
                                     لا يوجد مرفقات لهده الخدمه
@@ -170,6 +138,56 @@
         </div>
     </section>
     <!-- Start Services Details Area -->
+
+    <section class="pricing-area pt-100 pb-70">
+        <div class="container">
+            <div class="section-title">
+                <span>قائمه الاسعار</span>
+                <h2>{{$data->name}}</h2>
+                <div class="bar"></div>
+            </div>
+
+            <div class="row">
+
+
+                @foreach($data->category->packages as $package)
+                    <div class="col-lg-4 col-md-6">
+                        <div class="single-pricing-box top-1">
+                            <div class="pricing-header">
+                                <h3>{{$package->name}}</h3>
+                            </div>
+
+                            <div class="price">
+                                {{$package->price}}
+                            </div>
+
+                            <ul class="pricing-features">
+                              @foreach($package->featuresPackages as $featuresPackage)
+                                <li>
+                                    <i class="flaticon-check-mark"></i>
+                                    {{$featuresPackage->name}}
+                                </li>
+                                @endforeach
+
+                            </ul>
+
+                            <div class="pricing-btn">
+                                <a href="#" class="default-btn">
+                                    طلب عرض سعر
+                                </a>
+                            </div>
+
+                            <div class="pricing-shape">
+                                <img src="assets/img/pricing-shape.png" alt="image">
+                            </div>
+                        </div>
+                    </div>
+                @endforeach
+
+
+            </div>
+        </div>
+    </section>
 
 
 @endsection

@@ -47,6 +47,19 @@
 
                         <div class="row">
                             <div class="col">
+                                <label>فئات الخدمات</label>
+                                <select class="form-control" name="category_id" required>
+                                    <option value="" disabled selected>-- فئات الخدمات --</option>
+                                    @forelse($categories as $category)
+                                        <option value="{{$category->id}}" {{$category->id == $data->category_id ? 'selected' :
+                                    ''}}>{{$category->name}}</option>
+                                    @empty
+                                        <option value="" disabled selected>-- No Category Active --</option>
+                                    @endforelse
+                                </select>
+                            </div>
+
+                            <div class="col">
                                 <label>السعر</label>
                                 <input type="number" value="{{$data->price}}" name="price"  class="form-control @error('price') is-invalid @enderror">
                             </div>
@@ -86,23 +99,6 @@
                             </div>
                         </div>
 
-                        <br>
-
-                        <div class="row">
-                            <div class="col">
-                                <label>ملف </label>
-                                <input type="file" name="bdf" id="image_updload_bdf" multiple accept="application/pdf" class="file-input-overview">
-                                <input type="hidden" name="oldfile_dbf" value="{{$data->bdf->Filename ?? ''}}">
-                            </div>
-                        </div>
-                        <br>
-                        <div class="row">
-                            <div class="col">
-                                <label>صوره الموقع</label>
-                                <input type="file" name="cover" id="image_updload" multiple accept="image/*" class="file-input-overview">
-                                <input type="hidden" name="oldfile" value="{{$data->photo->Filename ?? ''}}">
-                            </div>
-                        </div>
                         <br>
 
                         <div class="row">
