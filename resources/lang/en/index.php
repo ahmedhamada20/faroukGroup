@@ -54,6 +54,6 @@ return [
     'email' => 'email',
     'phone' => 'Telephone number',
     'subject' => 'the subject',
-    'message' => 'the message',
+
     'sendMessage' => 'Send your message',
 ];

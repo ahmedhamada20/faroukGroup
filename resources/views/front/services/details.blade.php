@@ -105,28 +105,28 @@
                         </div>
 
                         <div class="services-contact-info">
-                            <h3>Contact Info</h3>
+                            <h3>بيانات التواصل</h3>
 
                             <ul>
                                 <li>
                                     <div class="icon">
                                         <i class='bx bx-user-pin'></i>
                                     </div>
-                                    <span>Phone:</span>
+                                    <span>الهاتف:</span>
                                     <a href="tel:{{settingSite()->phone}}">{{settingSite()->phone}}</a>
                                 </li>
                                 <li>
                                     <div class="icon">
                                         <i class='bx bx-map'></i>
                                     </div>
-                                    <span>Location:</span>
+                                    <span>العنوان:</span>
                                     {{settingSite()->address}}
                                 </li>
                                 <li>
                                     <div class="icon">
                                         <i class='bx bx-envelope'></i>
                                     </div>
-                                    <span>Email:</span>
+                                    <span>البريد الإلكترونى:</span>
                                     <span class="__cf_email__"
                                           data-cfemail="2c44494040436c5f5c4554024f4341">  {{settingSite()->email}}</span>
                                 </li>
@@ -151,7 +151,7 @@
 
 
                 @foreach($data->category->packages as $package)
-                    <div class="col-lg-4 col-md-6 text-center">
+                    <div class="col-md-6 text-center">
                         <div class="single-pricing-box top-1">
                             <div class="pricing-header">
                                 <h3>{{$package->name}}</h3>

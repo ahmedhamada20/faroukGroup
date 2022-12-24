@@ -17,7 +17,7 @@ return [
     'activity' => 'النشاط',
     'name_comppany' => 'إسم الشركة',
     'type_company' => 'حدد المشكلة',
-    'Message' => 'الرساله',
+    'Message' => 'نص إستشارتك',
     'sendMessage' => ' إرسال الإستشاره',
     'Free_consultation_with_a_business_developer' => 'إستشاره مجانية مع مطور أعمال',
 
@@ -57,5 +57,5 @@ return [
     'email' => 'البريد الالكتورني',
     'phone' => 'رقم الهاتف',
     'subject' => 'الموضوع',
-    'message' => 'الرساله',
+
 ];
