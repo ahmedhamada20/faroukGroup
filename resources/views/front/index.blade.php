@@ -35,7 +35,8 @@
                                     <p>
                                         {!!sliderActive()->notes!!}
                                     </p>
-                                    <a href="{{route('home.contactUs')}}" class="default-btn mt-3">حدد احتياجاتك</a>
+                                    <a href="{{route('home.contactUs')}}" class="default-btn mt-3">{{__('index.slider1')}}
+                                    </a>
                                 </div>
                             </div>
                             <div class="col-lg-6">
@@ -940,28 +941,96 @@
         <div class="container">
             <div class="partner-slider owl-carousel owl-theme">
                 <div class="partner-item">
-                    <img src="{{asset('front/assets/img/partner/arbitration.png')}}" alt="image">
+                    <img src="{{asset('front/assets/img/partner/Canadian European academy.png')}}" alt="image">
                 </div>
 
                 <div class="partner-item">
-                    <img src="{{asset('front/assets/img/partner/go_green.png')}}" alt="image">
+                    <img src="{{asset('front/assets/img/partner/EL TAMIMI.png')}}" alt="image">
                 </div>
 
                 <div class="partner-item">
-                    <img src="{{asset('front/assets/img/partner/imct.png')}}" alt="image">
+                    <img src="{{asset('front/assets/img/partner/gate .png')}}" alt="image">
                 </div>
 
                 <div class="partner-item">
-                    <img src="{{asset('front/assets/img/partner/aa.jpg')}}" alt="image">
+                    <img src="{{asset('front/assets/img/partner/imct group.png')}}" alt="image">
                 </div>
 
                 <div class="partner-item">
-                    <img src="{{asset('front/assets/img/partner/ca.jpg')}}" alt="image">
+                    <img src="{{asset('front/assets/img/partner/IROVENTS.png')}}" alt="image">
                 </div>
 
                 <div class="partner-item">
-                    <img src="{{asset('front/assets/img/partner/partner-6.png')}}" alt="image">
+                    <img src="{{asset('front/assets/img/partner/Kadmar shipping co.png')}}" alt="image">
                 </div>
+                <div class="partner-item">
+                    <img src="{{asset('front/assets/img/partner/Les Dames.png')}}" alt="image">
+                </div>
+
+                <div class="partner-item">
+                    <img src="{{asset('front/assets/img/partner/Mabani for Real Estate Investment.png')}}" alt="image">
+                </div>
+
+                <div class="partner-item">
+                    <img src="{{asset('front/assets/img/partner/ngc-business-training.png')}}" alt="image">
+                </div>
+
+                <div class="partner-item">
+                    <img src="{{asset('front/assets/img/partner/Rotana Egypt.png')}}" alt="image">
+                </div>
+
+                <div class="partner-item">
+                    <img src="{{asset('front/assets/img/partner/Sunrise tour.png')}}" alt="image">
+                </div>
+
+                <div class="partner-item">
+                    <img src="{{asset('front/assets/img/partner/tedata.png')}}" alt="image">
+                </div>
+                <div class="partner-item">
+                    <img src="{{asset('front/assets/img/partner/Tiba Manzalawi Group.png')}}" alt="image">
+                </div>
+
+                <div class="partner-item">
+                    <img src="{{asset('front/assets/img/partner/TREND GROUP.png')}}" alt="image">
+                </div>
+
+                <div class="partner-item">
+                    <img src="{{asset('front/assets/img/partner/Z Tours.png')}}" alt="image">
+                </div>
+
+                <div class="partner-item">
+                    <img src="{{asset('front/assets/img/partner/أكاديمية التدريب العالمية.png')}}" alt="image">
+                </div>
+
+                <div class="partner-item">
+                    <img src="{{asset('front/assets/img/partner/أكروبول لحلول الطاقة المتجددة.png')}}" alt="image">
+                </div>
+
+                <div class="partner-item">
+                    <img src="{{asset('front/assets/img/partner/الاكاديمية الدولية للتدريب.png')}}" alt="image">
+                </div>
+                <div class="partner-item">
+                    <img src="{{asset('front/assets/img/partner/الاكاديمية الكندية.png')}}" alt="image">
+                </div>
+                <div class="partner-item">
+                    <img src="{{asset('front/assets/img/partner/العثمانية للإستثمار العقارى.png')}}" alt="image">
+                </div>
+                <div class="partner-item">
+                    <img src="{{asset('front/assets/img/partner/الهيئة الدولية للتحكيم.png')}}" alt="image">
+                </div>
+                <div class="partner-item">
+                    <img src="{{asset('front/assets/img/partner/جريدة الوطن.png')}}" alt="image">
+                </div>
+                <div class="partner-item">
+                    <img src="{{asset('front/assets/img/partner/شركة الأمين  للسياحة.png')}}" alt="image">
+                </div>
+                <div class="partner-item">
+                    <img src="{{asset('front/assets/img/partner/فيرست مسك الدولية للسياحة.png')}}" alt="image">
+                </div>
+                <div class="partner-item">
+                    <img src="{{asset('front/assets/img/partner/مصر للأجهزة المكتبية.png')}}" alt="image">
+                </div>
+
             </div>
         </div>
     </div>

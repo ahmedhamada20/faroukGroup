@@ -57,11 +57,12 @@
 
                             <article class="item">
                                 <a href="{{route('home.blogDetails',$blogs->id)}}" class="thumb">
-                                    <span class="fullimage cover" style="background-image: url({{asset($blogs->image)}})" role="img"></span>
+                                    <img src="{{asset($blogs->image)}}" width="100px" height="100px" alt="">
+{{--                                    <span class="fullimage cover" style="background-image: url()" role="img"></span>--}}
                                 </a>
                                 <div class="info">
                                     <span>{{$blogs->create_at}}</span>
-                                    <h4 class="title usmall"><a href="#">{{$blogs->name}}</a></h4>
+                                    <h4 class="title usmall"><a href="{{route('home.blogDetails',$blogs->id)}}">{{$blogs->name}}</a></h4>
                                 </div>
                             </article>
                             @endforeach
