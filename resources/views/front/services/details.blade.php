@@ -143,7 +143,7 @@
         <div class="container">
             <div class="section-title">
                 <span>قائمه الاسعار</span>
-                <h2>{{$data->name}}</h2>
+                <h2>اختر الخطة التي تناسب احتياجاتك وتطلعاتك</h2>
                 <div class="bar"></div>
             </div>
 
@@ -151,7 +151,7 @@
 
 
                 @foreach($data->category->packages as $package)
-                    <div class="col-lg-4 col-md-6">
+                    <div class="col-lg-4 col-md-6 text-center">
                         <div class="single-pricing-box top-1">
                             <div class="pricing-header">
                                 <h3>{{$package->name}}</h3>
@@ -172,13 +172,13 @@
                             </ul>
 
                             <div class="pricing-btn">
-                                <a href="#" class="default-btn">
-                                    طلب عرض سعر
+                                <a href="#" class="default-btn btn-block">
+                                  {!! $package->notes!!}
                                 </a>
                             </div>
 
                             <div class="pricing-shape">
-                                <img src="assets/img/pricing-shape.png" alt="image">
+                                <img src="{{asset('front/assets/img/pricing-shape.png')}}" alt="image">
                             </div>
                         </div>
                     </div>

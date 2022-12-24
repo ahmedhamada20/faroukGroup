@@ -662,7 +662,7 @@
 <section class="quote-area ptb-100">
     <div class="container">
         <div class="row align-items-center">
-            <div class="quote-image">
+            <div class="quote-image" style="text-align: center">
                 <img src="{{asset('front/assets/img/digital-experience/contact.jpg')}}" width="585px" height="555px" alt="image">
             </div>
 
@@ -699,7 +699,7 @@
 
 
                         <div class="row">
-                            <div class="col-lg-3">
+                            <div class="col-lg-3 col-md-6 col-sm-6">
                                 <h4 >إنشاء/ تطوير</h4>
 
 
@@ -716,7 +716,7 @@
 
 
                             </div>
-                            <div class="col-lg-3">
+                            <div class="col-lg-3 col-md-6 col-sm-6">
                                 <h4 >محتوى الكتروني</h4>
 
 
@@ -733,7 +733,7 @@
 
 
                             </div>
-                            <div class="col-lg-3">
+                            <div class="col-lg-3 col-md-6 col-sm-6">
                                 <h4 >التسويق</h4>
 
 
@@ -749,7 +749,7 @@
 
 
                             </div>
-                            <div class="col-lg-3">
+                            <div class="col-lg-3 col-md-6 col-sm-6">
                                 <h4 >برامج تارجت</h4>
 
 
