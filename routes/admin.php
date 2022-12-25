@@ -21,6 +21,7 @@ use App\Http\Controllers\Admin\PackagesController;
 use App\Http\Controllers\Admin\PreviousWorkController;
 use App\Http\Controllers\Admin\ProductController;
 use App\Http\Controllers\Admin\QuestionController;
+use App\Http\Controllers\Admin\RequestTicksController;
 use App\Http\Controllers\Admin\RoleController;
 use App\Http\Controllers\Admin\SettingController;
 use App\Http\Controllers\Admin\SliderController;
@@ -163,6 +164,7 @@ Route::middleware(['auth', 'checkInformation'])->group(function () {
      Route::post('question_remove_image', [QuestionController::class, 'question_remove_image'])->name('question_remove_image');
      Route::post('question_photo_remove_image', [QuestionController::class, 'question_photo_remove_image'])->name('question_photo_remove_image');
 
+     Route::resource('requestTicks',RequestTicksController::class);
 
 
 });

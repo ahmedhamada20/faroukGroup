@@ -3,6 +3,8 @@
 use App\Http\Controllers\Front\CustomerLoginController;
 use App\Http\Controllers\Front\CustomerRegisterController;
 use App\Http\Controllers\Front\HomeController;
+use App\Http\Controllers\Front\TicketController;
+use App\Http\Controllers\Front\TicketController as TicketControllerAlias;
 use Illuminate\Support\Facades\Route;
 use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
 
@@ -76,6 +78,9 @@ Route::middleware(['auth:customer','customerCheck'])->group(function (){
     Route::get('/dashboard/customer', [CustomerLoginController::class, 'customer'])->name('/dashboard/customer');
     Route::post('GuestLogout', [CustomerLoginController::class, 'destroy'])
         ->name('GuestLogout');
+    Route::resource('tickets', TicketController::class);
+    Route::post('ticketsReply', [TicketController::class,'ticketsReply'])->name('ticketsReply');
+
 });
 
 

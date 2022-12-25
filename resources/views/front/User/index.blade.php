@@ -1,6 +1,7 @@
 @extends('front.User.master')
 
 @section('title')
+    لوحه تحكمك
 @endsection
 
 @section('css')

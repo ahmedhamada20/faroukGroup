@@ -22,7 +22,7 @@ if (!function_exists('getActiveRoutesHome')) {
     function getActiveRoutesHome($route)
     {
         $actives = request()->routeIs($route) ? ' active' : null;
-        if(!empty($actives)){
+        if (!empty($actives)) {
             return $actives;
         }
     }
@@ -46,7 +46,7 @@ if (!function_exists('sliderActive')) {
 if (!function_exists('aboutsActive')) {
     function aboutsActive()
     {
-        $data = AboutUs::where('status', 1)->where('id',1)->first();
+        $data = AboutUs::where('status', 1)->where('id', 1)->first();
         if (!empty($data)) {
             return $data;
         }
@@ -55,7 +55,7 @@ if (!function_exists('aboutsActive')) {
 if (!function_exists('aboutsActivelastet')) {
     function aboutsActivelastet()
     {
-        $data = AboutUs::where('status', 1)->where('id',5)->first();
+        $data = AboutUs::where('status', 1)->where('id', 5)->first();
         if (!empty($data)) {
             return $data;
         }
@@ -220,7 +220,7 @@ if (!function_exists('CheckDiscountCode')) {
     function CheckDiscountCode($id_discount, $id_packages)
     {
         $discount = Discount::findOrfail($id_discount);
-        if ($discount){
+        if ($discount) {
             $check_data = $discount->end_data != null ? (\Carbon\Carbon::now()->between($discount->start_data, $discount->end_data)) ? true : false : true;
             $check_used = $discount->used_coupon != null ? ($discount->use_coupon < $discount->used_coupon) ? true : false : true;
             if (!$check_data || !$check_used) {
@@ -249,3 +249,17 @@ if (!function_exists('CheckDiscountCode')) {
 
     }
 }
+
+if (!function_exists('generateRandomString')) {
+    function generateRandomString($length = 20)
+    {
+        $characters = 'ABCDEFGHZPOMQWRTYX0123456789';
+        $charactersLength = strlen($characters);
+        $randomString = '';
+        for ($i = 0; $i < $length; $i++) {
+            $randomString .= $characters[rand(0, $charactersLength - 1)];
+        }
+        return $randomString;
+    }
+}
+

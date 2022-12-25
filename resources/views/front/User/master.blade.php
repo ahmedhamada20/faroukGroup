@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     @include('front.User.layouts.head')
 </head>
-<body class="fixed-left">
+<body class="fixed-left" style="font-family: 'Cairo', sans-serif;">
 @include('front.User.layouts.Loader')
 
 <div id="wrapper">

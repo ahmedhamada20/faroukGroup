@@ -75,6 +75,7 @@
                     <li><a class="slide-item" href="{{ route('consultingIndex') }}">استشارات مجانيه</a></li>
                     <li><a class="slide-item" href="{{ route('agencyIndex') }}">طلب وكاله</a></li>
                     <li><a class="slide-item" href="{{ route('jopsIndex') }}">طلب توظيف</a></li>
+                    <li><a class="slide-item" href="{{ route('requestTicks.index') }}">طلبات التذاكر</a></li>
                 </ul>
             </li>
 
