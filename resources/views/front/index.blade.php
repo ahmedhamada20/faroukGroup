@@ -38,7 +38,7 @@
                                     <a href="{{route('home.contactUs')}}" class="default-btn mt-3">حدد احتياجاتك
                                     </a>
                                 </div>
-                            </div>g
+                            </div>
                             <div class="col-lg-6">
                                 <div class="main-banner-image">
                                     <img src="{{asset(sliderActive()->image)}}" width="750px" height="650px"
