@@ -28,12 +28,14 @@
             <div class="d-table-cell">
                 <div class="container">
                     <div class="page-banner-content">
-                        <h2>اتصل بنا</h2>
+                        <h2>{{__('index.Connect_with_us')}}
+                        </h2>
                         <ul>
                             <li>
                                 <a href="{{route('home')}}">الرئيسية</a>
                             </li>
-                            <li>اتصل بنا</li>
+                            <li>{{__('index.Connect_with_us')}}
+                            </li>
                         </ul>
                     </div>
                 </div>
@@ -52,7 +54,8 @@
                             <i class="flaticon-email-1"></i>
                         </div>
 
-                        <h3>الإميل</h3>
+                        <h3>{{__('index.email')}}
+                        </h3>
 
                         <p>{{ settingSite()->email }}</p>
                         {{-- <p><a href="https://templates.envytheme.com/cdn-cgi/l/email-protection#c1a9a4adadae81b2b1a8b9efa2aeac"><span class="__cf_email__" data-cfemail="1e767b7272715e6d6e7766307d7173">[email&#160;protected]</span></a></p> --}}

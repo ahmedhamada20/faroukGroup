@@ -85,7 +85,7 @@
                             <p class="text-success">{!! aboutsActive()->notes!!}</p>
 
                             <div class="about-btn">
-                                <a href="#" class="default-btn">
+                                <a href="{{route('home.aboutUs')}}" class="default-btn">
                                     لماذا نحن
                                 </a>
                             </div>

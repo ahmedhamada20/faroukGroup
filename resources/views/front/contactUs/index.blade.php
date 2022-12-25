@@ -64,7 +64,7 @@
                             <div class="form-group">
                                 <select class="form-control js-example-basic-multiple" name="type_company">
                                     <option value="" disabled selected>-- اختر من القائمه --</option>
-                                    @foreach(App\Models\category::where('status',true)->get() as $category)
+                                    @foreach(App\Models\Category::where('status',true)->get() as $category)
                                         <option value="{{$category->name}}">{{$category->name}}</option>
                                     @endforeach
                                 </select>
