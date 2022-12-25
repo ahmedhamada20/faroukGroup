@@ -63,17 +63,19 @@
                     <input type="hidden" name="packages_id" value="{{$package->id}}">
 
                     <div class="row">
-                        <div class="col-lg-6 col-md-6">
+                        <div class="col-lg-6 col-md-6 text-center">
                             <div class="form-group">
                                 <label>اسم الخدمه</label>
-                                <input type="text" value="{{$services->name}}" class="form-control" readonly >
+                                <h5>{{$services->name}}</h5>
+{{--                                <input type="text" value="{{$services->name}}" class="form-control" readonly >--}}
                             </div>
                         </div>
 
-                        <div class="col-lg-6 col-md-6">
+                        <div class="col-lg-6 col-md-6 text-center">
                             <div class="form-group">
                                 <label>اسم الباقه</label>
-                                <input type="text"  value="{{$package->name}}" class="form-control" readonly >
+                                <h5>{{$package->name}}</h5>
+{{--                                <input type="text"  value="{{$package->name}}" class="form-control" readonly >--}}
                             </div>
                         </div>
 
