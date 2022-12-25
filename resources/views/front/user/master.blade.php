@@ -11,8 +11,6 @@
 <body class="fixed-left" style="font-family: 'Cairo', sans-serif;">
 @include('front.User.layouts.Loader')
 
-<body class="fixed-left">
-@include('front.user.layouts.Loader')
 
 <div id="wrapper">
     @include('front.user.layouts.Sidebar')
