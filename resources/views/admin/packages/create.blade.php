@@ -44,6 +44,16 @@
 
                         <div class="row">
 
+                            <div class="col">
+                                <label>فئات الخدمات</label>
+                                <select class="form-control" name="category_id" required>
+                                    <option value="" disabled selected>-- اختر من فئات الخدمات --</option>
+                                    @foreach($categories as $category)
+                                        <option value="{{$category->id}}">{{$category->name}}</option>
+                                    @endforeach
+                                </select>
+                            </div>
+
 
                             <div class="col">
                                 <label>حاله </label>
@@ -102,13 +112,13 @@
 
 
 
-                        <div class="row">
-                            <div class="col">
-                                <h5 class="text-danger">صوره الموقع</h5>
-                                <input type="file" name="cover" id="image_updload"  accept="image/*"
-                                       class="file-input-overview">
-                            </div>
-                        </div>
+{{--                        <div class="row">--}}
+{{--                            <div class="col">--}}
+{{--                                <h5 class="text-danger">صوره الموقع</h5>--}}
+{{--                                <input type="file" name="cover" id="image_updload"  accept="image/*"--}}
+{{--                                       class="file-input-overview">--}}
+{{--                            </div>--}}
+{{--                        </div>--}}
 
                         <br>
                         <div class="row">

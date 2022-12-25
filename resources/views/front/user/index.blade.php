@@ -1,4 +1,4 @@
-@extends('front.User.master')
+@extends('front.user.master')
 
 @section('title')
     لوحه تحكمك

@@ -16,13 +16,19 @@ class Packages extends Model
         'notes',
         'status',
         'price',
+        'category_id',
     ];
 
     protected $appends = ['image'];
 
     public function getImageAttribute()
     {
-        return $this->photo != null ? asset('admin/pictures/packages/' . $this->id .'/'.$this->photo->Filename ) : null;
+        return $this->photo != null ? asset('admin/pictures/packages/' . $this->id .'/'.$this->photo->Filename) : null;
+    }
+
+    public function category()
+    {
+        return $this->belongsTo(Category::class,'category_id');
     }
 
     public function Status()

@@ -51,6 +51,7 @@ Route::group(
     Route::get('/servicesDetails/{id}', [HomeController::class, 'servicesDetails'])->name('home.servicesDetails');
     Route::get('/contact', [HomeController::class, 'contact'])->name('home.contact');
     Route::get('/Agency', [HomeController::class, 'Agency'])->name('home.Agency');
+    Route::get('/blogDetails/{id}', [HomeController::class, 'blogDetails'])->name('home.blogDetails');
 
 
     Route::get('/jops', function (){

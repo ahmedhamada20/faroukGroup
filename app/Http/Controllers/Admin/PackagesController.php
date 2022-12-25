@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
+use App\Models\Category;
 use App\Models\Photo;
 use App\Models\Seo;
 use Illuminate\Http\Request;
@@ -49,7 +50,11 @@ class PackagesController extends Controller
      */
     public function create()
     {
-        return view($this->data['folder'] . $this->data['folderBlade'] . '.create');
+        $data = [
+            'categories' => Category::whereStatus(true)->get(),
+        ];
+
+        return view($this->data['folder'] . $this->data['folderBlade'] . '.create',$data);
     }
 
     /**
@@ -67,6 +72,7 @@ class PackagesController extends Controller
             'notes' => ['ar' => $request->notes, 'en' => $request->notes_en],
             'status' => $request->status,
             'price' => $request->price,
+            'category_id' => $request->category_id,
 
 
         ]);
@@ -121,6 +127,7 @@ class PackagesController extends Controller
     {
         $data = [
             'data' => $this->data['Models']::findorfail($id),
+            'categories' => Category::whereStatus(true)->get(),
         ];
         return view($this->data['folder'] . $this->data['folderBlade'] . '.edit', $data);
     }
@@ -140,6 +147,7 @@ class PackagesController extends Controller
             'name' => ['ar' => $request->name, 'en' => $request->name_en],
             'notes' => ['ar' => $request->notes, 'en' => $request->notes_en],
             'price' => $request->price,
+            'category_id' => $request->category_id,
 
         ]);
 
@@ -152,7 +160,7 @@ class PackagesController extends Controller
             'seoable_id' => $data->id,
             'notes' => $request->seo
         ]);
-        
+
         // Inset One Photo
 
         if ($file = $request->file('cover')) {

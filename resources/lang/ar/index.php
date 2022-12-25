@@ -2,7 +2,7 @@
 
 return [
 
-    'Home' => 'الصفحه الرئسيه',
+    'Home' => 'الصفحه الرئيسية',
     'aboutsUs' => 'من نحن',
     'Our_digital_services' => 'خدماتنا الرقمية',
     'digital_transformation' => 'التحول الرقمي',
@@ -12,12 +12,12 @@ return [
     'digital_trade' => 'التجارة الرقمية',
     'Digital_Director' => 'المخرج الرقمي',
     'Consulting' => 'الاستشارات',
-    'Connect_with_us' => 'اتصل بنا',
+    'Connect_with_us' => 'تواصل معنا',
     'name' => 'الإسم',
     'activity' => 'النشاط',
     'name_comppany' => 'إسم الشركة',
     'type_company' => 'حدد المشكلة',
-    'Message' => 'الرساله',
+    'Message' => 'نص إستشارتك',
     'sendMessage' => ' إرسال الإستشاره',
     'Free_consultation_with_a_business_developer' => 'إستشاره مجانية مع مطور أعمال',
 
@@ -57,5 +57,5 @@ return [
     'email' => 'البريد الالكتورني',
     'phone' => 'رقم الهاتف',
     'subject' => 'الموضوع',
-    'message' => 'الرساله',
+
 ];

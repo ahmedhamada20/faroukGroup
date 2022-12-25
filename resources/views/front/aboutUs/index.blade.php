@@ -1,6 +1,6 @@
 @extends('front.layouts.master')
 @section('title')
-About Us
+من نحن
 @endsection
 
 @section('content')
@@ -11,12 +11,12 @@ About Us
             <div class="d-table-cell">
                 <div class="container">
                     <div class="page-banner-content">
-                        <h2>AboutUs Farouk Group</h2>
+                        <h2>من نحن</h2>
                         <ul>
                             <li>
-                                <a href="{{route('home')}}">Home</a>
+                                <a href="{{route('home')}}">الرئيسية</a>
                             </li>
-                            <li>AboutUs Farouk Group</li>
+                            <li>من نحن</li>
                         </ul>
                     </div>
                 </div>
@@ -84,7 +84,7 @@ About Us
 
                             <div class="about-btn">
                                 <a href="#" class="default-btn">
-                                    Learn More
+                                    ؟؟؟؟؟
                                 </a>
                             </div>
                         </div>
@@ -95,13 +95,13 @@ About Us
     <!-- End About Area -->
 
     <p class="">{!! aboutsActivelastet()->notes !!}</p>
-
+<br>
   <!-- Start Team Area -->
 <section class="team-area pb-70">
     <div class="container">
         <div class="section-title">
-            <span>Team Member</span>
-            <h2>Our Expert Team</h2>
+{{--            <span>Team Member</span>--}}
+            <h2>الهيكل التنظمي للشركة</h2>
             <div class="bar"></div>
         </div>
 

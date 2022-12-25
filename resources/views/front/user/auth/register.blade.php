@@ -70,7 +70,7 @@
                             </div>
 
                             <div class="form-group">
-                                <label>كلمه المورو</label>
+                                <label>كلمه المرور</label>
                                 <input type="password" class="form-control" name="password" required>
                             </div>
 

@@ -135,7 +135,7 @@
 
                         <div class="option-item">
                             <div class="dropdown">
-                                <a class=" dropdown-toggle btn-sm" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                <a class=" dropdown-toggle btn-sm" type="button" data-bs-toggle="" aria-expanded="false">
                                     <i class="fa-solid fa-globe"></i> {{App::getLocale() == 'ar' ? 'AR' : 'EN'}}
                                 </a>
 

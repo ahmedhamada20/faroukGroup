@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Front;
 
 use App\Http\Controllers\Controller;
+use App\Models\Blog;
 use App\Models\Contact;
 use App\Models\Course;
 use Illuminate\Http\Request;
@@ -13,7 +14,14 @@ class HomeController extends Controller
     public function index()
     {
         return view('front.index');
-//        return view('front.User.index');
+//        return view('front.user.index');
+    }
+
+    public function blogDetails($id)
+    {
+        $blog = Blog::findorfail($id);
+
+        return view('front.blog.index',compact('blog'));
     }
 
     public function aboutUs()
