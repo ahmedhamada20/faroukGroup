@@ -35,10 +35,10 @@
                                     <p>
                                         {!!sliderActive()->notes!!}
                                     </p>
-                                    <a href="{{route('home.contactUs')}}" class="default-btn mt-3">{{__('index.slider1')}}
+                                    <a href="{{route('home.contactUs')}}" class="default-btn mt-3">حدد احتياجاتك
                                     </a>
                                 </div>
-                            </div>
+                            </div>g
                             <div class="col-lg-6">
                                 <div class="main-banner-image">
                                     <img src="{{asset(sliderActive()->image)}}" width="750px" height="650px"
@@ -649,37 +649,37 @@
     <!-- End Fun Facts Area -->
 
     <!-- Start Portfolio Area -->
-    <section class="portfolio-area pb-100">
-        <div class="container-fluid">
-            <div class="section-title">
+{{--    <section class="portfolio-area pb-100">--}}
+{{--        <div class="container-fluid">--}}
+{{--            <div class="section-title">--}}
 
-                <h2>أحدث المشاريع المكتملة</h2>
-                <div class="bar"></div>
-            </div>
+{{--                <h2>أحدث المشاريع المكتملة</h2>--}}
+{{--                <div class="bar"></div>--}}
+{{--            </div>--}}
 
-            <div class="portfolio-slider owl-carousel owl-theme">
-                @forelse (adsActive() as $ads)
-                    <div class="single-portfolio-item">
-                        <div class="portfolio-image">
-                            <a href="#">
-                                <img src="{{asset('front/assets/img/portfolio/portfolio-1.jpg')}}" alt="image">
-                            </a>
-                        </div>
+{{--            <div class="portfolio-slider owl-carousel owl-theme">--}}
+{{--                @forelse (adsActive() as $ads)--}}
+{{--                    <div class="single-portfolio-item">--}}
+{{--                        <div class="portfolio-image">--}}
+{{--                            <a href="#">--}}
+{{--                                <img src="{{asset('front/assets/img/portfolio/portfolio-1.jpg')}}" alt="image">--}}
+{{--                            </a>--}}
+{{--                        </div>--}}
 
-                        <div class="portfolio-content">
-                            <h3>
-                                <a href="#">{{ $ads->name }}</a>
-                            </h3>
-                            <span>{!! $ads->notes !!}</span>
-                        </div>
-                    </div>
-                @empty
+{{--                        <div class="portfolio-content">--}}
+{{--                            <h3>--}}
+{{--                                <a href="#">{{ $ads->name }}</a>--}}
+{{--                            </h3>--}}
+{{--                            <span>{!! $ads->notes !!}</span>--}}
+{{--                        </div>--}}
+{{--                    </div>--}}
+{{--                @empty--}}
 
-                @endforelse
+{{--                @endforelse--}}
 
-            </div>
-        </div>
-    </section>
+{{--            </div>--}}
+{{--        </div>--}}
+{{--    </section>--}}
     <!-- End Portfolio Area -->
 
     <!-- Start Client Area -->
