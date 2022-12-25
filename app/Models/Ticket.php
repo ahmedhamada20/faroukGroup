@@ -14,7 +14,7 @@ class Ticket extends Model
         "user_id",
         "ticketNumbers",
         "category_id",
-            "status",
+        "status",
         "message",
         "image",
     ];
@@ -23,27 +23,27 @@ class Ticket extends Model
 
     public function getImageAttribute()
     {
-        return $this->photo != null ? asset('admin/pictures/ticket/' . $this->id .'/'.$this->photo->Filename ) : null;
+        return $this->photo != null ? asset('admin/pictures/ticket/' . $this->id . '/' . $this->photo->Filename) : null;
     }
 
     public function customer()
     {
-        return $this->belongsTo(Customer::class,'customer_id');
+        return $this->belongsTo(Customer::class, 'customer_id');
     }
 
     public function user()
     {
-        return $this->belongsTo(User::class,'user_id');
+        return $this->belongsTo(User::class, 'user_id');
     }
 
     public function ticketReplys()
     {
-        return $this->hasMany(TicketReply::class,'ticket_id');
+        return $this->hasMany(TicketReply::class, 'ticket_id');
     }
 
     public function category()
     {
-        return $this->belongsTo(Category::class,'category_id');
+        return $this->belongsTo(Category::class, 'category_id');
     }
 
 

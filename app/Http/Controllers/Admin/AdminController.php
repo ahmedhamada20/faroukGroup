@@ -6,6 +6,7 @@ use App\Exports\ContactExport;
 use App\Exports\ContactMessageExport;
 use App\Http\Controllers\Controller;
 use App\Models\Contact;
+use App\Models\RequestSercice;
 use Illuminate\Http\Request;
 use Maatwebsite\Excel\Facades\Excel;
 
@@ -18,6 +19,16 @@ class AdminController extends Controller
         ];
         return view('admin.Contact.JOP', $data);
     }
+
+    public function supcpations()
+    {
+        $data = [
+            'data' => RequestSercice::paginate(10),
+        ];
+        return view('admin.supcpations.index', $data);
+    }
+
+
 
     public function AgencyIndex()
     {

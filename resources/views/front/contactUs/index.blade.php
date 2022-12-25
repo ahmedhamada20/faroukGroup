@@ -69,15 +69,7 @@
                                     @endforeach
                                 </select>
                             </div>
-                            {{--                            @foreach(App\Models\category::where('status',true)->get() as $category)--}}
-                            {{--                            <div class="form-check">--}}
-                            {{--                                <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>--}}
-                            {{--                                <label class="form-check-label" for="flexCheckChecked">--}}
-                            {{--                                    {{$category->name}}--}}
-                            {{--                                </label>--}}
-                            {{--                            </div>--}}
 
-                            {{--                            @endforeach--}}
 
                             <div class="form-group">
                                 <textarea class="form-control" name="Message" required

@@ -172,7 +172,7 @@
                             </ul>
 
                             <div class="pricing-btn">
-                                <a href="#" class="default-btn btn-block">
+                                <a href="{{route('home.subscriptions',[$data->id,$package->id])}}" class="default-btn btn-block">
                                   {!! $package->notes!!}
                                 </a>
                             </div>

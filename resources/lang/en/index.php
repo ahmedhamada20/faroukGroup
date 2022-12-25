@@ -38,6 +38,8 @@ return [
 
 
     'emailrequired' => 'Email is required',
+    'countryrequired' => 'country is required',
+    'jobsrequired' => 'Jobs is required',
     'emailmin' => 'The email must be valid',
     'emailmax' => 'This e-mail is incorrect',
     'emailemail' => 'You only need to enter your email address',

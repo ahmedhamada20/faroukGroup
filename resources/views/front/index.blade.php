@@ -86,7 +86,7 @@
 
                             <div class="about-btn">
                                 <a href="{{route('home.aboutUs')}}" class="default-btn">
-                                    لماذا نحن
+                                    من نحن
                                 </a>
                             </div>
                         </div>
@@ -559,7 +559,7 @@
                                         <i class="flaticon-promotion"></i>
                                     </div>
                                     <h3>
-                                        <a href="#">{{ $event->name }}</a>
+                                        <a>{{ $event->name }}</a>
                                     </h3>
                                     <p>{!! $event->notes !!}</p>
                                 </div>
@@ -811,7 +811,7 @@
                 <div class="col-lg-6">
 
                     <div class="quote-image" style="text-align: center">
-                        <img src="{{asset('front/assets/img/digital-experience/contact.jpg')}}"  alt="image">
+                        <img src="{{asset('front/assets/img/digital-experience/استشارة.png')}}"  alt="image">
                     </div>
                 </div>
 
@@ -844,7 +844,7 @@
                     <div class="col-lg-3 col-md-6">
                         <div class="single-team-box">
                             <div class="image">
-                                <img src="{{asset('front/assets/img/team/team-6.jpg')}}" alt="image">
+                                <img src="{{asset($number->image)}}" alt="image">
                             </div>
 
                             <div class="content">

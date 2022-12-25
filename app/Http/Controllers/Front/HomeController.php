@@ -6,8 +6,12 @@ use App\Http\Controllers\Controller;
 use App\Models\Blog;
 use App\Models\Contact;
 use App\Models\Course;
+use App\Models\Customer;
+use App\Models\Packages;
+use App\Models\RequestSercice;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Validator;
+use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Hash;
 
 class HomeController extends Controller
 {
@@ -17,11 +21,73 @@ class HomeController extends Controller
 //        return view('front.user.index');
     }
 
+
+    public function subscriptionsPost(Request $request)
+    {
+        $request->validate([
+            'name' => 'required|min:2|max:200',
+            'email' => 'required|min:2|max:255',
+            'phone' => 'required',
+            'jobs' => 'required|min:2|max:255',
+            'country' => 'required|min:2',
+        ]);
+
+
+        DB::beginTransaction();
+
+        try {
+
+            $subscription = RequestSercice::create([
+                'courses_id' => $request->courses_id,
+                'packages_id' => $request->packages_id,
+                'name' => $request->name,
+                'email' => $request->email,
+                'phone' => $request->phone,
+                'jobs' => $request->jobs,
+                'country' => $request->country,
+            ]);
+
+            $data = Customer::create([
+                'name' => $request->name,
+                'phone' => $request->phone,
+                'email' => $request->email,
+                'address' => 'no',
+                'password' => Hash::make($request->phone),
+                'type' => 'active',
+            ]);
+
+            RequestSercice::findorfail($subscription->id)->update([
+                'customer_id' => $data->id,
+            ]);
+
+            DB::commit();
+            return redirect()->route('home')->with(['success' => __('index.sendsuccessfullyMessage')]);
+
+        } catch (\Exception $e) {
+            DB::rollback();
+            return redirect()->back()->withErrors(['error' => 'Please Try Again']);
+        }
+
+
+
+    }
+
+    public function subscriptions($id, $package)
+    {
+
+        $data = [
+            'services' => Course::findorfail($id),
+            'package' => Packages::findorfail($package),
+        ];
+
+        return view('front.subscriptions.index', $data);
+    }
+
     public function blogDetails($id)
     {
         $blog = Blog::findorfail($id);
 
-        return view('front.blog.index',compact('blog'));
+        return view('front.blog.index', compact('blog'));
     }
 
     public function aboutUs()
@@ -33,6 +99,7 @@ class HomeController extends Controller
     {
         return view('front.agency.index');
     }
+
     public function contactUs()
     {
         return view('front.contactUs.index');
@@ -50,8 +117,8 @@ class HomeController extends Controller
 
     public function servicesDetails($id)
     {
-        $data = Course::where('category_id',$id)->first();
-        return view('front.services.details',compact('data'));
+        $data = Course::where('category_id', $id)->first();
+        return view('front.services.details', compact('data'));
     }
 
     public function contact()
@@ -280,13 +347,13 @@ class HomeController extends Controller
             'message.min' => __('index.Messagemin'),
         ]);
 
-        if($request->file('image')){
-            $file= $request->file('image');
-            $filename= date('YmdHi').$file->getClientOriginalName();
-            $file-> move(public_path('public/Image'), $filename);
+        if ($request->file('image')) {
+            $file = $request->file('image');
+            $filename = date('YmdHi') . $file->getClientOriginalName();
+            $file->move(public_path('public/Image'), $filename);
         }
 
-        $new  = new Contact();
+        $new = new Contact();
         $new->name = $request->name . $request->name_laset;
         $new->email = $request->email;
         $new->subject = $request->subject;

@@ -52,6 +52,8 @@ Route::group(
     Route::get('/contact', [HomeController::class, 'contact'])->name('home.contact');
     Route::get('/Agency', [HomeController::class, 'Agency'])->name('home.Agency');
     Route::get('/blogDetails/{id}', [HomeController::class, 'blogDetails'])->name('home.blogDetails');
+    Route::get('/subscriptions/{id}/{package}', [HomeController::class, 'subscriptions'])->name('home.subscriptions');
+    Route::post('subscriptions', [HomeController::class, 'subscriptionsPost'])->name('home.subscriptionsPost');
 
 
     Route::get('/jops', function (){

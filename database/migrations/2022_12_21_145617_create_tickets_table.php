@@ -15,11 +15,11 @@ class CreateTicketsTable extends Migration
     {
         Schema::create('tickets', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('category_id')->constrained('categories')->cascadeOnDelete()->cascadeOnUpdate();
             $table->foreignId('customer_id')->constrained('customers')->cascadeOnUpdate()->cascadeOnUpdate();
             $table->foreignId('user_id')->nullable()->constrained('users')->cascadeOnUpdate()->cascadeOnUpdate();
             $table->string('ticketNumbers');
             $table->enum('status',['padding','review','accepted','completed','cancel']);
-            $table->foreignId('category_id')->constrained('categories')->cascadeOnDelete()->cascadeOnUpdate();
             $table->text('message');
             $table->timestamps();
         });
