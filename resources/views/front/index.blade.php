@@ -943,9 +943,11 @@
 
 
                 @foreach(galleryActive()->photos as $photo)
+                    @if($photo->Filename)
                     <div class="partner-item">
                         <img src="{{asset('admin/pictures/gallery/'.galleryActive()->id.'/'.$photo->Filename)}}" alt="image">
                     </div>
+                    @endif
                 @endforeach
 
 
