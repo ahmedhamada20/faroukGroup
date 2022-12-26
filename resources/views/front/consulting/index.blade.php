@@ -22,7 +22,7 @@
     @endif
 
     <!-- Start Page Banner -->
-    <div class="page-banner-area item-bg2">
+    <div class="page-banner-area">
         <div class="d-table">
             <div class="d-table-cell">
                 <div class="container">

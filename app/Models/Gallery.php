@@ -19,9 +19,9 @@ class Gallery extends Model
 
 
 
-    public function getFileAttribute()
+    public function getImageAttribute()
     {
-        return $this->pdf != null ? asset('admin/bdf/gallery/' . $this->id . '/' . $this->pdf->Filename) : null;
+        return $this->photo != null ? asset('admin/pictures/gallery/' . $this->id . '/' . $this->photo->Filename) : null;
     }
 
     protected $fillable = [
@@ -29,6 +29,8 @@ class Gallery extends Model
         'notes',
         'status',
     ];
+
+
 
     public function Status()
     {

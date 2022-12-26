@@ -649,37 +649,37 @@
     <!-- End Fun Facts Area -->
 
     <!-- Start Portfolio Area -->
-{{--    <section class="portfolio-area pb-100">--}}
-{{--        <div class="container-fluid">--}}
-{{--            <div class="section-title">--}}
+    {{--    <section class="portfolio-area pb-100">--}}
+    {{--        <div class="container-fluid">--}}
+    {{--            <div class="section-title">--}}
 
-{{--                <h2>أحدث المشاريع المكتملة</h2>--}}
-{{--                <div class="bar"></div>--}}
-{{--            </div>--}}
+    {{--                <h2>أحدث المشاريع المكتملة</h2>--}}
+    {{--                <div class="bar"></div>--}}
+    {{--            </div>--}}
 
-{{--            <div class="portfolio-slider owl-carousel owl-theme">--}}
-{{--                @forelse (adsActive() as $ads)--}}
-{{--                    <div class="single-portfolio-item">--}}
-{{--                        <div class="portfolio-image">--}}
-{{--                            <a href="#">--}}
-{{--                                <img src="{{asset('front/assets/img/portfolio/portfolio-1.jpg')}}" alt="image">--}}
-{{--                            </a>--}}
-{{--                        </div>--}}
+    {{--            <div class="portfolio-slider owl-carousel owl-theme">--}}
+    {{--                @forelse (adsActive() as $ads)--}}
+    {{--                    <div class="single-portfolio-item">--}}
+    {{--                        <div class="portfolio-image">--}}
+    {{--                            <a href="#">--}}
+    {{--                                <img src="{{asset('front/assets/img/portfolio/portfolio-1.jpg')}}" alt="image">--}}
+    {{--                            </a>--}}
+    {{--                        </div>--}}
 
-{{--                        <div class="portfolio-content">--}}
-{{--                            <h3>--}}
-{{--                                <a href="#">{{ $ads->name }}</a>--}}
-{{--                            </h3>--}}
-{{--                            <span>{!! $ads->notes !!}</span>--}}
-{{--                        </div>--}}
-{{--                    </div>--}}
-{{--                @empty--}}
+    {{--                        <div class="portfolio-content">--}}
+    {{--                            <h3>--}}
+    {{--                                <a href="#">{{ $ads->name }}</a>--}}
+    {{--                            </h3>--}}
+    {{--                            <span>{!! $ads->notes !!}</span>--}}
+    {{--                        </div>--}}
+    {{--                    </div>--}}
+    {{--                @empty--}}
 
-{{--                @endforelse--}}
+    {{--                @endforelse--}}
 
-{{--            </div>--}}
-{{--        </div>--}}
-{{--    </section>--}}
+    {{--            </div>--}}
+    {{--        </div>--}}
+    {{--    </section>--}}
     <!-- End Portfolio Area -->
 
     <!-- Start Client Area -->
@@ -811,7 +811,7 @@
                 <div class="col-lg-6">
 
                     <div class="quote-image" style="text-align: center">
-                        <img src="{{asset('front/assets/img/digital-experience/استشارة.png')}}"  alt="image">
+                        <img src="{{asset('front/assets/img/digital-experience/استشارة.png')}}" alt="image">
                     </div>
                 </div>
 
@@ -940,96 +940,102 @@
     <div class="partner-area ptb-100">
         <div class="container">
             <div class="partner-slider owl-carousel owl-theme">
-                <div class="partner-item">
-                    <img src="{{asset('front/assets/img/partner/Canadian European academy.png')}}" alt="image">
-                </div>
 
-                <div class="partner-item">
-                    <img src="{{asset('front/assets/img/partner/EL TAMIMI.png')}}" alt="image">
-                </div>
 
-                <div class="partner-item">
-                    <img src="{{asset('front/assets/img/partner/gate .png')}}" alt="image">
-                </div>
+                @foreach(galleryActive()->photos as $photo)
+                    <div class="partner-item">
+                        <img src="{{asset('admin/pictures/gallery/'.galleryActive()->id.'/'.$photo->Filename)}}" alt="image">
+                    </div>
+                @endforeach
 
-                <div class="partner-item">
-                    <img src="{{asset('front/assets/img/partner/imct group.png')}}" alt="image">
-                </div>
 
-                <div class="partner-item">
-                    <img src="{{asset('front/assets/img/partner/IROVENTS.png')}}" alt="image">
-                </div>
 
-                <div class="partner-item">
-                    <img src="{{asset('front/assets/img/partner/Kadmar shipping co.png')}}" alt="image">
-                </div>
-                <div class="partner-item">
-                    <img src="{{asset('front/assets/img/partner/Les Dames.png')}}" alt="image">
-                </div>
+                {{--                <div class="partner-item">--}}
+                {{--                    <img src="{{asset('front/assets/img/partner/EL TAMIMI.png')}}" alt="image">--}}
+                {{--                </div>--}}
 
-                <div class="partner-item">
-                    <img src="{{asset('front/assets/img/partner/Mabani for Real Estate Investment.png')}}" alt="image">
-                </div>
+                {{--                <div class="partner-item">--}}
+                {{--                    <img src="{{asset('front/assets/img/partner/gate .png')}}" alt="image">--}}
+                {{--                </div>--}}
 
-                <div class="partner-item">
-                    <img src="{{asset('front/assets/img/partner/ngc-business-training.png')}}" alt="image">
-                </div>
+                {{--                <div class="partner-item">--}}
+                {{--                    <img src="{{asset('front/assets/img/partner/imct group.png')}}" alt="image">--}}
+                {{--                </div>--}}
 
-                <div class="partner-item">
-                    <img src="{{asset('front/assets/img/partner/Rotana Egypt.png')}}" alt="image">
-                </div>
+                {{--                <div class="partner-item">--}}
+                {{--                    <img src="{{asset('front/assets/img/partner/IROVENTS.png')}}" alt="image">--}}
+                {{--                </div>--}}
 
-                <div class="partner-item">
-                    <img src="{{asset('front/assets/img/partner/Sunrise tour.png')}}" alt="image">
-                </div>
+                {{--                <div class="partner-item">--}}
+                {{--                    <img src="{{asset('front/assets/img/partner/Kadmar shipping co.png')}}" alt="image">--}}
+                {{--                </div>--}}
+                {{--                <div class="partner-item">--}}
+                {{--                    <img src="{{asset('front/assets/img/partner/Les Dames.png')}}" alt="image">--}}
+                {{--                </div>--}}
 
-                <div class="partner-item">
-                    <img src="{{asset('front/assets/img/partner/tedata.png')}}" alt="image">
-                </div>
-                <div class="partner-item">
-                    <img src="{{asset('front/assets/img/partner/Tiba Manzalawi Group.png')}}" alt="image">
-                </div>
+                {{--                <div class="partner-item">--}}
+                {{--                    <img src="{{asset('front/assets/img/partner/Mabani for Real Estate Investment.png')}}" alt="image">--}}
+                {{--                </div>--}}
 
-                <div class="partner-item">
-                    <img src="{{asset('front/assets/img/partner/TREND GROUP.png')}}" alt="image">
-                </div>
+                {{--                <div class="partner-item">--}}
+                {{--                    <img src="{{asset('front/assets/img/partner/ngc-business-training.png')}}" alt="image">--}}
+                {{--                </div>--}}
 
-                <div class="partner-item">
-                    <img src="{{asset('front/assets/img/partner/Z Tours.png')}}" alt="image">
-                </div>
+                {{--                <div class="partner-item">--}}
+                {{--                    <img src="{{asset('front/assets/img/partner/Rotana Egypt.png')}}" alt="image">--}}
+                {{--                </div>--}}
 
-                <div class="partner-item">
-                    <img src="{{asset('front/assets/img/partner/أكاديمية التدريب العالمية.png')}}" alt="image">
-                </div>
+                {{--                <div class="partner-item">--}}
+                {{--                    <img src="{{asset('front/assets/img/partner/Sunrise tour.png')}}" alt="image">--}}
+                {{--                </div>--}}
 
-                <div class="partner-item">
-                    <img src="{{asset('front/assets/img/partner/أكروبول لحلول الطاقة المتجددة.png')}}" alt="image">
-                </div>
+                {{--                <div class="partner-item">--}}
+                {{--                    <img src="{{asset('front/assets/img/partner/tedata.png')}}" alt="image">--}}
+                {{--                </div>--}}
+                {{--                <div class="partner-item">--}}
+                {{--                    <img src="{{asset('front/assets/img/partner/Tiba Manzalawi Group.png')}}" alt="image">--}}
+                {{--                </div>--}}
 
-                <div class="partner-item">
-                    <img src="{{asset('front/assets/img/partner/الاكاديمية الدولية للتدريب.png')}}" alt="image">
-                </div>
-                <div class="partner-item">
-                    <img src="{{asset('front/assets/img/partner/الاكاديمية الكندية.png')}}" alt="image">
-                </div>
-                <div class="partner-item">
-                    <img src="{{asset('front/assets/img/partner/العثمانية للإستثمار العقارى.png')}}" alt="image">
-                </div>
-                <div class="partner-item">
-                    <img src="{{asset('front/assets/img/partner/الهيئة الدولية للتحكيم.png')}}" alt="image">
-                </div>
-                <div class="partner-item">
-                    <img src="{{asset('front/assets/img/partner/جريدة الوطن.png')}}" alt="image">
-                </div>
-                <div class="partner-item">
-                    <img src="{{asset('front/assets/img/partner/شركة الأمين  للسياحة.png')}}" alt="image">
-                </div>
-                <div class="partner-item">
-                    <img src="{{asset('front/assets/img/partner/فيرست مسك الدولية للسياحة.png')}}" alt="image">
-                </div>
-                <div class="partner-item">
-                    <img src="{{asset('front/assets/img/partner/مصر للأجهزة المكتبية.png')}}" alt="image">
-                </div>
+                {{--                <div class="partner-item">--}}
+                {{--                    <img src="{{asset('front/assets/img/partner/TREND GROUP.png')}}" alt="image">--}}
+                {{--                </div>--}}
+
+                {{--                <div class="partner-item">--}}
+                {{--                    <img src="{{asset('front/assets/img/partner/Z Tours.png')}}" alt="image">--}}
+                {{--                </div>--}}
+
+                {{--                <div class="partner-item">--}}
+                {{--                    <img src="{{asset('front/assets/img/partner/أكاديمية التدريب العالمية.png')}}" alt="image">--}}
+                {{--                </div>--}}
+
+                {{--                <div class="partner-item">--}}
+                {{--                    <img src="{{asset('front/assets/img/partner/أكروبول لحلول الطاقة المتجددة.png')}}" alt="image">--}}
+                {{--                </div>--}}
+
+                {{--                <div class="partner-item">--}}
+                {{--                    <img src="{{asset('front/assets/img/partner/الاكاديمية الدولية للتدريب.png')}}" alt="image">--}}
+                {{--                </div>--}}
+                {{--                <div class="partner-item">--}}
+                {{--                    <img src="{{asset('front/assets/img/partner/الاكاديمية الكندية.png')}}" alt="image">--}}
+                {{--                </div>--}}
+                {{--                <div class="partner-item">--}}
+                {{--                    <img src="{{asset('front/assets/img/partner/العثمانية للإستثمار العقارى.png')}}" alt="image">--}}
+                {{--                </div>--}}
+                {{--                <div class="partner-item">--}}
+                {{--                    <img src="{{asset('front/assets/img/partner/الهيئة الدولية للتحكيم.png')}}" alt="image">--}}
+                {{--                </div>--}}
+                {{--                <div class="partner-item">--}}
+                {{--                    <img src="{{asset('front/assets/img/partner/جريدة الوطن.png')}}" alt="image">--}}
+                {{--                </div>--}}
+                {{--                <div class="partner-item">--}}
+                {{--                    <img src="{{asset('front/assets/img/partner/شركة الأمين  للسياحة.png')}}" alt="image">--}}
+                {{--                </div>--}}
+                {{--                <div class="partner-item">--}}
+                {{--                    <img src="{{asset('front/assets/img/partner/فيرست مسك الدولية للسياحة.png')}}" alt="image">--}}
+                {{--                </div>--}}
+                {{--                <div class="partner-item">--}}
+                {{--                    <img src="{{asset('front/assets/img/partner/مصر للأجهزة المكتبية.png')}}" alt="image">--}}
+                {{--                </div>--}}
 
             </div>
         </div>

@@ -171,10 +171,11 @@ if (!function_exists('AllProfessorActive')) {
 if (!function_exists('galleryActive')) {
     function galleryActive()
     {
-        $data = Gallery::where('status', 1)->inRandomOrder()->limit(1)->get();
+        $data = Gallery::where('status', 1)->first();
         return $data;
     }
 }
+
 if (!function_exists('aboutusActive')) {
     function aboutusActive()
     {
