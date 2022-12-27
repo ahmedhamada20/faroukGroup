@@ -32,7 +32,7 @@ class BlogController extends Controller
         $data = [
             'data' => $this->data['Models']::with(['photo', 'pdf'])
                 ->when(\request()->keyword != null, function ($query) {
-                    $query->search(\request()->keyword);
+                    $query->search(\request()->keyword ?? null);
                 })
                 ->when(\request()->status != null, function ($query) {
                     $query->whereStatus(\request()->status);
