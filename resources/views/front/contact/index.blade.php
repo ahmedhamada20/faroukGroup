@@ -160,7 +160,7 @@
 
                         <div class="col-lg-6 col-md-6">
                             <div class="form-group">
-                                <label>الشركه<span class="text-danger">*</span></label>
+                                <label>الشركة<span class="text-danger">*</span></label>
                                 <input type="text" name="name_comppany"  id="msg_subject" class="form-control @error('subject') is-invalid
 
                                 @enderror" required data-error="{{ __('index.subjectrequired') }}">
@@ -170,7 +170,7 @@
 
                         <div class="col-lg-12 col-md-12">
                             <div class="form-group">
-                                <label>{{ __('index.message') }}<span class="text-danger">*</span></label>
+                                <label>رسالتك<span class="text-danger">*</span></label>
                                 <textarea name="message"  class="form-control @error('message') is-invalid
 
                                 @enderror" id="message" cols="30" rows="6" required data-error="{{ __('index.Messagerequired') }}"></textarea>

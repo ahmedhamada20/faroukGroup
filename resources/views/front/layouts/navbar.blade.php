@@ -123,7 +123,7 @@
                             <div class="search-overlay search-popup">
                                 <div class='search-box'>
                                     <form class="search-form">
-                                        <input class="search-input" name="search" placeholder="Search" type="text">
+                                        <input class="search-input" name="search" placeholder="بحث" type="text">
 
                                         <button class="search-button" type="submit">
                                             <i class="flaticon-loupe"></i>

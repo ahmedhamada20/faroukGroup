@@ -219,7 +219,7 @@
                                             <i class="flaticon-check"></i>
                                         </div>
                                         <h3>تصميم الهوية البصرية وإبتكار القيمة</h3>
-                                        <p>نقدم خدمة التسويق الرقمي وندير علامتك التجارية لخلق فرصا جديدة لأعمالك</p>
+                                        <p>نقدم خدمة التسويق الرقمي وندير علامتك التجارية لخلق فرصاً جديدة لأعمالك</p>
                                     </div>
 
                                     <div class="experience-inner-content">
@@ -362,7 +362,7 @@
                                             <i class="flaticon-check"></i>
                                         </div>
                                         <h3>رؤيته تطوير تارجت للمواقع</h3>
-                                        <p>فهم إحتياجات عملائنا وتحليل استراتيجات العمل لابتكار حلول تكنولوجية لتحقيق
+                                        <p>فهم احتياجات عملائنا وتحليل استراتيجات العمل لابتكار حلول تكنولوجية لتحقيق
                                             النتائج المستهدفة للتحول الرقمي</p>
                                     </div>
 
@@ -815,7 +815,7 @@
         <div class="container">
             <div class="section-title">
                 {{--            <span>Team Member</span>--}}
-                <h2>الهيكل التنظمي للشركة</h2>
+                <h2>الهيكل التنظيمي للشركة</h2>
                 <div class="bar"></div>
             </div>
 
@@ -902,13 +902,13 @@
         <div class="container">
             <div class="subscribe-content">
                 {{--            <span>Get Started Instantly!</span>--}}
-                <h3>اترك رقمك لإرسال البرمو الترويجي على الواتساب </h3>
+                <h3>اترك رقمك لإرسال البرومو الترويجي على الواتساب </h3>
 
                 <form class="newsletter-form" data-toggle="validator">
-                    <input type="email" class="input-newsletter" placeholder="برجاء إترك رقمك متبوعاً بكود الدولة   "
-                           name="EMAIL" required autocomplete="off">
+                    <input type="email" class="input-newsletter" placeholder="برجاء أترك رقمك متبوعاً بكود الدولة   "
+                           name="vvcvcvcvcvcvcvcvcvcv" required autocomplete="off">
 
-                    <button type="submit">Subscribe</button>
+                    <button type="submit">إرسال</button>
                     <div id="validator-newsletter" class="form-result"></div>
                 </form>
             </div>

@@ -27,12 +27,12 @@
             <div class="d-table-cell">
                 <div class="container">
                     <div class="page-banner-content">
-                        <h2>إستشارة مجانية لتحديد الإحتياجات</h2>
-                        <ul>add
+                        <h2>استشارة مجانية لتحديد الاحتياجات</h2>
+                        <ul>
                             <li>
                                 <a href="{{route('home')}}">الرئيسية</a>
                             </li>
-                            <li>إستشارة مجانية لتحديد الإحتياجات</li>
+                            <li>استشارة مجانية لتحديد الاحتياجات</li>
                         </ul>
                     </div>
                 </div>
@@ -48,7 +48,7 @@
                 <p>سجل بياناتك الآن وسيقوم بالتواصل معك أحد مطورين الأعمال</p>
                 <h2>هل أنت جاهز لمعرفة نقاط القوة والضعف بشركتك ؟</h2>
                 <div class="bar"></div>
-                <p class="strong">يجب اختيار معاد من السبت الي الخميس من الساعه 10 ص الي الساعه 5 م</p>
+                <p class="strong">يجب اختيار معاد من السبت إلى الخميس من الساعة 10 ص إلى الساعة 5 م</p>
                 <div class="bar"></div>
             </div>
 
@@ -106,7 +106,7 @@
 
                                 <div class="col-lg-6 col-md-6">
                                     <div class="form-group">
-                                        <input type="text" name="activity" id="email" class="form-control" required data-error="يجب ادخال المسمي الوظيفي" placeholder="المسمي الوظيفي">
+                                        <input type="text" name="activity" id="email" class="form-control" required data-error="يجب ادخال المسمى الوظيفي" placeholder="المسمى الوظيفي">
                                         <div class="help-block with-errors"></div>
                                     </div>
                                 </div>
@@ -142,7 +142,7 @@
                                 </div>
 
                                 <div class="col-lg-12 col-md-12">
-                                    <button type="submit" class="default-btn">ارسال طلبك</button>
+                                    <button type="submit" class="default-btn">إرسال طلبك</button>
                                     <div id="msgSubmit" class="h3 text-center hidden"></div>
                                     <div class="clearfix"></div>
                                 </div>

@@ -47,7 +47,7 @@
 
                     <ul class="quick-links">
                         <li>
-                            <a href="{{route('home.consulting')}}">الإستشارات المجانية</a>
+                            <a href="{{route('home.consulting')}}">الاستشارات المجانية</a>
                         </li>
                         <li>
                             <a href="{{route('GuestRegister')}}">تسجيل عضوية</a>
@@ -85,7 +85,7 @@
 
             <div class="col-lg-3 col-sm-6">
                 <div class="single-footer-widget pl-5">
-                    <h3>نسعد بإتصالك</h3>
+                    <h3>نسعد باتصالك</h3>
 
                     <ul class="footer-contact-info">
                         <li>

@@ -10,12 +10,12 @@
             <div class="d-table-cell">
                 <div class="container">
                     <div class="page-banner-content">
-                        <h2>تسجيل عضويه جديده</h2>
+                        <h2>تسجيل عضوية جديدة</h2>
                         <ul>
                             <li>
-                                <a href="{{route('home')}}">الصفحه الرئسيه</a>
+                                <a href="{{route('home')}}">الصفحة الرئيسية</a>
                             </li>
-                            <li>تسجيل عضويه جديده</li>
+                            <li>تسجيل عضوية جديدة</li>
                         </ul>
                     </div>
                 </div>
@@ -45,7 +45,7 @@
 
                 <div class="col-lg-6">
                     <div class="register-form">
-                        <h2> سجل عضويتك الان</h2>
+                        <h2> سجل عضويتك الآن</h2>
 
                         <form action="{{route('GuestRegister')}}" method="post" autocomplete="off">
                             @csrf
@@ -60,7 +60,7 @@
                             </div>
 
                             <div class="form-group">
-                                <label>البريد الالكتروني</label>
+                                <label>البريد الإلكتروني</label>
                                 <input type="email" name="email" class="form-control" required>
                             </div>
 
@@ -70,12 +70,12 @@
                             </div>
 
                             <div class="form-group">
-                                <label>كلمه المرور</label>
+                                <label>كلمة المرور</label>
                                 <input type="password" class="form-control" name="password" required>
                             </div>
 
                             <div class="form-group">
-                                <label>تأكيد كلمه المرور</label>
+                                <label>تأكيد كلمة المرور</label>
                                 <input type="password" class="form-control" name="password_confirmation" required>
                             </div>
 

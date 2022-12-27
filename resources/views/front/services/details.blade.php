@@ -14,7 +14,7 @@
                         <h2>{{$data->category->name ?? ''}}</h2>
                         <ul>
                             <li>
-                                <a href="{{route('home')}}">الصفحه الرئسيه</a>
+                                <a href="{{route('home')}}">الصفحة الرئيسية</a>
                             </li>
                             <li>{{$data->name ?? ''}}</li>
                         </ul>
@@ -82,7 +82,7 @@
                     <div class="services-details-information">
                         <ul class="services-list">
                             @foreach($data->previousWorks as $previousWork)
-                                <li><a href="#" class="{{$loop->first ? 'active' : null}}">{{$previousWork->name}}</a>
+                                <li><a  class="{{$loop->first ? 'active' : null}}">{{$previousWork->name}}</a>
                                 </li>
                             @endforeach
 
@@ -113,7 +113,7 @@
                                         <i class='bx bx-user-pin'></i>
                                     </div>
                                     <span>الهاتف:</span>
-                                    <a href="tel:{{settingSite()->phone}}">{{settingSite()->phone}}</a>
+                                    <a style="color: #000000;" href="tel:{{settingSite()->phone}}">{{settingSite()->phone}}</a>
                                 </li>
                                 <li>
                                     <div class="icon">
@@ -142,7 +142,7 @@
     <section class="pricing-area pt-100 pb-70">
         <div class="container">
             <div class="section-title">
-                <span>قائمه الاسعار</span>
+                <span>قائمة الأسعار</span>
                 <h2>اختر الخطة التي تناسب احتياجاتك وتطلعاتك</h2>
                 <div class="bar"></div>
             </div>

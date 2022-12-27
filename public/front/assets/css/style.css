@@ -3943,7 +3943,7 @@ Pricing Area CSS
   text-align: left;
   margin-left: auto;
   margin-right: auto;
-  max-width: 200px;
+  max-width: 250px;
 }
 
 .single-pricing-box .pricing-features li {
@@ -5585,7 +5585,7 @@ Services Details Area CSS
   margin-bottom: 20px;
   border-bottom: 1px solid #eeeeee;
   position: relative;
-  color: #f64c67;
+  color: #000000;
   font-weight: 500;
   font-size: 16px;
   padding-left: 35px;
