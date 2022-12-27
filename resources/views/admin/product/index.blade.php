@@ -37,7 +37,7 @@
 
                     <div class="row">
                         <div class="col">
-                            @include('admin.product.search')
+{{--                            @include('admin.product.search')--}}
                         </div>
                     </div>
                 </div>

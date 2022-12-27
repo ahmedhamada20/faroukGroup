@@ -39,7 +39,7 @@
 
                     <div class="row" id="search">
                         <div class="col">
-                            @include('admin.category.search')
+{{--                            @include('admin.category.search')--}}
                         </div>
                     </div>
 

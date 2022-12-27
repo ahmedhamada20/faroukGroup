@@ -37,7 +37,7 @@
 
                     <div class="row">
                         <div class="col">
-                            @include('admin.gallery.search')
+{{--                            @include('admin.gallery.search')--}}
                         </div>
                     </div>
                 </div>

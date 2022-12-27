@@ -37,7 +37,7 @@
 
                     <div class="row">
                         <div class="col">
-                            @include('admin.slider.search')
+{{--                            @include('admin.slider.search')--}}
                         </div>
                     </div>
                 </div>
