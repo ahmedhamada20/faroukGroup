@@ -2,7 +2,7 @@
 
 return [
 
-    'Home' => 'الصفحه الرئيسية',
+    'Home' => 'الصفحة الرئيسية',
     'aboutsUs' => 'من نحن',
     'Our_digital_services' => 'خدماتنا الرقمية',
     'digital_transformation' => 'التحول الرقمي',
@@ -17,9 +17,9 @@ return [
     'activity' => 'النشاط',
     'name_comppany' => 'إسم الشركة',
     'type_company' => 'حدد المشكلة',
-    'Message' => 'نص إستشارتك',
-    'sendMessage' => ' إرسال الإستشاره',
-    'Free_consultation_with_a_business_developer' => 'إستشاره مجانية مع مطور أعمال',
+    'Message' => 'نص الرساله(اخْتِياريّ)',
+    'sendMessage' => '  إرسال',
+    'Free_consultation_with_a_business_developer' => 'استمارة تحديد احتياجات',
 
 
     'namerequired' => 'الاسم مطلوب',

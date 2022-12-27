@@ -40,7 +40,32 @@
                                 <input type="text" class="form-control @error('name') is-invalid @enderror" name="name"
                                        required placeholder="{{ __('index.name') }}">
                             </div>
+                            <div class="row">
+                                <div class="col-md-12">
 
+                                    <select class="hessine" style=" " required id="txtcountryTwo" name="country">
+                                        <option value="" disabled selected>--اختر كود الدولة--</option>
+
+                                        <option value="20">حمهورية مصر العربية</option>
+
+                                        <option value="974">قطر</option>
+                                        <option value="973">البحرين</option>
+                                        <option value="971">الإمارات</option>
+                                        <option value="966">السعودية</option>
+                                        <option value="964">العراق</option>
+                                        <option value="962">الأردن</option>
+                                        <option value="965">الكويت</option>
+
+                                        <option value="968">عمان</option>
+
+                                        <option value="">أخرى</option>
+
+
+
+                                    </select>
+
+                                </div>
+                            </div>
                                <div class="form-group">
                                 <input type="text" class="form-control @error('phone') is-invalid @enderror" name="phone"
                                        required placeholder="{{ __('index.phone') }}">
@@ -61,15 +86,35 @@
                                 <input type="text" class="form-control @error('name_comppany') is-invalid @enderror"
                                        name="name_comppany" required placeholder="{{ __('index.name_comppany') }}">
                             </div>
-                            <div class="form-group">
-                                <select class="form-control js-example-basic-multiple" name="type_company">
-                                    <option value="" disabled selected>-- اختر من القائمه --</option>
-                                    @foreach(App\Models\Category::where('status',true)->get() as $category)
-                                        <option value="{{$category->name}}">{{$category->name}}</option>
-                                    @endforeach
-                                </select>
-                            </div>
+{{--                            <div class="form-group">--}}
+{{--                                <select class="form-control js-example-basic-multiple" name="type_company">--}}
+{{--                                    <option value="" disabled selected>-- اختر من القائمه --</option>--}}
+{{--                                    @foreach(App\Models\Category::where('status',true)->get() as $category)--}}
+{{--                                        <option value="{{$category->name}}">{{$category->name}}</option>--}}
+{{--                                    @endforeach--}}
+{{--                                </select>--}}
+{{--                            </div>--}}
 
+                            <div class="col-lg-6 col-md-6 col-sm-6">
+                                <p>-- اختر من القائمه --</p>
+
+
+                                <input type="checkbox" id="vehiclec1" name="vehiclec1" value="Bike">
+                                <label for="vehiclec1">التسويق الرقمي</label><br>
+                                <input type="checkbox" id="vehiclec2" name="vehiclec2" value="Car">
+                                <label for="vehiclec2">تصميم وتطوير المواقع</label><br>
+                                <input type="checkbox" id="vehiclec3" name="vehiclec3" value="Boat">
+                                <label for="vehiclec3">قواعد بيانات</label><br>
+                                <input type="checkbox" id="vehiclec4" name="vehiclec4" value="Boat">
+                                <label for="vehiclec4">المدير الرقمي</label><br>
+                                <input type="checkbox" id="vehiclec5" name="vehiclec5" value="Boat">
+                                <label for="vehiclec5">منصة تارجت</label><br>
+                                <input type="checkbox" id="vehiclec6" name="vehiclec6" value="Boat">
+                                <label for="vehiclec6">تطوير الأعمال</label><br>
+
+
+                            </div>
+<br>
 
                             <div class="form-group">
                                 <textarea class="form-control" name="Message" required

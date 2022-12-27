@@ -499,7 +499,7 @@
         <div class="container">
             <div class="section-title">
                 <span>حلولنا الرقمية</span>
-                <h2>حلول تقنية تخلق فرصاُ</h2>
+                <h2>حلول تقنية تخلق فُرَصًا</h2>
                 <div class="bar"></div>
             </div>
 
@@ -510,7 +510,7 @@
                             <div class="image">
                                 <a href="{{route('home.servicesDetails',$category->id)}}">
                                     <img src="{{asset($category->image ?? 'front/assets/img/services/services-7.jpg')}}"
-                                         width="403px" height="310px" alt="image">
+                                         width="403px" height="310px" alt="image" style="height: 350px">
                                 </a>
                             </div>
                             <div class="content">
@@ -538,14 +538,14 @@
         <div class="container">
             <div class="section-title text-width">
                 <span>خطوات العمل</span>
-                <h2>حلول تقنية تخلق فرصاُ</h2>
+                <h2>حلول تقنية تخلق فُرَصًا</h2>
                 <div class="bar"></div>
             </div>
 
             <div class="row align-items-center">
                 <div class="col-lg-6">
                     <div class="features-image-warp">
-                        <img src="{{asset('front/assets/img/features/work.png')}}" alt="image">
+                        <img src="{{asset('front/assets/img/features/work.png')}}" alt="image" >
                     </div>
                 </div>
 
@@ -554,9 +554,9 @@
 
                         @forelse (eventsActive() as $event )
                             <div class="col-lg-6 col-md-6">
-                                <div class="single-features-box top-1">
-                                    <div class="icon">
-                                        <i class="flaticon-promotion"></i>
+                                <div class="single-features-box top-1" style="height: 280px">
+                                    <div class="icon" style="height: 80px">
+                                        <i class="{{asset($event->image)}}"></i>
                                     </div>
                                     <h3>
                                         <a>{{ $event->name }}</a>
@@ -705,6 +705,32 @@
                                 <input type="text" class="form-control @error('name') is-invalid @enderror" name="name"
                                        required placeholder="{{ __('index.name') }}">
                             </div>
+                            <div class="row">
+                                <div class="col-md-12">
+
+                                    <select class="hessine" style=" " required id="txtcountryTwo" name="country">
+                                        <option value="" disabled selected>--اختر كود الدولة--</option>
+
+                                        <option value="20">حمهورية مصر العربية</option>
+
+                                        <option value="974">قطر</option>
+                                        <option value="973">البحرين</option>
+                                        <option value="971">الإمارات</option>
+                                        <option value="966">السعودية</option>
+                                        <option value="964">العراق</option>
+                                        <option value="962">الأردن</option>
+                                        <option value="965">الكويت</option>
+
+                                        <option value="968">عمان</option>
+
+                                        <option value="">أخرى</option>
+
+
+
+                                    </select>
+
+                                </div>
+                            </div>
                             <div class="form-group">
                                 <input type="text" class="form-control @error('phone') is-invalid @enderror"
                                        name="phone"
@@ -718,47 +744,50 @@
                                 <input type="text" class="form-control @error('name_comppany') is-invalid @enderror"
                                        name="name_comppany" required placeholder="{{ __('index.name_comppany') }}">
                             </div>
-                            <div class="form-group">
-                                <input type="text" class="form-control @error('type_company') is-invalid @enderror"
-                                       name="type_company" required placeholder="{{ __('index.type_company') }}">
-                            </div>
+{{--                            <div class="form-group">--}}
+{{--                                <input type="text" class="form-control @error('type_company') is-invalid @enderror"--}}
+{{--                                       name="type_company" required placeholder="{{ __('index.type_company') }}">--}}
+{{--                            </div>--}}
 
+
+                            <br>
 
                             <div class="row">
                                 <div class="col-lg-6 col-md-6 col-sm-6">
-                                    <h4>إنشاء/ تطوير</h4>
+                                    <h4>حدد المشكلة</h4>
 
 
                                     <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
-                                    <label for="vehicle1">موقع الكتروني</label><br>
+                                    <label for="vehicle1">مشكلة فى المبيعات</label><br>
                                     <input type="checkbox" id="vehicle2" name="vehicle2" value="Car">
-                                    <label for="vehicle2">تطبيق موبايل</label><br>
+                                    <label for="vehicle2">مشكلة فى التسويق</label><br>
                                     <input type="checkbox" id="vehicle3" name="vehicle3" value="Boat">
-                                    <label for="vehicle3">منصة</label><br>
+                                    <label for="vehicle3">مشكلة فى البرمجيات</label><br>
                                     <input type="checkbox" id="vehicle4" name="vehicle4" value="Boat">
-                                    <label for="vehicle4">نظام</label><br>
+                                    <label for="vehicle4">مشكلة فى إدارة شركتي</label><br>
                                     <input type="checkbox" id="vehicle5" name="vehicle5" value="Boat">
-                                    <label for="vehicle5">استضافة</label><br>
+                                    <label for="vehicle5">مشكلة في البراند</label><br>
+                                    <input type="checkbox" id="vehicle6" name="vehicle6" value="Boat">
+                                    <label for="vehicle6">كل ما سبق</label><br>
 
 
                                 </div>
-                                <div class="col-lg-6 col-md-6 col-sm-6">
-                                    <h4>محتوى الكتروني</h4>
+{{--                                <div class="col-lg-6 col-md-6 col-sm-6">--}}
+{{--                                    <h4>محتوى الكتروني</h4>--}}
 
 
-                                    <input type="checkbox" id="vehicle6" name="vehicle6" value="Bike">
-                                    <label for="vehicle6">الهوية البصرية</label><br>
-                                    <input type="checkbox" id="vehicle7" name="vehicle7" value="Car">
-                                    <label for="vehicle7">تصميم الجرافيك</label><br>
-                                    <input type="checkbox" id="vehicle8" name="vehicle8" value="Boat">
-                                    <label for="vehicle8">الموشنن جرافيك</label><br>
-                                    <input type="checkbox" id="vehicle9" name="vehicle9" value="Boat">
-                                    <label for="vehicle9">كتابة المحتوى</label><br>
-                                    <input type="checkbox" id="vehicle10" name="vehicle10" value="Boat">
-                                    <label for="vehicle10">إنشاء مدونات</label><br>
+
+{{--                                    <input type="checkbox" id="vehicle7" name="vehicle7" value="Car">--}}
+{{--                                    <label for="vehicle7">تصميم الجرافيك</label><br>--}}
+{{--                                    <input type="checkbox" id="vehicle8" name="vehicle8" value="Boat">--}}
+{{--                                    <label for="vehicle8">الموشنن جرافيك</label><br>--}}
+{{--                                    <input type="checkbox" id="vehicle9" name="vehicle9" value="Boat">--}}
+{{--                                    <label for="vehicle9">كتابة المحتوى</label><br>--}}
+{{--                                    <input type="checkbox" id="vehicle10" name="vehicle10" value="Boat">--}}
+{{--                                    <label for="vehicle10">إنشاء مدونات</label><br>--}}
 
 
-                                </div>
+{{--                                </div>--}}
                                 {{--                            <div class="col-lg-3 col-md-6 col-sm-6">--}}
                                 {{--                                <h4 >التسويق</h4>--}}
 
@@ -890,7 +919,7 @@
                                 <h3>
                                     <a href="{{route('home.blogDetails',$blog->id)}}">{{$blog->name}}</a>
                                 </h3>
-                                <a href="{{route('home.blogDetails',$blog->id)}}" class="blog-btn">Read More <i
+                                <a href="{{route('home.blogDetails',$blog->id)}}" class="blog-btn">قراءة المزيد <i
                                         class='bx bx-chevrons-right'></i></a>
                             </div>
                         </div>
@@ -922,7 +951,7 @@
         <div class="container">
             <div class="subscribe-content">
                 {{--            <span>Get Started Instantly!</span>--}}
-                <h2>إترك رقمك لإرسال البرمو الترويجي على الواتساب </h2>
+                <h3>اترك رقمك لإرسال البرمو الترويجي على الواتساب </h3>
 
                 <form class="newsletter-form" data-toggle="validator">
                     <input type="email" class="input-newsletter" placeholder="برجاء إترك رقمك متبوعاً بكود الدولة   "
@@ -949,95 +978,6 @@
                     </div>
                     @endif
                 @endforeach
-
-
-
-                {{--                <div class="partner-item">--}}
-                {{--                    <img src="{{asset('front/assets/img/partner/EL TAMIMI.png')}}" alt="image">--}}
-                {{--                </div>--}}
-
-                {{--                <div class="partner-item">--}}
-                {{--                    <img src="{{asset('front/assets/img/partner/gate .png')}}" alt="image">--}}
-                {{--                </div>--}}
-
-                {{--                <div class="partner-item">--}}
-                {{--                    <img src="{{asset('front/assets/img/partner/imct group.png')}}" alt="image">--}}
-                {{--                </div>--}}
-
-                {{--                <div class="partner-item">--}}
-                {{--                    <img src="{{asset('front/assets/img/partner/IROVENTS.png')}}" alt="image">--}}
-                {{--                </div>--}}
-
-                {{--                <div class="partner-item">--}}
-                {{--                    <img src="{{asset('front/assets/img/partner/Kadmar shipping co.png')}}" alt="image">--}}
-                {{--                </div>--}}
-                {{--                <div class="partner-item">--}}
-                {{--                    <img src="{{asset('front/assets/img/partner/Les Dames.png')}}" alt="image">--}}
-                {{--                </div>--}}
-
-                {{--                <div class="partner-item">--}}
-                {{--                    <img src="{{asset('front/assets/img/partner/Mabani for Real Estate Investment.png')}}" alt="image">--}}
-                {{--                </div>--}}
-
-                {{--                <div class="partner-item">--}}
-                {{--                    <img src="{{asset('front/assets/img/partner/ngc-business-training.png')}}" alt="image">--}}
-                {{--                </div>--}}
-
-                {{--                <div class="partner-item">--}}
-                {{--                    <img src="{{asset('front/assets/img/partner/Rotana Egypt.png')}}" alt="image">--}}
-                {{--                </div>--}}
-
-                {{--                <div class="partner-item">--}}
-                {{--                    <img src="{{asset('front/assets/img/partner/Sunrise tour.png')}}" alt="image">--}}
-                {{--                </div>--}}
-
-                {{--                <div class="partner-item">--}}
-                {{--                    <img src="{{asset('front/assets/img/partner/tedata.png')}}" alt="image">--}}
-                {{--                </div>--}}
-                {{--                <div class="partner-item">--}}
-                {{--                    <img src="{{asset('front/assets/img/partner/Tiba Manzalawi Group.png')}}" alt="image">--}}
-                {{--                </div>--}}
-
-                {{--                <div class="partner-item">--}}
-                {{--                    <img src="{{asset('front/assets/img/partner/TREND GROUP.png')}}" alt="image">--}}
-                {{--                </div>--}}
-
-                {{--                <div class="partner-item">--}}
-                {{--                    <img src="{{asset('front/assets/img/partner/Z Tours.png')}}" alt="image">--}}
-                {{--                </div>--}}
-
-                {{--                <div class="partner-item">--}}
-                {{--                    <img src="{{asset('front/assets/img/partner/أكاديمية التدريب العالمية.png')}}" alt="image">--}}
-                {{--                </div>--}}
-
-                {{--                <div class="partner-item">--}}
-                {{--                    <img src="{{asset('front/assets/img/partner/أكروبول لحلول الطاقة المتجددة.png')}}" alt="image">--}}
-                {{--                </div>--}}
-
-                {{--                <div class="partner-item">--}}
-                {{--                    <img src="{{asset('front/assets/img/partner/الاكاديمية الدولية للتدريب.png')}}" alt="image">--}}
-                {{--                </div>--}}
-                {{--                <div class="partner-item">--}}
-                {{--                    <img src="{{asset('front/assets/img/partner/الاكاديمية الكندية.png')}}" alt="image">--}}
-                {{--                </div>--}}
-                {{--                <div class="partner-item">--}}
-                {{--                    <img src="{{asset('front/assets/img/partner/العثمانية للإستثمار العقارى.png')}}" alt="image">--}}
-                {{--                </div>--}}
-                {{--                <div class="partner-item">--}}
-                {{--                    <img src="{{asset('front/assets/img/partner/الهيئة الدولية للتحكيم.png')}}" alt="image">--}}
-                {{--                </div>--}}
-                {{--                <div class="partner-item">--}}
-                {{--                    <img src="{{asset('front/assets/img/partner/جريدة الوطن.png')}}" alt="image">--}}
-                {{--                </div>--}}
-                {{--                <div class="partner-item">--}}
-                {{--                    <img src="{{asset('front/assets/img/partner/شركة الأمين  للسياحة.png')}}" alt="image">--}}
-                {{--                </div>--}}
-                {{--                <div class="partner-item">--}}
-                {{--                    <img src="{{asset('front/assets/img/partner/فيرست مسك الدولية للسياحة.png')}}" alt="image">--}}
-                {{--                </div>--}}
-                {{--                <div class="partner-item">--}}
-                {{--                    <img src="{{asset('front/assets/img/partner/مصر للأجهزة المكتبية.png')}}" alt="image">--}}
-                {{--                </div>--}}
 
             </div>
         </div>

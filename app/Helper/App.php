@@ -75,7 +75,7 @@ if (!function_exists('activeProduct')) {
 if (!function_exists('categoryActive')) {
     function categoryActive()
     {
-        $data = Category::where('status', 1)->inRandomOrder()->limit(6)->get();
+        $data = Category::where('status', 1)->limit(6)->get();
         return $data;
     }
 }
@@ -84,7 +84,7 @@ if (!function_exists('categoryActive')) {
 if (!function_exists('eventsActive')) {
     function eventsActive()
     {
-        $data = Event::where('status', 1)->inRandomOrder()->limit(4)->get();
+        $data = Event::where('status', 1)->limit(4)->get();
         return $data;
     }
 }
