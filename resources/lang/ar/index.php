@@ -35,6 +35,7 @@ return [
     'type_companymin' => 'اكتب شركة دقيقة',
     'type_companymax' => 'اكتب الشركة كحد أقصى',
     'Messagerequired' => 'الرسالة المطلوبة',
+    'vehicle1required' => 'يجب اختيار نوع المشكله',
     'Messagemin' => 'رسالة دقيقة',
     'sendsuccessfullyMessage' => 'أرسل الرسالة بنجاح',
 

@@ -4,6 +4,22 @@
 @endsection
 
 @section('content')
+    @if(Session::has('success'))
+        <div class="alert alert-success alert-dismissible">
+            <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+            <strong>{{ Session::get('success') }}</strong>
+        </div>
+    @endif
+
+    @if ($errors->any())
+        <div class="alert alert-danger">
+            <ul>
+                @foreach ($errors->all() as $error)
+                    <li>{{ $error }}</li>
+                @endforeach
+            </ul>
+        </div>
+    @endif
 
     <!-- Start Page Banner -->
     <div class="page-banner-area">
@@ -86,30 +102,23 @@
                                 <input type="text" class="form-control @error('name_comppany') is-invalid @enderror"
                                        name="name_comppany" required placeholder="{{ __('index.name_comppany') }}">
                             </div>
-{{--                            <div class="form-group">--}}
-{{--                                <select class="form-control js-example-basic-multiple" name="type_company">--}}
-{{--                                    <option value="" disabled selected>-- اختر من القائمه --</option>--}}
-{{--                                    @foreach(App\Models\Category::where('status',true)->get() as $category)--}}
-{{--                                        <option value="{{$category->name}}">{{$category->name}}</option>--}}
-{{--                                    @endforeach--}}
-{{--                                </select>--}}
-{{--                            </div>--}}
+
 
                             <div class="col-lg-6 col-md-6 col-sm-6">
                                 <p>-- اختر من القائمه --</p>
 
 
-                                <input type="checkbox" id="vehiclec1" name="vehiclec1" value="Bike">
+                                <input type="checkbox" id="vehiclec1" name="vehicle1[]" value="التسويق الرقمي">
                                 <label for="vehiclec1">التسويق الرقمي</label><br>
-                                <input type="checkbox" id="vehiclec2" name="vehiclec2" value="Car">
+                                <input type="checkbox" id="vehiclec2" name="vehicle1[]" value="تصميم وتطوير المواقع">
                                 <label for="vehiclec2">تصميم وتطوير المواقع</label><br>
-                                <input type="checkbox" id="vehiclec3" name="vehiclec3" value="Boat">
+                                <input type="checkbox" id="vehiclec3" name="vehicle1[]" value="قواعد بيانات">
                                 <label for="vehiclec3">قواعد بيانات</label><br>
-                                <input type="checkbox" id="vehiclec4" name="vehiclec4" value="Boat">
+                                <input type="checkbox" id="vehiclec4" name="vehicle1[]" value="المدير الرقمي">
                                 <label for="vehiclec4">المدير الرقمي</label><br>
-                                <input type="checkbox" id="vehiclec5" name="vehiclec5" value="Boat">
+                                <input type="checkbox" id="vehiclec5" name="vehicle1[]" value="منصة تارجت">
                                 <label for="vehiclec5">منصة تارجت</label><br>
-                                <input type="checkbox" id="vehiclec6" name="vehiclec6" value="Boat">
+                                <input type="checkbox" id="vehiclec6" name="vehicle1[]" value="تطوير الأعمال">
                                 <label for="vehiclec6">تطوير الأعمال</label><br>
 
 
@@ -153,12 +162,5 @@
 
 
 @section('js')
-    {{--    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>--}}
-
-    <script>
-        $(document).ready(function () {
-            $('.js-example-basic-multiple').select2();
-        });
-    </script>
 
 @endsection

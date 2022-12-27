@@ -49,7 +49,7 @@
                                 <th>رقم الهاتف</th>
                                 <th>النشاط</th>
                                 <th>إسم الشركة</th>
-
+                                <th>نوع المشكله</th>
                                 <th>الرساله</th>
                                 <th>العمليات</th>
 
@@ -64,6 +64,18 @@
                                     <td>{{$row->phone}}</td>
                                     <td>{{$row->activity}}</td>
                                     <td>{{$row->name_comppany}}</td>
+                                    <td>
+                                        <ul>
+                                            @foreach(explode(',',$row->notes) as $notes)
+                                                @if($notes)
+                                            <li>
+                                                {{$notes}}
+                                            </li>
+                                                @endif
+                                            @endforeach
+                                        </ul>
+{{--                                        {{$row->notes}}--}}
+                                    </td>
 
                                     <td><button class="btn btn-success btn-sm" data-toggle="modal" data-target="#viewmessage{{ $row->id }}"><i class="fa fa-eye"></i></button></td>
                                     <td>

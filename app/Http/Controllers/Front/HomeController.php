@@ -128,12 +128,15 @@ class HomeController extends Controller
 
     public function sendmessage(Request $request)
     {
+
+
+
         $request->validate([
             'name' => 'required|min:2|max:200',
             'activity' => 'required|min:2|max:255',
             'name_comppany' => 'required|min:2|max:255',
-            'type_company' => 'required|min:2|max:255',
-            'Message' => 'required|min:2',
+            'vehicle1' => 'required',
+            'Message' => 'nullable|min:2',
             'phone' => 'required|min:11|numeric',
         ], [
             'name.required' => __('index.namerequired'),
@@ -148,10 +151,8 @@ class HomeController extends Controller
             'name_comppany.min' => __('index.name_comppanymin'),
             'name_comppany.max' => __('index.name_comppanymax'),
 
-            'type_company.required' => __('index.type_companyrequired'),
-            'type_company.min' => __('index.type_companymin'),
-            'type_company.max' => __('index.type_companymax'),
 
+            'vehicle1.required' => __('index.vehicle1required'),
             'Message.required' => __('index.Messagerequired'),
             'Message.min' => __('index.Messagemin'),
 
@@ -165,8 +166,9 @@ class HomeController extends Controller
             'phone' => $request->phone,
             'activity' => $request->activity,
             'name_comppany' => $request->name_comppany,
-            'type_company' => $request->type_company,
+            'type_company' => $request->country,
             'Message' => $request->Message,
+            'notes' => implode(',', $request['vehicle1']),
             'type_contact' => Contact::HOMECONTECT,
         ]);
 
@@ -176,6 +178,7 @@ class HomeController extends Controller
 
     public function sendConsulting(Request $request)
     {
+
         $request->validate([
             'name' => 'required|min:2|max:200',
             'phone' => 'required|min:11|numeric',
@@ -218,6 +221,7 @@ class HomeController extends Controller
             'data' => $request->data,
             'time' => $request->time,
             'Message' => $request->Message,
+            'notes' => $request->country,
             'type_contact' => Contact::PAGECONSULTING,
         ]);
 

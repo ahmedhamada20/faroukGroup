@@ -20,6 +20,7 @@ class Contact extends Model
         'type_contact',
         'data',
         'time',
+        'notes',
     ];
 
     const HOMECONTECT = 0;
