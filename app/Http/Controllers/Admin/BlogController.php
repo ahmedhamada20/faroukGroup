@@ -36,8 +36,7 @@ class BlogController extends Controller
                 })
                 ->when(\request()->status != null, function ($query) {
                     $query->whereStatus(\request()->status);
-                })
-                ->paginate(\request()->paginate ?? 10),
+                })->paginate(\request()->paginate ?? 10)
         ];
         return view($this->data['folder'] . $this->data['folderBlade'] . '.index', $data);
     }
@@ -70,7 +69,7 @@ class BlogController extends Controller
 
         ]);
 
-        
+
         Seo::UpdateOrcreate([
             'seoable_type'=> $this->data['Models'],
             'seoable_id' => $data->id,
@@ -157,7 +156,7 @@ class BlogController extends Controller
         ]);
 
 
-        
+
         Seo::UpdateOrcreate([
             'seoable_type'=> $this->data['Models'],
             'seoable_id' => $data->id,
@@ -166,7 +165,7 @@ class BlogController extends Controller
             'seoable_id' => $data->id,
             'notes' => $request->seo
         ]);
-        
+
         // Inset One Photo
 
         if ($file = $request->file('cover')) {

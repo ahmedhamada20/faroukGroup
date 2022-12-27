@@ -29,7 +29,7 @@ class Blog extends Model
 
     protected $fillable = [
         'name',
-        'notes',
+//        'notes',
         'status',
     ];
 
