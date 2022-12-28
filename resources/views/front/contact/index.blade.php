@@ -28,13 +28,13 @@
             <div class="d-table-cell">
                 <div class="container">
                     <div class="page-banner-content">
-                        <h2>{{__('index.Connect_with_us')}}
+                        <h2>اتصل بنا
                         </h2>
                         <ul>
                             <li>
                                 <a href="{{route('home')}}">الرئيسية</a>
                             </li>
-                            <li>{{__('index.Connect_with_us')}}
+                            <li>اتصل بنا
                             </li>
                         </ul>
                     </div>
@@ -81,12 +81,23 @@
                         </div>
 
                         <h3>الهاتف</h3>
-                        <p>
-                            0235858737 - 0235821622 - 0235826260
-                        </p>
-                        <p><a href="tel:{{ settingSite()->phone }}">{{ settingSite()->phone }}</a></p>
-                        {{-- <p><a href="tel:1234567890">+123 456 7890</a></p> --}}
-                        {{-- <p><a href="tel:2414524526">+241 452 4526</a></p> --}}
+                        <div class="row">
+                            <div class="col">
+                                <p>
+                                    <a href="tel:{{ settingSite()->phone }}">{{ settingSite()->phone }}</a>
+                                </p>
+
+                                <p><a href="tel:0235826260">0235826260</a></p>
+                              
+                            </div>
+                            <div class="col">
+
+                                <p><a href="tel:01009656756">01009656756</a></p>
+                             
+                                <p><a href="tel:0235858737">0235858737</a></p>
+                            </div>
+                        </div>
+                  
                     </div>
                 </div>
             </div>
@@ -100,7 +111,7 @@
         <div class="container">
             <div class="section-title">
                 {{-- <span>Get in Touch</span> --}}
-                <h2>تواصل معانا</h2>
+                <h2>تواصل معنا</h2>
                 <div class="bar"></div>
             </div>
 
@@ -108,7 +119,7 @@
                 <form action="{{ route('sendcontect') }}" method="POST">
                     @csrf
                     <div class="row">
-                        <div class="col-lg-6 col-md-6">
+                        <div class="col-lg-12 col-md-12">
                             <div class="form-group">
                                 <label>{{ __('index.nameOne') }}<span class="text-danger">*</span></label>
                                 <input type="text" name="name" id="name" class="form-control @error('name') is-invalid
@@ -116,6 +127,30 @@
                                 @enderror" required data-error="{{ __('index.namerequired') }}">
                                 <div class="help-block with-errors"></div>
                             </div>
+                        </div>
+
+                        
+                        <div class="col-lg-12 col-md-12">
+                            <select class="hessine" style=" " required id="txtcountryTwo" name="country">
+                                <option value="" disabled selected>--اختر كود الدولة--</option>
+
+                                <option value="20">حمهورية مصر العربية</option>
+
+                                <option value="974">قطر</option>
+                                <option value="973">البحرين</option>
+                                <option value="971">الإمارات</option>
+                                <option value="966">السعودية</option>
+                                <option value="964">العراق</option>
+                                <option value="962">الأردن</option>
+                                <option value="965">الكويت</option>
+
+                                <option value="968">عمان</option>
+
+                                <option value="">أخرى</option>
+
+
+
+                            </select>
                         </div>
 
                         <div class="col-lg-6 col-md-6">

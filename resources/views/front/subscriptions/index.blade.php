@@ -79,7 +79,7 @@
                             </div>
                         </div>
 
-                        <div class="col-lg-6 col-md-6">
+                        <div class="col-lg-12 col-md-12">
                             <div class="form-group">
                                 <label>الاسم<span class="text-danger">*</span></label>
                                 <input type="text" name="name" id="name" class="form-control @error('name') is-invalid
@@ -90,7 +90,7 @@
                         </div>
 
                         <div class="row">
-                            <div class="col-lg-6 col-md-6">
+                            <div class="col-lg-12 col-md-12">
 
                                 <select class="hessine" style=" " required id="txtcountryTwo" name="country" dir="rtl">
                                     <option value="" disabled selected>--اختر كود الدولة--</option>

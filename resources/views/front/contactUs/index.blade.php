@@ -1,6 +1,6 @@
 @extends('front.layouts.master')
 @section('title')
-    {{ __('index.Free_consultation_with_a_business_developer') }}
+    تواصل معنا
 @endsection
 
 @section('content')
@@ -27,12 +27,12 @@
             <div class="d-table-cell">
                 <div class="container">
                     <div class="page-banner-content">
-                        <h2>{{ __('index.Free_consultation_with_a_business_developer') }}</h2>
+                        <h2>تواصل معنا</h2>
                         <ul>
                             <li>
                                 <a href="{{route('home')}}">{{__('index.Home')}}</a>
                             </li>
-                            <li>{{ __('index.Free_consultation_with_a_business_developer') }}</li>
+                            <li>تواصل معنا</li>
                         </ul>
                     </div>
                 </div>
@@ -48,7 +48,7 @@
                 <div class="col-lg-6">
                     <div class="quote-form">
                         <div class="content">
-                            <h3>{{ __('index.Free_consultation_with_a_business_developer') }}</h3>
+                            <h3>تواصل معنا</h3>
                         </div>
                         <form method="POST" action="{{ route('sendmessage') }}">
                             @csrf

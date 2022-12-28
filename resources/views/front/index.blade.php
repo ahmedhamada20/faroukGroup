@@ -774,7 +774,7 @@
                             </div>
 
                             <div class="form-group">
-                                <textarea class="form-control" name="Message" required
+                                <textarea class="form-control" name="Message"
                                           placeholder="{{ __('index.Message') }}"></textarea>
                             </div>
                             <div class="col-lg-4">
@@ -902,14 +902,19 @@
         <div class="container">
             <div class="subscribe-content">
                 {{--            <span>Get Started Instantly!</span>--}}
-                <h3>اترك رقمك لإرسال البرومو الترويجي على الواتساب </h3>
+                <h3 class="mb-2">اترك رقمك لإرسال البرومو الترويجي على الواتساب </h3>
 
-                <form class="newsletter-form" data-toggle="validator">
-                    <input type="email" class="input-newsletter" placeholder="برجاء أترك رقمك متبوعاً بكود الدولة   "
-                           name="vvcvcvcvcvcvcvcvcvcv" required autocomplete="off">
+                <form method="POST" action="" autocomplete="off" >
 
-                    <button type="submit">إرسال</button>
-                    <div id="validator-newsletter" class="form-result"></div>
+                    <div class="input-group mb-3">
+                        <input type="text" class="form-control" required placeholder="برجاء أترك رقمك متبوعاً بكود الدولة" aria-label="برجاء أترك رقمك متبوعاً بكود الدولة" aria-describedby="button-addon2">
+                        <div class="input-group-append">
+                          <button class="btn btn-info"  id="button-addon2">إرسال</button>
+                        </div>
+                      </div>
+
+
+                    
                 </form>
             </div>
         </div>

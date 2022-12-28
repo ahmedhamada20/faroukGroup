@@ -93,10 +93,26 @@
                                 <i class='bx bx-user-pin'></i>
                             </div>
                             <span>الهاتف : </span>
-                            <p>
-                                0235858737 - 0235821622 - 0235826260
-                            </p>
-                            <a href="tel:{{settingSite()->phone}}">{{settingSite()->phone}}</a>
+                         
+                            <div class="row">
+                                <div class="col">
+                                    <p>
+                                        <a href="tel:{{ settingSite()->phone }}">{{ settingSite()->phone }}</a>
+                                    </p>
+    
+                                    <p><a href="tel:0235826260">0235826260</a></p>
+                                  
+                                </div>
+                                <div class="col">
+    
+                                    <p><a href="tel:01009656756">01009656756</a></p>
+                                 
+                                    <p><a href="tel:0235858737">0235858737</a></p>
+                                </div>
+                            </div>
+
+                     
+                        
                         </li>
                         <li>
                             <div class="icon">
