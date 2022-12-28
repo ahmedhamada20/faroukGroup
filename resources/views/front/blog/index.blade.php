@@ -5,26 +5,25 @@
 
 @section('content')
 
-    <!-- Start Page Banner -->
-    <div class="page-banner-area item-bg1">
-        <div class="d-table">
-            <div class="d-table-cell">
-                <div class="container">
-                    <div class="page-banner-content">
-                        <h2>تفاصيل المقاله</h2>
-                        <ul>
-                            <li>
-                                <a href="{{route('home')}}">الصفخه الرئسيه</a>
-                            </li>
-                            <li>تفاصيل المقاله</li>
-                        </ul>
-                    </div>
+  <!-- Start Page Banner -->
+  <div class="page-banner-area">
+    <div class="d-table">
+        <div class="d-table-cell">
+            <div class="container">
+                <div class="page-banner-content">
+                    <h2>تفاصيل المقالة</h2>
+                    <ul>
+                        <li>
+                            <a href="{{route('home')}}"> الرئيسيه</a>
+                        </li>
+                        <li>تفاصيل المقالة</li>
+                    </ul>
                 </div>
             </div>
         </div>
     </div>
-    <!-- End Page Banner -->
-    <!-- Start Blog Details Area -->
+</div>
+
     <section class="blog-details-area ptb-100">
         <div class="container">
             <div class="row">
