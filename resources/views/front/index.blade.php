@@ -865,7 +865,7 @@
                             </div>
                             <div class="content">
                             <span>
-{{$blog->created_at->format('Y-m-d')}}
+                                {{$blog->created_at->format('Y-m-d')}}
                             </span>
                                 <h3>
                                     <a href="{{route('home.blogDetails',$blog->id)}}">{{$blog->name}}</a>

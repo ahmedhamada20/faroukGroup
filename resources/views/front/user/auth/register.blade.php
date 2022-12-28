@@ -5,7 +5,9 @@
 
 @section('content')
     <!-- Start Page Banner -->
-    <div class="page-banner-area item-bg3">
+
+
+    <div class="page-banner-area">
         <div class="d-table">
             <div class="d-table-cell">
                 <div class="container">
@@ -13,7 +15,7 @@
                         <h2>تسجيل عضوية جديدة</h2>
                         <ul>
                             <li>
-                                <a href="{{route('home')}}">الصفحة الرئيسية</a>
+                                <a href="{{route('home')}}"> الرئيسية</a>
                             </li>
                             <li>تسجيل عضوية جديدة</li>
                         </ul>

@@ -22,71 +22,87 @@
     </div>
 @endif
 
-    <!-- Start Page Banner -->
-    <div class="page-banner-area item-bg4">
-        <div class="d-table">
-            <div class="d-table-cell">
-                <div class="container">
-                    <div class="page-banner-content">
-                        <h2>Contact Style One</h2>
-                        <ul>
-                            <li>
-                                <a href="{{route('home')}}">Home</a>
-                            </li>
-                            <li>Contact Style One</li>
-                        </ul>
-                    </div>
+
+<div class="page-banner-area">
+    <div class="d-table">
+        <div class="d-table-cell">
+            <div class="container">
+                <div class="page-banner-content">
+                    <h2>طلب وكالة</h2>
+                    <ul>
+                        <li>
+                            <a href="{{route('home')}}"> الرئيسية</a>
+                        </li>
+                        <li>طلب وكالة</li>
+                    </ul>
                 </div>
             </div>
         </div>
     </div>
-    <!-- End Page Banner -->
+</div>
 
-    <!-- Start Contact Info Area -->
-    <section class="contact-info-area pt-100 pb-70">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-4 col-md-6 col-sm-6">
-                    <div class="contact-info-box">
-                        <div class="icon">
-                            <i class="flaticon-email-1"></i>
-                        </div>
 
-                        <h3>Email Here</h3>
 
-                        <p>{{ settingSite()->email }}</p>
-                        {{-- <p><a href="https://templates.envytheme.com/cdn-cgi/l/email-protection#c1a9a4adadae81b2b1a8b9efa2aeac"><span class="__cf_email__" data-cfemail="1e767b7272715e6d6e7766307d7173">[email&#160;protected]</span></a></p> --}}
+  <!-- Start Contact Info Area -->
+  <section class="contact-info-area pt-100 pb-70">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-4 col-md-6 col-sm-6">
+                <div class="contact-info-box">
+                    <div class="icon">
+                        <i class="flaticon-email-1"></i>
                     </div>
+
+                    <h3>{{__('index.email')}}
+                    </h3>
+
+                    <p>{{ settingSite()->email }}</p>
+                    {{-- <p><a href="https://templates.envytheme.com/cdn-cgi/l/email-protection#c1a9a4adadae81b2b1a8b9efa2aeac"><span class="__cf_email__" data-cfemail="1e767b7272715e6d6e7766307d7173">[email&#160;protected]</span></a></p> --}}
                 </div>
+            </div>
 
-                <div class="col-lg-4 col-md-6 col-sm-6">
-                    <div class="contact-info-box">
-                        <div class="icon">
-                            <i class="flaticon-pin"></i>
-                        </div>
-
-                        <h3>Location Here</h3>
-                        <p>{{ settingSite()->address }}</p>
-                        {{-- <p><a href="https://www.google.com/maps/@24.9045273,91.8523559,15z" target="_blank">2750 Quadra Street Victoria Road, New York, Canada</a></p> --}}
+            <div class="col-lg-4 col-md-6 col-sm-6">
+                <div class="contact-info-box">
+                    <div class="icon">
+                        <i class="flaticon-pin"></i>
                     </div>
+
+                    <h3>العنوان</h3>
+                    <p>{{ settingSite()->address }}</p>
+                    {{-- <p><a href="https://www.google.com/maps/@24.9045273,91.8523559,15z" target="_blank">2750 Quadra Street Victoria Road, New York, Canada</a></p> --}}
                 </div>
+            </div>
 
-                <div class="col-lg-4 col-md-6 col-sm-6">
-                    <div class="contact-info-box">
-                        <div class="icon">
-                            <i class="flaticon-call"></i>
-                        </div>
-
-                        <h3>Call Here</h3>
-                        <p><a href="tel:{{ settingSite()->phone }}">{{ settingSite()->phone }}</a></p>
-                        {{-- <p><a href="tel:1234567890">+123 456 7890</a></p> --}}
-                        {{-- <p><a href="tel:2414524526">+241 452 4526</a></p> --}}
+            <div class="col-lg-4 col-md-6 col-sm-6">
+                <div class="contact-info-box">
+                    <div class="icon">
+                        <i class="flaticon-call"></i>
                     </div>
+
+                    <h3>الهاتف</h3>
+                    <div class="row">
+                        <div class="col">
+                            <p>
+                                <a href="tel:{{ settingSite()->phone }}">{{ settingSite()->phone }}</a>
+                            </p>
+
+                            <p><a href="tel:0235826260">0235826260</a></p>
+                          
+                        </div>
+                        <div class="col">
+
+                            <p><a href="tel:01009656756">01009656756</a></p>
+                         
+                            <p><a href="tel:0235858737">0235858737</a></p>
+                        </div>
+                    </div>
+              
                 </div>
             </div>
         </div>
-    </section>
-    <!-- End Contact Info Area -->
+    </div>
+</section>
+<!-- End Contact Info Area -->
 
 
     <!-- Start Contact Area -->
@@ -94,7 +110,7 @@
         <div class="container">
             <div class="section-title">
                 {{-- <span>Get in Touch</span> --}}
-                <h2>طلب وكاله</h2>
+                <h2>طلب وكالة</h2>
                 <div class="bar"></div>
             </div>
 
@@ -122,17 +138,11 @@
                             </div>
                         </div>
 
-                        <div class="col-lg-6 col-md-6">
-                            <div class="form-group">
-                                <label>{{ __('index.email') }}<span class="text-danger">*</span></label>
-                                <input type="email" name="email"  id="email" class="form-control @error('email') is-invalid
+                     
 
-                                @enderror" required data-error="{{ __('index.emailrequired') }}">
-                                <div class="help-block with-errors"></div>
-                            </div>
-                        </div>
+
                         <div class="row">
-                            <div class="col-lg-6 col-md-6">
+                            <div class="col-lg-6 col-md-6 p-2">
 
                                 <select class="hessine" style=" " required id="txtcountryTwo" name="country">
                                     <option value="" disabled selected>--اختر كود الدولة--</option>
@@ -156,13 +166,26 @@
                                 </select>
 
                             </div>
+
+                            <div class="col-lg-6 col-md-6">
+                                <div class="form-group">
+                                    <label>{{ __('index.phone') }} <span class="text-danger">*</span></label>
+                                    <input type="text" name="phone"  id="phone_number" required data-error="{{ __('index.phonerequired') }}" class="form-control @error('phone') is-invalid
+    
+                                    @enderror">
+                                    <div class="help-block with-errors"></div>
+                                </div>
+                            </div>
+    
                         </div>
+                       
+
                         <div class="col-lg-6 col-md-6">
                             <div class="form-group">
-                                <label>{{ __('index.phone') }} <span class="text-danger">*</span></label>
-                                <input type="text" name="phone"  id="phone_number" required data-error="{{ __('index.phonerequired') }}" class="form-control @error('phone') is-invalid
+                                <label>{{ __('index.email') }}<span class="text-danger">*</span></label>
+                                <input type="email" name="email"  id="email" class="form-control @error('email') is-invalid
 
-                                @enderror">
+                                @enderror" required data-error="{{ __('index.emailrequired') }}">
                                 <div class="help-block with-errors"></div>
                             </div>
                         </div>
@@ -177,9 +200,9 @@
                             </div>
                         </div>
 
-                        <div class="col-lg-6 col-md-6">
+                        <div class="col-lg-12 col-md-12">
                             <div class="form-group">
-                                <label>الشركه<span class="text-danger">*</span></label>
+                                <label>الشركة<span class="text-danger">*</span></label>
                                 <input type="text" name="name_comppany"  id="msg_subject" class="form-control @error('subject') is-invalid
 
                                 @enderror" required data-error="{{ __('index.subjectrequired') }}">
@@ -189,10 +212,10 @@
 
                         <div class="col-lg-12 col-md-12">
                             <div class="form-group">
-                                <label>{{ __('index.message') }}<span class="text-danger">*</span></label>
+                                <label>رسالتك<span class="text-danger">*</span></label>
                                 <textarea name="message"  class="form-control @error('message') is-invalid
 
-                                @enderror" id="message" cols="30" rows="6" required data-error="{{ __('index.Messagerequired') }}"></textarea>
+                                @enderror" id="message" cols="30" rows="6" data-error="{{ __('index.Messagerequired') }}"></textarea>
                                 <div class="help-block with-errors"></div>
                             </div>
                         </div>

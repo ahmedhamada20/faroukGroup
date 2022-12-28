@@ -59,7 +59,7 @@
                             <a href="{{route('home.jops')}}">وظائف شاغرة </a>
                         </li>
                         <li>
-                            <a href="contact-1.html">المدونة</a>
+                            <a href="{{ route('home.bloges') }}">المقالات</a>
                         </li>
                         <li>
                             <a href="policy">السياسات</a>

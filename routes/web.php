@@ -60,6 +60,10 @@ Route::group(
      return view('front.jops.index');
     })->name('home.jops');
 
+    Route::get('/bloges', function (){
+     return view('front.blog.all');
+    })->name('home.bloges');
+
     Route::get('/policy', function (){
      return view('front.policy.index');
     })->name('home.policy');

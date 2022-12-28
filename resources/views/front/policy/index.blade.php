@@ -22,8 +22,10 @@
     </div>
 @endif
 
+
+
     <!-- Start Page Banner -->
-    <div class="page-banner-area item-bg4">
+    <div class="page-banner-area">
         <div class="d-table">
             <div class="d-table-cell">
                 <div class="container">
@@ -40,7 +42,7 @@
             </div>
         </div>
     </div>
-    <!-- End Page Banner -->
+
 
     <!-- Start Contact Info Area -->
 
@@ -48,7 +50,7 @@
 
 
     <!-- Start Contact Area -->
-    <section class="contact-area pb-100" dir="rtl">
+    <section class="contact-area pb-100 "  style="margin-right: 39px;"  dir="rtl">
         <div class="container">
             <br class="section-title">
                 {{-- <span>Get in Touch</span> --}}

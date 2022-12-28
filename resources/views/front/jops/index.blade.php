@@ -22,25 +22,24 @@
     </div>
 @endif
 
-    <!-- Start Page Banner -->
-    <div class="page-banner-area item-bg4">
-        <div class="d-table">
-            <div class="d-table-cell">
-                <div class="container">
-                    <div class="page-banner-content">
-                        <h2>وظائف شاغرة</h2>
-                        <ul>
-                            <li>
-                                <a href="{{route('home')}}">Home</a>
-                            </li>
-                            <li>وظائف شاغرة</li>
-                        </ul>
-                    </div>
+<div class="page-banner-area">
+    <div class="d-table">
+        <div class="d-table-cell">
+            <div class="container">
+                <div class="page-banner-content">
+                    <h2>وظائف شاغرة</h2>
+                    <ul>
+                        <li>
+                            <a href="{{route('home')}}">الرئيسية</a>
+                        </li>
+                        <li>وظائف شاغرة</li>
+                    </ul>
                 </div>
             </div>
         </div>
     </div>
-    <!-- End Page Banner -->
+</div>
+
 
     <!-- Start Contact Info Area -->
     <section class="contact-info-area pt-100 pb-70">
@@ -52,7 +51,8 @@
                             <i class="flaticon-email-1"></i>
                         </div>
 
-                        <h3>Email Here</h3>
+                        <h3>{{__('index.email')}}
+                        </h3>
 
                         <p>{{ settingSite()->email }}</p>
                         {{-- <p><a href="https://templates.envytheme.com/cdn-cgi/l/email-protection#c1a9a4adadae81b2b1a8b9efa2aeac"><span class="__cf_email__" data-cfemail="1e767b7272715e6d6e7766307d7173">[email&#160;protected]</span></a></p> --}}
@@ -65,7 +65,7 @@
                             <i class="flaticon-pin"></i>
                         </div>
 
-                        <h3>Location Here</h3>
+                        <h3>العنوان</h3>
                         <p>{{ settingSite()->address }}</p>
                         {{-- <p><a href="https://www.google.com/maps/@24.9045273,91.8523559,15z" target="_blank">2750 Quadra Street Victoria Road, New York, Canada</a></p> --}}
                     </div>
@@ -77,10 +77,24 @@
                             <i class="flaticon-call"></i>
                         </div>
 
-                        <h3>Call Here</h3>
-                        <p><a href="tel:{{ settingSite()->phone }}">{{ settingSite()->phone }}</a></p>
-                        {{-- <p><a href="tel:1234567890">+123 456 7890</a></p> --}}
-                        {{-- <p><a href="tel:2414524526">+241 452 4526</a></p> --}}
+                        <h3>الهاتف</h3>
+                        <div class="row">
+                            <div class="col">
+                                <p>
+                                    <a href="tel:{{ settingSite()->phone }}">{{ settingSite()->phone }}</a>
+                                </p>
+
+                                <p><a href="tel:0235826260">0235826260</a></p>
+                              
+                            </div>
+                            <div class="col">
+
+                                <p><a href="tel:01009656756">01009656756</a></p>
+                             
+                                <p><a href="tel:0235858737">0235858737</a></p>
+                            </div>
+                        </div>
+                  
                     </div>
                 </div>
             </div>
@@ -123,14 +137,27 @@
                         </div>
 
                         <div class="col-lg-6 col-md-6">
-                            <div class="form-group">
-                                <label>{{ __('index.email') }}<span class="text-danger">*</span></label>
-                                <input type="email" name="email"  id="email" class="form-control @error('email') is-invalid
+                            <select class="hessine" style=" " required id="txtcountryTwo" name="country">
+                                <option value="" disabled selected>--اختر كود الدولة--</option>
 
-                                @enderror" required data-error="{{ __('index.emailrequired') }}">
-                                <div class="help-block with-errors"></div>
-                            </div>
+                                <option value="20">حمهورية مصر العربية</option>
+                                <option value="974">قطر</option>
+                                <option value="973">البحرين</option>
+                                <option value="971">الإمارات</option>
+                                <option value="966">السعودية</option>
+                                <option value="964">العراق</option>
+                                <option value="962">الأردن</option>
+                                <option value="965">الكويت</option>
+
+                                <option value="968">عمان</option>
+
+                                <option value="">أخرى</option>
+
+
+
+                            </select>
                         </div>
+
 
                         <div class="col-lg-6 col-md-6">
                             <div class="form-group">
@@ -142,6 +169,23 @@
                             </div>
                         </div>
 
+
+
+                     
+                      
+                        <div class="col-lg-6 col-md-6">
+                            <div class="form-group">
+                                <label>{{ __('index.email') }}<span class="text-danger">*</span></label>
+                                <input type="email" name="email"  id="email" class="form-control @error('email') is-invalid
+
+                                @enderror" required data-error="{{ __('index.emailrequired') }}">
+                                <div class="help-block with-errors"></div>
+                            </div>
+                        </div>
+
+
+                        
+
                         <div class="col-lg-6 col-md-6">
                             <div class="form-group">
                                 <label>المسمي الوظيفي الحالي<span class="text-danger">*</span></label>
@@ -152,7 +196,7 @@
                             </div>
                         </div>
 
-                        <div class="col-lg-6 col-md-6">
+                        <div class="col-lg-12 col-md-12">
                             <div class="form-group">
                                 <label>الوظيفه التي ترغب التقدم لها<span class="text-danger">*</span></label>
                                 <input type="text" name="name_comppany"  id="msg_subject" class="form-control @error('subject') is-invalid
@@ -164,7 +208,7 @@
 
                         <div class="col-lg-12 col-md-12">
                             <div class="form-group">
-                                <label>ارفاق Cv<span class="text-danger">*</span></label>
+                                <label>ارفاق السيرة الذاتية<span class="text-danger">*</span></label>
                                 <input type="file" class="form-control" required accept="application/pdf" name="image">
                                 <div class="help-block with-errors"></div>
                             </div>
@@ -172,7 +216,7 @@
 
                         <div class="col-lg-12 col-md-12">
                             <button type="submit" class="default-btn">
-                               ارسال طلب وظفيه
+                                إرسال طلب وظفية
                             </button>
 
                             {{-- <div id="msgSubmit" class="h3 text-center hidden"></div> --}}

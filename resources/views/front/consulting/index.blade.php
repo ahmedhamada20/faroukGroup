@@ -70,8 +70,17 @@
                                         <div class="help-block with-errors"></div>
                                     </div>
                                 </div>
-                                <div class="row">
-                                    <div class="col-md-12">
+
+
+                                <div class="col-lg-6 col-md-6">
+                                    <div class="form-group">
+                                        <input type="text" name="activity" id="email" class="form-control" required data-error="يجب ادخال المسمى الوظيفي" placeholder="المسمى الوظيفي">
+                                        <div class="help-block with-errors"></div>
+                                    </div>
+                                </div>
+
+                                {{-- <div class="row"> --}}
+                                    <div class="col-md-6">
 
                                         <select class="hessine" style=" " required id="txtcountryTwo" name="country">
                                             <option value="" disabled selected>--اختر كود الدولة--</option>
@@ -95,24 +104,20 @@
                                         </select>
 
                                     </div>
-                                </div>
 
-                                <div class="col-lg-6 col-md-6">
-                                    <div class="form-group">
-                                        <input type="number" name="phone" id="phone_number" required data-error="ادخل رقم الهاتف" class="form-control" placeholder="الهاتف ">
-                                        <div class="help-block with-errors"></div>
+                                    <div class="col-lg-6 col-md-6">
+                                        <div class="form-group">
+                                            <input type="number" name="phone" id="phone_number" required data-error="ادخل رقم الهاتف" class="form-control" placeholder="الهاتف ">
+                                            <div class="help-block with-errors"></div>
+                                        </div>
                                     </div>
-                                </div>
+                                {{-- </div> --}}
 
-                                <div class="col-lg-6 col-md-6">
-                                    <div class="form-group">
-                                        <input type="text" name="activity" id="email" class="form-control" required data-error="يجب ادخال المسمى الوظيفي" placeholder="المسمى الوظيفي">
-                                        <div class="help-block with-errors"></div>
-                                    </div>
-                                </div>
+                               
 
+           
 
-                                <div class="col-lg-6 col-md-6">
+                                <div class="col-lg-12 col-md-12">
                                     <div class="form-group">
                                         <input type="text" name="name_comppany" id="msg_subject" class="form-control" required data-error="ادخل اسم النشاط" placeholder="النشاط ">
                                         <div class="help-block with-errors"></div>

@@ -5,25 +5,26 @@
 
 @section('content')
 
-    <!-- Start Page Banner -->
-    <div class="page-banner-area item-bg4">
-        <div class="d-table">
-            <div class="d-table-cell">
-                <div class="container">
-                    <div class="page-banner-content">
-                        <h2>تسجيل الدخول</h2>
-                        <ul>
-                            <li>
-                                <a href="{{route('home')}}">الصفحه الرئسيه</a>
-                            </li>
-                            <li>تسجيل الدخول</li>
-                        </ul>
-                    </div>
+
+<div class="page-banner-area">
+    <div class="d-table">
+        <div class="d-table-cell">
+            <div class="container">
+                <div class="page-banner-content">
+                    <h2>تسجيل الدخول</h2>
+                    <ul>
+                        <li>
+                            <a href="{{route('home')}}"> الرئيسية</a>
+                        </li>
+                        <li>تسجيل الدخول</li>
+                    </ul>
                 </div>
             </div>
         </div>
     </div>
-    <!-- End Page Banner -->
+</div>
+
+
 
     <!-- Start Login Area -->
     <section class="login-area ptb-100">
