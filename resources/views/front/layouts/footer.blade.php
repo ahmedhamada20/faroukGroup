@@ -148,9 +148,9 @@
             <div class="row align-items-center">
                 <div class="col-lg-6 col-md-6">
                     <p>
-                        جميع الحقوق @<script data-cfasync="false" src="../../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js">
-
-                        </script><script>document.write(new Date().getFullYear())</script> شركة فاروق جروب للتجارة الإلكترونية والبرمجة
+                        
+                    
+                       جميع الحقوق محفوظة لشركة فاروق جروب للتجارة الإلكترونية والبرمجة @2022-2023
                     </p>
                 </div>
 
