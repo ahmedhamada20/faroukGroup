@@ -91,7 +91,7 @@
                         </div>
 
                         <div class="row">
-                            <div class="col-lg-12 col-md-12">
+                            <div class="col-lg-6 col-md-6">
 
                                 <select class="hessine" style=" " required id="txtcountryTwo" name="country" dir="rtl">
                                     <option value="" disabled selected>--اختر كود الدولة--</option>
@@ -115,18 +115,21 @@
                                 </select>
 
                             </div>
-                        </div>
-                        <div class="col-lg-6 col-md-6">
-                            <div class="form-group">
-                                <label>رقم الهاتف<span class="text-danger">*</span></label>
-                                <input type="number" name="phone" id="phone" class="form-control @error('phone') is-invalid
 
-                                @enderror" required data-error="{{ __('index.phonerequired') }}">
-                                <div class="help-block with-errors"></div>
+
+                            <div class="col-lg-6 col-md-6">
+                                <div class="form-group">
+                                    <label>رقم الهاتف<span class="text-danger">*</span></label>
+                                    <input type="number" name="phone" id="phone" class="form-control @error('phone') is-invalid
+    
+                                    @enderror" required data-error="{{ __('index.phonerequired') }}">
+                                    <div class="help-block with-errors"></div>
+                                </div>
                             </div>
                         </div>
+                      
 
-                        <div class="col-lg-6 col-md-6">
+                        <div class="col-lg-12 col-md-12">
                             <div class="form-group">
                                 <label>البريد الإلكتروني<span class="text-danger">*</span></label>
                                 <input type="email" name="email" id="email" class="form-control @error('email') is-invalid
@@ -136,7 +139,7 @@
                             </div>
                         </div>
 
-                        <div class="col-lg-6 col-md-6">
+                        <div class="col-lg-12 col-md-12">
                             <div class="form-group">
                                 <label>الدولة<span class="text-danger">*</span></label>
                                 <input type="text" name="country" id="country" class="form-control @error('country') is-invalid
