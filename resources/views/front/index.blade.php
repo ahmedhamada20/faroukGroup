@@ -107,14 +107,7 @@
 
             <div class="tab digital-experience-tab">
                 <ul class="tabs">
-                    <li>
-                        <a href="#">
-                                <span>
-                                    <i class="flaticon-analysis"></i>
-                                   المدير الرقمي
-                                </span>
-                        </a>
-                    </li>
+
 
                     <li class="bg-5cbd12">
                         <a href="#">
@@ -125,14 +118,6 @@
                         </a>
                     </li>
 
-                    <li class="bg-e2851b">
-                        <a href="#">
-                                <span>
-                                    <i class="flaticon-digital-marketing"></i>
-                                   منصة تارجت
-                                </span>
-                        </a>
-                    </li>
 
                     <li class="bg-04b893">
                         <a href="#">
@@ -143,15 +128,19 @@
                         </a>
                     </li>
 
+
+                    
                     <li class="bg-785eda">
                         <a href="#">
                                 <span>
                                     <i class="flaticon-network"></i>
-                                    تارجت لتصميم وتطوير المواقع
+                                    تصميم وتطوير المواقع
                                 </span>
                         </a>
                     </li>
 
+
+                    
                     <li class="bg-d0465a">
                         <a href="#">
                                 <span>
@@ -160,55 +149,36 @@
                                 </span>
                         </a>
                     </li>
+
+                    <li>
+                        <a href="#">
+                                <span>
+                                    <i class="flaticon-analysis"></i>
+                                   المدير الرقمي
+                                </span>
+                        </a>
+                    </li>
+
+                   
+
+                    <li class="bg-e2851b">
+                        <a href="#">
+                                <span>
+                                    <i class="flaticon-digital-marketing"></i>
+                                   منصة تارجت
+                                </span>
+                        </a>
+                    </li>
+
+              
+
+
                 </ul>
 
                 <div class="tab_content">
-                    <div class="tabs_item">
-                        <div class="row align-items-center">
-                            <div class="col-lg-6">
-                                <div class="digital-experience-content">
 
 
-                                    <div class="experience-inner-content">
-                                        <div class="icon">
-                                            <i class="flaticon-check"></i>
-                                        </div>
-                                        <h3>أول نظام للإدارة الإلكترونية</h3>
-                                        <p>تهيئة خاصة لإدارة شركتك وإنشاء نظام إداري متكامل للمدراء ورؤساء مجلس الإدارة
-                                            والمدراء التنفيذيين</p>
-                                    </div>
-
-                                    <div class="experience-inner-content">
-                                        <div class="icon">
-                                            <i class="flaticon-check"></i>
-                                        </div>
-                                        <h3>رؤية المدير الرقمي</h3>
-                                        <p>توظيف علوم تكنولوجيا المعلومات والإدارة لتقديم حلول تقنية تساعد المدير
-                                            التنفيذي في المتابعة والإشراف والرقابة على أهداف الإدارات وتوجيه السياسات
-                                            والإجراءات نحو تحقيق أهداف المؤسسة وتوفير المرونة اللازمة للاستجابة
-                                            للمتغيرات المتلاحقة سواء الداخلية أو الخارجية.</p>
-                                    </div>
-
-                                    <div class="experience-inner-content">
-                                        <div class="icon">
-                                            <i class="flaticon-check"></i>
-                                        </div>
-                                        <h3>مهمة المدير الرقمي</h3>
-                                        <p>فهم احتياجات المدير التنفيذي وتحليل استراتيجيات العمل لابتكار حلول تكنولوجية
-                                            لتحقيق النتائج المستهدفة في نظام رقمي متكامل</p>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="col-lg-6">
-                                <div class="digital-experience-image">
-                                    <img src="{{asset('front/assets/img/digital-experience/digital-experience-1.png')}}"
-                                         alt="image">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
+                    
                     <div class="tabs_item">
                         <div class="row align-items-center">
                             <div class="col-lg-6">
@@ -252,54 +222,7 @@
                         </div>
                     </div>
 
-                    <div class="tabs_item">
-                        <div class="row align-items-center">
-                            <div class="col-lg-6">
-                                <div class="digital-experience-content">
-
-
-                                    <div class="experience-inner-content">
-                                        <div class="icon">
-                                            <i class="flaticon-check"></i>
-                                        </div>
-                                        <h3>أول مجتمع رقمي للشركات فى مصر</h3>
-                                        <p>إنضم إلي المجتمع المستهدف للشركات</p>
-                                    </div>
-
-                                    <div class="experience-inner-content">
-                                        <div class="icon">
-                                            <i class="flaticon-check"></i>
-                                        </div>
-                                        <h3>رؤية منصة تارجت</h3>
-                                        <p>توظيف علوم تكنولوجيا المعلومات والإدارة لإنشاء مجتمع متواصل موجه لمؤسسات
-                                            الأعمال من خلال منصة رقمية تقدم حلولاً تقنية لخلق فرصاُ جديدة تبدأ من
-                                            جمهورية مصر العربية وتمتد لوطننا العربي.
-
-                                        </p>
-                                    </div>
-
-                                    <div class="experience-inner-content">
-                                        <div class="icon">
-                                            <i class="flaticon-check"></i>
-                                        </div>
-                                        <h3>مهمة منصة تارجت</h3>
-                                        <p>فهم إحتياجات عملائنا وتحليل استراتيجات العلاقات بين مؤسسات الأعمال وبين
-                                            المستهلكين والشركات لابتكار حلول تكنولوجية لتحقيق النتائج المستهدفة للتحول
-                                            الرقمي.</p>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="col-lg-6">
-                                <div class="digital-experience-image">
-                                    <img src="{{asset('front/assets/img/digital-experience/digital-experience-2.png')}}"
-                                         alt="image">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-
+                    
                     <div class="tabs_item">
                         <div class="row align-items-center">
                             <div class="col-lg-6">
@@ -343,6 +266,7 @@
                         </div>
                     </div>
 
+                    
                     <div class="tabs_item">
                         <div class="row align-items-center">
                             <div class="col-lg-6">
@@ -429,6 +353,106 @@
                             </div>
                         </div>
                     </div>
+
+
+                    <div class="tabs_item">
+                        <div class="row align-items-center">
+                            <div class="col-lg-6">
+                                <div class="digital-experience-content">
+
+
+                                    <div class="experience-inner-content">
+                                        <div class="icon">
+                                            <i class="flaticon-check"></i>
+                                        </div>
+                                        <h3>أول نظام للإدارة الإلكترونية</h3>
+                                        <p>تهيئة خاصة لإدارة شركتك وإنشاء نظام إداري متكامل للمدراء ورؤساء مجلس الإدارة
+                                            والمدراء التنفيذيين</p>
+                                    </div>
+
+                                    <div class="experience-inner-content">
+                                        <div class="icon">
+                                            <i class="flaticon-check"></i>
+                                        </div>
+                                        <h3>رؤية المدير الرقمي</h3>
+                                        <p>توظيف علوم تكنولوجيا المعلومات والإدارة لتقديم حلول تقنية تساعد المدير
+                                            التنفيذي في المتابعة والإشراف والرقابة على أهداف الإدارات وتوجيه السياسات
+                                            والإجراءات نحو تحقيق أهداف المؤسسة وتوفير المرونة اللازمة للاستجابة
+                                            للمتغيرات المتلاحقة سواء الداخلية أو الخارجية.</p>
+                                    </div>
+
+                                    <div class="experience-inner-content">
+                                        <div class="icon">
+                                            <i class="flaticon-check"></i>
+                                        </div>
+                                        <h3>مهمة المدير الرقمي</h3>
+                                        <p>فهم احتياجات المدير التنفيذي وتحليل استراتيجيات العمل لابتكار حلول تكنولوجية
+                                            لتحقيق النتائج المستهدفة في نظام رقمي متكامل</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-6">
+                                <div class="digital-experience-image">
+                                    <img src="{{asset('front/assets/img/digital-experience/digital-experience-1.png')}}"
+                                         alt="image">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="tabs_item">
+                        <div class="row align-items-center">
+                            <div class="col-lg-6">
+                                <div class="digital-experience-content">
+
+
+                                    <div class="experience-inner-content">
+                                        <div class="icon">
+                                            <i class="flaticon-check"></i>
+                                        </div>
+                                        <h3>أول مجتمع رقمي للشركات فى مصر</h3>
+                                        <p>إنضم إلي المجتمع المستهدف للشركات</p>
+                                    </div>
+
+                                    <div class="experience-inner-content">
+                                        <div class="icon">
+                                            <i class="flaticon-check"></i>
+                                        </div>
+                                        <h3>رؤية منصة تارجت</h3>
+                                        <p>توظيف علوم تكنولوجيا المعلومات والإدارة لإنشاء مجتمع متواصل موجه لمؤسسات
+                                            الأعمال من خلال منصة رقمية تقدم حلولاً تقنية لخلق فرصاُ جديدة تبدأ من
+                                            جمهورية مصر العربية وتمتد لوطننا العربي.
+
+                                        </p>
+                                    </div>
+
+                                    <div class="experience-inner-content">
+                                        <div class="icon">
+                                            <i class="flaticon-check"></i>
+                                        </div>
+                                        <h3>مهمة منصة تارجت</h3>
+                                        <p>فهم إحتياجات عملائنا وتحليل استراتيجات العلاقات بين مؤسسات الأعمال وبين
+                                            المستهلكين والشركات لابتكار حلول تكنولوجية لتحقيق النتائج المستهدفة للتحول
+                                            الرقمي.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-6">
+                                <div class="digital-experience-image">
+                                    <img src="{{asset('front/assets/img/digital-experience/digital-experience-2.png')}}"
+                                         alt="image">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+
+                
+
                 </div>
             </div>
         </div>
