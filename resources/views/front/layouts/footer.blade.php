@@ -126,8 +126,10 @@
                                 <i class='bx bx-envelope'></i>
                             </div>
                             <span>البريد الإلكتروني :</span>
-                            <span class="__cf_email__"
-                                  data-cfemail="2c44494040436c5f5c4554024f4341">  {{settingSite()->email}}</span>
+                            
+                            <a href="mailto: {{settingSite()->email}}">{{settingSite()->email}}</a>
+
+                       
                         </li>
                     </ul>
 

@@ -57,7 +57,7 @@
                         <h3>{{__('index.email')}}
                         </h3>
 
-                        <p>{{ settingSite()->email }}</p>
+                        <a href="mailto: {{settingSite()->email}}">{{settingSite()->email}}</a>
                         {{-- <p><a href="https://templates.envytheme.com/cdn-cgi/l/email-protection#c1a9a4adadae81b2b1a8b9efa2aeac"><span class="__cf_email__" data-cfemail="1e767b7272715e6d6e7766307d7173">[email&#160;protected]</span></a></p> --}}
                     </div>
                 </div>

@@ -756,7 +756,8 @@
                                     <h4>حدد المشكلة</h4>
 
 
-                                    <input type="checkbox" id="vehicle1" name="vehicle1[]" value="مشكلة فى المبيعات">
+                                    
+                                    <input type="checkbox" required  id="vehicle1" name="vehicle1[]" value="مشكلة فى المبيعات">
                                     <label for="vehicle1">مشكلة فى المبيعات</label><br>
                                     <input type="checkbox" id="vehicle2" name="vehicle1[]" value="مشكلة فى التسويق">
                                     <label for="vehicle2">مشكلة فى التسويق</label><br>
@@ -904,7 +905,7 @@
                 {{--            <span>Get Started Instantly!</span>--}}
                 <h3 class="mb-2">اترك رقمك لإرسال البرومو الترويجي على الواتساب </h3>
 
-                <form method="POST" action="" autocomplete="off" >
+                <form  action="{{ route('home') }}" autocomplete="off" >
 
                     <div class="input-group mb-3">
                         <input type="text" class="form-control" required placeholder="برجاء أترك رقمك متبوعاً بكود الدولة" aria-label="برجاء أترك رقمك متبوعاً بكود الدولة" aria-describedby="button-addon2">
