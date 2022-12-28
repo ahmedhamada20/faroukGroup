@@ -108,16 +108,16 @@
                     </ul>
 
                     <div class="others-options d-flex align-items-center">
-                        {{-- <div class="option-item">
+                        <div class="option-item">
                             <div class="cart-btn">
-                                <a href="cart.html">
+                                <a href="{{ route('home.contact') }}">
                                     <i class='flaticon-shopping-cart'></i>
                                     <span>0</span>
                                 </a>
                             </div>
                         </div>
 
-                        <div class="option-item">
+                        {{-- <div class="option-item">
                             <i class="search-btn flaticon-loupe"></i>
                             <i class="close-btn flaticon-cancel"></i>
                             <div class="search-overlay search-popup">
@@ -163,7 +163,7 @@
         </div>
     </div>
 
-    {{-- <div class="others-option-for-responsive">
+    <div class="others-option-for-responsive">
         <div class="container">
             <div class="dot-menu">
                 <div class="inner">
@@ -206,6 +206,6 @@
                 </div>
             </div>
         </div>
-    </div> --}}
+    </div>
 </div>
 <!-- End Navbar Area -->

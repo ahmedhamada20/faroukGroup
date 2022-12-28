@@ -580,7 +580,7 @@
                                 <div class="single-features-box top-1" style="height: 280px">
                                     
                                      
-                                        <img src="{{ asset($event->image) }}" width="50px" height="50px" alt="">
+                                        <img src="{{ asset($event->image) }}" width="40px" height="40px" alt="">
                                 
                                     <h3>
                                         <a>{{ $event->name }}</a>
