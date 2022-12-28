@@ -47,6 +47,16 @@
 
                         <div class="row">
                             <div class="col">
+                                <label>رقم الهاتف</label>
+                                <input type="text" name="phone" required value="{{$data->phone}}"
+                                       class="form-control @error('phone') is-invalid @enderror">
+                            </div>
+                        </div>
+
+                        <br>
+
+                        <div class="row">
+                            <div class="col">
                                 <label>الكلمات المفتاحيه ويجب وضع علامه <strong class="text-danger">,</strong></label>
                                 <textarea name="seo" class="form-control">
                                     {{ $data->seo->notes ?? ''}}

@@ -830,7 +830,7 @@
                             <div class="content">
                                 <h3>{{ $number->name }}</h3>
                                 <span>{!! $number->notes !!}</span>
-                                <a href="" class="default-btn btn-small"
+                                <a href="tel:{{ $number->phone }}" class="default-btn btn-small"
                                    style="border-radius: 50%;padding: 0px 13px !important;"><i class="fa fa-phone"></i></a>
                             </div>
                         </div>

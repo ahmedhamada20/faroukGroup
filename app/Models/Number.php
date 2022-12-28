@@ -15,6 +15,7 @@ class Number extends Model
         'name',
         'notes',
         'status',
+        'phone',
     ];
 
     protected $appends = ['image'];

@@ -108,7 +108,7 @@
                     </ul>
 
                     <div class="others-options d-flex align-items-center">
-                        <div class="option-item">
+                        {{-- <div class="option-item">
                             <div class="cart-btn">
                                 <a href="cart.html">
                                     <i class='flaticon-shopping-cart'></i>
@@ -131,7 +131,7 @@
                                     </form>
                                 </div>
                             </div>
-                        </div>
+                        </div> --}}
 
                         <div class="option-item">
                             <div class="dropdown">
@@ -163,7 +163,7 @@
         </div>
     </div>
 
-    <div class="others-option-for-responsive">
+    {{-- <div class="others-option-for-responsive">
         <div class="container">
             <div class="dot-menu">
                 <div class="inner">
@@ -206,6 +206,6 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> --}}
 </div>
 <!-- End Navbar Area -->

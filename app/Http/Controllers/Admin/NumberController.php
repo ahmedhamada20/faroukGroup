@@ -67,6 +67,7 @@ class NumberController extends Controller
             'name' => ['ar' => $request->name, 'en' => $request->name_en],
             'notes' => ['ar' => $request->notes, 'en' => $request->notes_en],
             'status' => $request->status,
+            'phone' => $request->phone,
 
 
         ]);
@@ -139,6 +140,7 @@ class NumberController extends Controller
         $data->update([
             'name' => ['ar' => $request->name, 'en' => $request->name_en],
             'notes' => ['ar' => $request->notes, 'en' => $request->notes_en],
+            'phone' => $request->phone,
 
         ]);
         

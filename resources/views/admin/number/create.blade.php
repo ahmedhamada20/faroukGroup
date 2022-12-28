@@ -41,6 +41,14 @@
                         </div>
 
                         <br>
+<div class="row">
+    <div class="col">
+        <label>رقم الهاتف</label>
+        <input type="text" name="phone" required value="{{old('phone')}}"
+               class="form-control @error('phone') is-invalid @enderror">
+    </div>
+</div>
+                        <br>
 
                         <div class="row">
 
