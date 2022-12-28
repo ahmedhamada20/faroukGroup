@@ -781,7 +781,7 @@
 
 
                                     
-                                    <input type="checkbox" required  id="vehicle1" name="vehicle1[]" value="مشكلة فى المبيعات">
+                                    <input type="checkbox"   id="vehicle1" name="vehicle1[]" value="مشكلة فى المبيعات">
                                     <label for="vehicle1">مشكلة فى المبيعات</label><br>
                                     <input type="checkbox" id="vehicle2" name="vehicle1[]" value="مشكلة فى التسويق">
                                     <label for="vehicle2">مشكلة فى التسويق</label><br>
