@@ -905,10 +905,10 @@
                 {{--            <span>Get Started Instantly!</span>--}}
                 <h3 class="mb-2">اترك رقمك لإرسال البرومو الترويجي على الواتساب </h3>
 
-                <form  action="{{ route('home') }}" autocomplete="off" >
-
+                <form  action="{{ route('submitNumber') }}" method="POST" autocomplete="off" >
+@csrf
                     <div class="input-group mb-3">
-                        <input type="text" class="form-control" required placeholder="برجاء أترك رقمك متبوعاً بكود الدولة" aria-label="برجاء أترك رقمك متبوعاً بكود الدولة" aria-describedby="button-addon2">
+                        <input type="text" class="form-control" name="phone" required placeholder="برجاء أترك رقمك متبوعاً بكود الدولة" aria-label="برجاء أترك رقمك متبوعاً بكود الدولة" aria-describedby="button-addon2">
                         <div class="input-group-append">
                           <button class="btn btn-info"  id="button-addon2">إرسال</button>
                         </div>

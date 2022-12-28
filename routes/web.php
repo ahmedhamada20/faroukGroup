@@ -68,6 +68,7 @@ Route::group(
      return view('front.policy.index');
     })->name('home.policy');
 
+    Route::post('submitNumber',[HomeController::class,'submitNumber'])->name('submitNumber');
     Route::post('sendConsulting',[HomeController::class,'sendConsulting'])->name('sendConsulting');
     Route::post('sendmessage',[HomeController::class,'sendmessage'])->name('sendmessage');
     Route::post('sendcontect',[HomeController::class,'sendcontect'])->name('sendcontect');

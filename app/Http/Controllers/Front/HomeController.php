@@ -176,6 +176,28 @@ class HomeController extends Controller
     }
 
 
+    public function submitNumber(Request $request)
+    {
+        $request->validate([
+         
+            'phone' => 'required|numeric',
+          
+        ], [
+          
+            'phone.required' => __('index.phonerequired'),
+            'phone.min' => __('index.phonemin'),
+            'phone.numeric' => __('index.phonenumeric'),
+        ]);
+
+        Contact::create([
+            'phone' => $request->phone,
+            'type_contact' => Contact::WHATSAPP,
+        ]);
+
+        return redirect()->back()->with(['success' => __('index.sendsuccessfullyMessage')]);
+    }
+
+
     public function sendConsulting(Request $request)
     {
 

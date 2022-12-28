@@ -144,6 +144,7 @@ Route::middleware(['auth', 'checkInformation'])->group(function () {
     Route::post('customerReviews_photo_remove_image', [CustomerReviewsController::class, 'customerReviews_photo_remove_image'])->name('customerReviews_photo_remove_image');
 
 
+    Route::get('whatsapp',[AdminController::class,'whatsapp'])->name('whatsapp');
     Route::get('supcpations',[AdminController::class,'supcpations'])->name('supcpations');
     Route::get('consultingIndex',[AdminController::class,'consultingIndex'])->name('consultingIndex');
     Route::get('agencyIndex',[AdminController::class,'AgencyIndex'])->name('agencyIndex');

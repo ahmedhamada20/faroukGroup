@@ -77,6 +77,7 @@
                     <li><a class="slide-item" href="{{ route('jopsIndex') }}">طلب توظيف</a></li>
                     <li><a class="slide-item" href="{{ route('requestTicks.index') }}">طلبات التذاكر</a></li>
                     <li><a class="slide-item" href="{{ route('supcpations') }}">طلبات الاشتراك</a></li>
+                    <li><a class="slide-item" href="{{ route('whatsapp') }}">طلبات ارسال البرمو</a></li>
                 </ul>
             </li>
 

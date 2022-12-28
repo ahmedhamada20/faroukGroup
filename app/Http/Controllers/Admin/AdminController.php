@@ -19,6 +19,13 @@ class AdminController extends Controller
         ];
         return view('admin.Contact.JOP', $data);
     }
+    public function whatsapp()
+    {
+        $data = [
+            'data' => Contact::where('type_contact', Contact::WHATSAPP)->paginate(10),
+        ];
+        return view('admin.whatsapp.index', $data);
+    }
 
     public function supcpations()
     {

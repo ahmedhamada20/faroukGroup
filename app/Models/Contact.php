@@ -28,4 +28,5 @@ class Contact extends Model
     const PAGECONSULTING= 2;
     const AGENCY= 3;
     const JOP= 4;
+    const WHATSAPP= 5;
 }
