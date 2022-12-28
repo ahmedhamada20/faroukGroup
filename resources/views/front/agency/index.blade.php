@@ -146,18 +146,18 @@
 
                                 <select class="hessine" style=" " required id="txtcountryTwo" name="country">
                                     <option value="" disabled selected>--اختر كود الدولة--</option>
-
-                                    <option value="20">حمهورية مصر العربية</option>
-
-                                    <option value="974">قطر</option>
-                                    <option value="973">البحرين</option>
                                     <option value="971">الإمارات</option>
+                                    <option value="962">الأردن</option>
+                                    <option value="973">البحرين</option>
                                     <option value="966">السعودية</option>
                                     <option value="964">العراق</option>
-                                    <option value="962">الأردن</option>
                                     <option value="965">الكويت</option>
-
                                     <option value="968">عمان</option>
+                                
+                                    <option value="974">قطر</option>
+                                    <option value="20">مصر</option>
+                                   
+                                
 
                                     <option value="">أخرى</option>
 
