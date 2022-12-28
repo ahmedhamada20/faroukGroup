@@ -579,7 +579,8 @@
                             <div class="col-lg-6 col-md-6">
                                 <div class="single-features-box top-1" style="height: 280px">
                                     <div class="icon" style="height: 80px">
-                                        <i class="{{asset($event->image)}}"></i>
+                                     
+                                        <img src="{{ asset($event->image) }}" width="50px" height="50px" alt="">
                                     </div>
                                     <h3>
                                         <a>{{ $event->name }}</a>
