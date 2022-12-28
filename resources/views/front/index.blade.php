@@ -868,7 +868,7 @@
                                 {{$blog->created_at->format('Y-m-d')}}
                             </span>
                                 <h3>
-                                    <a href="{{route('home.blogDetails',$blog->id)}}">{{$blog->name}}</a>
+                                    <a href="{{route('home.blogDetails',$blog->id)}}">{{Str::limit($blog->name,28)}}</a>
                                 </h3>
                                 <a href="{{route('home.blogDetails',$blog->id)}}" class="blog-btn">قراءة المزيد <i
                                         class='bx bx-chevrons-right'></i></a>

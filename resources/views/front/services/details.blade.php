@@ -14,7 +14,7 @@
                         <h2>{{$data->category->name ?? ''}}</h2>
                         <ul>
                             <li>
-                                <a href="{{route('home')}}">الصفحة الرئيسية</a>
+                                <a href="{{route('home')}}"> الرئيسية</a>
                             </li>
                             <li>{{$data->name ?? ''}}</li>
                         </ul>

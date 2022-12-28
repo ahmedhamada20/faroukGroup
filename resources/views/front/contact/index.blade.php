@@ -1,6 +1,6 @@
 @extends('front.layouts.master')
 @section('title')
-    اتصل بنا
+    تواصل معنا
 @endsection
 
 @section('content')
