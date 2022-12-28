@@ -578,10 +578,10 @@
                         @forelse (eventsActive() as $event )
                             <div class="col-lg-6 col-md-6">
                                 <div class="single-features-box top-1" style="height: 280px">
-                                    <div class="icon" style="height: 80px">
+                                    
                                      
                                         <img src="{{ asset($event->image) }}" width="50px" height="50px" alt="">
-                                    </div>
+                                
                                     <h3>
                                         <a>{{ $event->name }}</a>
                                     </h3>
