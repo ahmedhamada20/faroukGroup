@@ -107,30 +107,53 @@
                         <div class="services-contact-info">
                             <h3>بيانات التواصل</h3>
 
-                            <ul>
-                                <li>
-                                    <div class="icon">
-                                        <i class='bx bx-user-pin'></i>
-                                    </div>
-                                    <span>الهاتف:</span>
-                                    <a style="color: #000000;" href="tel:{{settingSite()->phone}}">{{settingSite()->phone}}</a>
-                                </li>
-                                <li>
-                                    <div class="icon">
-                                        <i class='bx bx-map'></i>
-                                    </div>
-                                    <span>العنوان:</span>
-                                    {{settingSite()->address}}
-                                </li>
-                                <li>
-                                    <div class="icon">
-                                        <i class='bx bx-envelope'></i>
-                                    </div>
-                                    <span>البريد الإلكترونى:</span>
-                                    <span class="__cf_email__"
-                                          data-cfemail="2c44494040436c5f5c4554024f4341">  {{settingSite()->email}}</span>
-                                </li>
-                            </ul>
+                            
+                    <ul class="footer-contact-info">
+                        <li>
+                            <div class="icon">
+                                <i class='bx bx-user-pin'></i>
+                            </div>
+                            <span>الهاتف : </span>
+                         
+                            <div class="row">
+                                <div class="col">
+                                    <p>
+                                        <a href="tel:{{ settingSite()->phone }}">{{ settingSite()->phone }}</a>
+                                    </p>
+    
+                                    <p><a href="tel:0235826260">0235826260</a></p>
+                                  
+                                </div>
+                                <div class="col">
+    
+                                    <p><a href="tel:01009656756">01009656756</a></p>
+                                 
+                                    <p><a href="tel:0235858737">0235858737</a></p>
+                                </div>
+                            </div>
+
+                     
+                        
+                        </li>
+                        <li>
+                            <div class="icon">
+                                <i class='bx bx-map'></i>
+                            </div>
+                            <span>العنوان:</span>
+                            {{settingSite()->address}}
+                        </li>
+                        <li>
+                            <div class="icon">
+                                <i class='bx bx-envelope'></i>
+                            </div>
+                            <span>البريد الإلكتروني :</span>
+                            
+                            <a href="mailto: {{settingSite()->email}}">{{settingSite()->email}}</a>
+
+                       
+                        </li>
+                    </ul>
+
                         </div>
                     </div>
                 </div>
